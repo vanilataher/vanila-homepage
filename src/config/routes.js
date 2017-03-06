@@ -11,6 +11,7 @@ export default (
 	<Router>
 		<Route path={"/"} component={Blank}>
       <IndexRoute component={Home}/>
+      <Route path={"index"} component={Home} />
       <Route path={"client"} component={Client} />
     </Route>
 	</Router>
