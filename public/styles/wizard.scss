@@ -1,10 +1,11 @@
 @import "fonts.css";
 $color-primary: #4471F1;
-$color-danger : #FF6464;
+$color-danger: #FF6464;
 
-.clear{
-  clear:both;
+.clear {
+    clear: both;
 }
+
 .wizard-container {
     font-family: SegoeRegular;
     background-color: #eeeeee;
@@ -15,6 +16,7 @@ $color-danger : #FF6464;
         width: 50%;
         float: left;
         min-height: 100vh;
+        padding-bottom: 40px;
 
         b {
             font-family: SegoeBold;
@@ -106,6 +108,69 @@ $color-danger : #FF6464;
                     border: 1px solid #ededed;
                     outline: none;
                 }
+
+                textarea {
+                    width: 100%;
+                    padding: 15px 20px;
+                    border-radius: 5px;
+                    border: 1px solid #ededed;
+                    outline: none;
+                    resize: none;
+                }
+            }
+
+            .device-type-card {
+                width: 100%;
+                border: 1px solid #ededed;
+                border-radius: 10px;
+                padding: 10px 20px;
+                display: table;
+                margin-top: 20px;
+
+                .radiobox-container {
+                    display: table-cell;
+                    width: 10%;
+                    vertical-align: middle;
+                }
+
+                .detail-container {
+                    display: table-cell;
+                    width: 60%;
+                    vertical-align: middle;
+                    padding-right: 80px;
+
+                    h1 {
+                        font-family: SegoeBold;
+                        font-size: 14px;
+                        margin: 5px 0;
+                        color: #2D2C2C;
+                    }
+
+                    p {
+                        font-size: 11px;
+                        color: #B9BBBC;
+                    }
+                }
+
+                .icon-container {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 30%;
+                    border-left: 1px solid #ededed;
+                    padding-right: 20px;
+
+                    .image-container {
+                        width: 50px;
+                        text-align: center;
+                        margin: auto;
+
+                        img {
+                            max-width: 50px;
+                            max-height: 50px;
+                            height: 100%;
+                        }
+                    }
+                }
             }
 
             .button-container {
@@ -121,9 +186,44 @@ $color-danger : #FF6464;
                     color: #ffffff;
                     text-transform: uppercase;
                     font-size: 16px;
-                    &.danger{
+
+                    &.danger {
                         background-color: $color-danger;
                     }
+                }
+            }
+        }
+
+        .card-container {
+            text-align: center;
+
+            .wizard-card {
+                display: inline-block;
+                vertical-align: top;
+                width: 200px;
+                height: auto;
+                border-radius: 5px;
+                border: 1px solid #ededed;
+                margin: 5px;
+                padding: 10px;
+
+                .image {
+                    width: 100%;
+                    height: 180px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                .heading {
+                    text-align: center;
+                    font-size: 16px;
+                    margin: 0;
+                    width: 100%;
+                    height: 44px;
+                    margin-bottom: 5px;
+                    font-family: SegoeRegular;
+                    font-weight: bold;
                 }
             }
         }
@@ -135,11 +235,12 @@ $color-danger : #FF6464;
         float: left;
         min-height: 100vh;
         position: relative;
-        img{
+
+        img {
             padding: 40px;
             position: absolute;
             left: 50%;
-            top:50%;
+            top: 50%;
             transform: translate(-50%,-50%);
             max-width: 100%;
         }
