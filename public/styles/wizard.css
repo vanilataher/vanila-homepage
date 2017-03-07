@@ -1,0 +1,103 @@
+@import url(fonts.css);
+.clear {
+  clear: both; }
+
+.wizard-container {
+  font-family: SegoeRegular;
+  background-color: #eeeeee;
+  width: 100%; }
+  .wizard-container .left-container {
+    background-color: #ffffff;
+    width: 50%;
+    float: left;
+    min-height: 100vh; }
+    .wizard-container .left-container b {
+      font-family: SegoeBold; }
+    .wizard-container .left-container .container {
+      padding: 0 100px;
+      width: 100%; }
+    .wizard-container .left-container .title {
+      color: #444444;
+      font-family: SegoeExtraLight;
+      font-weight: 100;
+      font-size: 42px;
+      text-align: center;
+      max-width: 400px;
+      margin: 40px auto auto;
+      letter-spacing: -2px;
+      line-height: 45px; }
+    .wizard-container .left-container .sub-title {
+      color: #666666;
+      font-family: SegoeLight;
+      font-weight: 100;
+      font-size: 16px;
+      text-align: center;
+      max-width: 250px;
+      margin: 30px auto auto;
+      letter-spacing: -0.2px; }
+    .wizard-container .left-container .wizard-steps {
+      width: 100%;
+      margin-top: 50px; }
+      .wizard-container .left-container .wizard-steps ul {
+        padding: 0;
+        position: relative;
+        margin-top: -13px; }
+        .wizard-container .left-container .wizard-steps ul li {
+          display: inline-block;
+          border-color: #DEE6FC;
+          width: 20%; }
+          .wizard-container .left-container .wizard-steps ul li .circle {
+            border: 2px solid #DEE6FC;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            margin: auto;
+            background: #ffffff; }
+          .wizard-container .left-container .wizard-steps ul li.active .circle {
+            border: 7px solid #DEE6FC; }
+      .wizard-container .left-container .wizard-steps .line {
+        border-top: 2px solid #DEE6FC;
+        width: calc(80%);
+        margin: auto; }
+    .wizard-container .left-container .wizard-form {
+      padding: 0 10px; }
+      .wizard-container .left-container .wizard-form .form {
+        margin-top: 20px; }
+        .wizard-container .left-container .wizard-form .form label {
+          display: block;
+          font-size: 16px;
+          margin-bottom: 10px;
+          color: #505050; }
+        .wizard-container .left-container .wizard-form .form input {
+          width: 100%;
+          padding: 15px 20px;
+          border-radius: 5px;
+          border: 1px solid #ededed;
+          outline: none; }
+      .wizard-container .left-container .wizard-form .button-container {
+        margin-top: 40px; }
+        .wizard-container .left-container .wizard-form .button-container button {
+          width: 100%;
+          padding: 15px;
+          background: #4471F1;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          color: #ffffff;
+          text-transform: uppercase;
+          font-size: 16px; }
+  .wizard-container .right-container {
+    background-color: #eeeeee;
+    width: 50%;
+    float: left;
+    min-height: 100vh;
+    position: relative; }
+    .wizard-container .right-container img {
+      padding: 40px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%; }
+
+/*# sourceMappingURL=wizard.css.map */

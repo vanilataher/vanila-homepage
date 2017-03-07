@@ -1,0 +1,143 @@
+@import "fonts.css";
+$color-primary: #4471F1;
+
+.clear{
+  clear:both;
+}
+.wizard-container {
+    font-family: SegoeRegular;
+    background-color: #eeeeee;
+    width: 100%;
+
+    .left-container {
+        background-color: #ffffff;
+        width: 50%;
+        float: left;
+        min-height: 100vh;
+
+        b {
+            font-family: SegoeBold;
+        }
+
+        .container {
+            padding: 0 100px;
+            width: 100%;
+        }
+
+        .title {
+            color: #444444;
+            font-family: SegoeExtraLight;
+            font-weight: 100;
+            font-size: 42px;
+            text-align: center;
+            max-width: 400px;
+            margin: 40px auto auto;
+            letter-spacing: -2px;
+            line-height: 45px;
+        }
+
+        .sub-title {
+            color: #666666;
+            font-family: SegoeLight;
+            font-weight: 100;
+            font-size: 16px;
+            text-align: center;
+            max-width: 250px;
+            margin: 30px auto auto;
+            letter-spacing: -0.2px;
+        }
+
+        .wizard-steps {
+            width: 100%;
+            margin-top: 50px;
+
+            ul {
+                padding: 0;
+                position: relative;
+                margin-top: -13px;
+
+                li {
+                    display: inline-block;
+                    border-color: #DEE6FC;
+                    width: 20%;
+
+                    .circle {
+                        border: 2px solid #DEE6FC;
+                        border-radius: 50%;
+                        width: 22px;
+                        height: 22px;
+                        margin: auto;
+                        background: #ffffff;
+                    }
+
+                    &.active {
+                        .circle {
+                            border: 7px solid #DEE6FC;
+                        }
+                    }
+                }
+            }
+
+            .line {
+                border-top: 2px solid #DEE6FC;
+                width: calc(80%);
+                margin: auto;
+            }
+        }
+
+        .wizard-form {
+            padding: 0 10px;
+
+            .form {
+                margin-top: 20px;
+
+                label {
+                    display: block;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    color: #505050;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 15px 20px;
+                    border-radius: 5px;
+                    border: 1px solid #ededed;
+                    outline: none;
+                }
+            }
+
+            .button-container {
+                margin-top: 40px;
+
+                button {
+                    width: 100%;
+                    padding: 15px;
+                    background: $color-primary;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .right-container {
+        background-color: #eeeeee;
+        width: 50%;
+        float: left;
+        min-height: 100vh;
+        position: relative;
+        img{
+            padding: 40px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            max-width: 100%;
+        }
+    }
+}
