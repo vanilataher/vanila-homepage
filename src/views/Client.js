@@ -10,6 +10,13 @@ export default class Client extends Component {
             currentStep: 1
         }
     }
+    nextStep(){
+        if(this.state.currentStep < 5){
+            this.setState({
+              currentStep:this.state.currentStep+1
+            })
+        }
+    }
     render() {
         return (
             <div className="wizard-container">
@@ -35,7 +42,7 @@ export default class Client extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <WizardForm currentStep={this.state.currentStep}/>
+                        <WizardForm nextStep={this.nextStep.bind(this)} currentStep={this.state.currentStep}/>
                     </div>
                 </div>
                 <div className="right-container">
