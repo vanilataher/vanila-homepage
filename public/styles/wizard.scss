@@ -288,6 +288,10 @@ $color-warning: #F18944;
                 }
             }
 
+            .calander-container {
+                margin-top: 20px;
+            }
+
             .login-button-container {
                 margin-top: 30px;
 
@@ -301,7 +305,7 @@ $color-warning: #F18944;
                     border-radius: 5px;
                     color: #ffffff;
                     font-size: 16px;
-                    margin-right: 20px;
+                    margin-right: 15px;
                     margin-top: 20px;
 
                     img {
@@ -311,7 +315,7 @@ $color-warning: #F18944;
                 }
 
                 .register-button {
-                    padding: 15px 25px;
+                    padding: 15px;
                     margin-top: 20px;
                     background: #ffffff;
                     border: 1px solid #ededed;
@@ -320,7 +324,7 @@ $color-warning: #F18944;
                     border-radius: 5px;
                     color: #333333;
                     font-size: 16px;
-                    margin-left: 20px;
+                    margin-left: 15px;
                 }
             }
 
@@ -423,6 +427,16 @@ $color-warning: #F18944;
             .container {
                 padding: 0 40px;
             }
+
+            .facebook-button {
+                display: block;
+                margin: auto auto 20px !important;
+            }
+
+            .register-button {
+                display: block;
+                margin: 20px auto auto !important;
+            }
         }
     }
 }
@@ -430,10 +444,11 @@ $color-warning: #F18944;
     .wizard-container {
         .left-container {
             .container {
-                .title{
+                .title {
                     font-size: 32px;
                 }
-                .sub-title{
+
+                .sub-title {
                     font-size: 14px;
                 }
             }
@@ -444,17 +459,30 @@ $color-warning: #F18944;
     .wizard-container {
         .left-container {
             width: 100%;
+
             .container {
-                .title{
+                .title {
                     font-size: 32px;
                 }
-                .sub-title{
+
+                .sub-title {
                     font-size: 14px;
                 }
             }
+
+            .device-type-card {
+                .detail-container {
+                    padding-right: 0 !important;
+                }
+
+                .icon-container {
+                    display: none !important;
+                }
+            }
         }
-        .right-container{
-          display: none;
+
+        .right-container {
+            display: none;
         }
     }
 }

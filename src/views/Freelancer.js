@@ -41,7 +41,7 @@ export default class Client extends Component {
                             <WizardStep currentStep={this.state.currentStep}/>
                         </div>
                     </div>
-                    <div className="row">
+                    <div>
                         <WizardForm nextStep={this.nextStep.bind(this)} currentStep={this.state.currentStep}/>
                     </div>
                 </div>
