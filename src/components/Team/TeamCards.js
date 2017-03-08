@@ -39,7 +39,7 @@ const TeamCards = (props) => {
         avatar: require('../../../public/img/homeAssets/marija.png')
     },
     {
-        name: 'H. Tugkan Hibar',
+        name: 'H. Tugkan Kibar',
         position: 'Backend developer',
         avatar:require('../../../public/img/homeAssets/tugkan.png')
     }
