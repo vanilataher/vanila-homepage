@@ -82,7 +82,7 @@ export default class WizardForm extends Component {
                                         <input type="radio" name="device-type" checked={this.checkType('website')}/>
                                     </div>
                                     <div className="detail-container">
-                                        <h1>Webiste / Web App</h1>
+                                        <h1>Website / Web App</h1>
                                         <p>Build a personal or company website, blog, online store, or social community app, game, etc.</p>
                                     </div>
                                     <div className="icon-container">
