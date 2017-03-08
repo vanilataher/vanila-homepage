@@ -4,6 +4,7 @@ import Blank from '../components/layouts/Blank.js';
 // views
 import Home from '../views/Home.js';
 import Client from '../views/Client.js';
+import Freelancer from '../views/Freelancer.js';
 
 import { Route, Router, IndexRedirect, IndexRoute} from 'react-router';
 
@@ -13,6 +14,7 @@ export default (
       <IndexRoute component={Home}/>
       <Route path={"index"} component={Home} />
       <Route path={"client"} component={Client} />
+      <Route path={"freelancer"} component={Freelancer} />
     </Route>
 	</Router>
 );

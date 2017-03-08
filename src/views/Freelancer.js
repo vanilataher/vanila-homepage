@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import WizardStep from '../components/wizard/wizard-step';
-import WizardForm from '../components/wizard/client-wizard-form';
-import WizardImages from '../components/wizard/client-wizard-images';
+import WizardForm from '../components/wizard/freelancer-wizard-form';
 import '../../public/styles/wizard.css'
 export default class Client extends Component {
     constructor() {
@@ -19,21 +18,22 @@ export default class Client extends Component {
     }
     render() {
         return (
-            <div className="wizard-container client">
+            <div className="wizard-container freelancer">
                 <div className="left-container">
                     <div className="container">
                         <div className="row">
                             <h1 className="title">
-                                Do you have
+                                Join Vanila.io
                                 <b>
-                                    &nbsp;idea&nbsp;
-                                </b><br/>
-                                for your next project ?
+                                    &nbsp;community&nbsp;
+                                </b>
+                                <div>and become big ?</div>
                             </h1>
                             <h4 className="sub-title">
-                                Tell us about it, we are glad to listen <br/> and will provide you with a
+                                Sharpen your skills while working<br/>
+                                on Cool projects, while you
                                 <b>
-                                    &nbsp;feedback
+                                    &nbsp;learn, earn and make Friends.
                                 </b>
                             </h4>
                         </div>
@@ -46,7 +46,9 @@ export default class Client extends Component {
                     </div>
                 </div>
                 <div className="right-container">
-                    <WizardImages currentStep={this.state.currentStep}/>
+                    <div className="wizard-images">
+                        <img src={require('../../public/img/freelancerAssets/freelancerAsset1.png')}/>
+                    </div>
                 </div>
                 <div className="clear"/>
             </div>

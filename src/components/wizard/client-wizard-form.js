@@ -69,7 +69,7 @@ export default class WizardForm extends Component {
                             <div className="col-md-12 card-container">
                                 <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'webdev'} heading={'Web & Mobile App Development'} img={require('../../../public/img/clientsAssets/app-developmentAsset1.png')}/>
                                 <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'design'} heading={'Branding & Design'} img={require('../../../public/img/clientsAssets/ui-uxAsset1.png')}/>
-                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'marketing'} heading={'Marketing'} img={require('../../../public/img/clientsAssets/freelancer2Asset 1.png')}/>
+                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'marketing'} heading={'Marketing'} img={require('../../../public/img/clientsAssets/freelancer2Asset1.png')}/>
                                 <div className="clear"/>
                             </div>
                         </div>
