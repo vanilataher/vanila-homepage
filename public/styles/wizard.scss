@@ -94,19 +94,54 @@ $color-danger: #FF6464;
             .form {
                 margin-top: 20px;
 
-                label {
+                .form-heading {
                     display: block;
-                    font-size: 16px;
+                    font-size: 18px;
                     margin-bottom: 10px;
                     color: #505050;
                 }
 
-                input {
+                .form-subheading {
+                    display: block;
+                    font-size: 15px;
+                    color: #95989A;
+                }
+
+                input[type="text"],input[type="email"] {
                     width: 100%;
                     padding: 15px 20px;
                     border-radius: 5px;
                     border: 1px solid #ededed;
                     outline: none;
+                }
+
+                input[type="radio"] {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid #DBDBDB;
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                    outline: 0;
+                    vertical-align: top;
+                }
+
+                input[type="radio"]:checked {
+                    background-color: $color-primary;
+                    border: 3px solid #DBDBDB;
+                }
+
+                .radio-label {
+                    font-size: 18px;
+                    color: #5F5F5F;
+                    font-family: SegoeExtraLight;
+                    margin-right: 20px;
+                    vertical-align: middle;
+
+                    input {
+                        margin-right: 5px;
+                    }
                 }
 
                 textarea {
@@ -116,6 +151,40 @@ $color-danger: #FF6464;
                     border: 1px solid #ededed;
                     outline: none;
                     resize: none;
+                }
+
+                .slider-container {
+                    .slider-label {
+                        font-size: 16px;
+                        color: #505050;
+                        font-family: SegoeExtraLight;
+                        width: 65px;
+                        display: inline-block;
+                    }
+
+                    .slider {
+                        display: inline-block;
+                        max-width: 300px;
+                        width: calc(100% - 150px);
+                        margin-right: 20px;
+                        vertical-align: middle;
+                    }
+
+                    .ui-slider-horizontal .ui-slider-range {
+                        background-color: #4C4C4D;
+                    }
+
+                    .ui-slider .ui-slider-handle {
+                        border-radius: 50%;
+                        background-color: $color-primary;
+                        border: none;
+                        outline: none;
+                        top: -8px;
+                    }
+
+                    .ui-slider-horizontal {
+                        height: 3px;
+                    }
                 }
             }
 
