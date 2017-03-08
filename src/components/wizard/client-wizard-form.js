@@ -3,6 +3,8 @@ import {observer} from 'mobx-react';
 
 import ClientSignupStore from '../../stores/client_signup';
 
+import API from '../../helpers/api';
+
 import Card from './wizard-card';
 import Slider from './slider';
 import DatePicker from './datepicker';
@@ -24,8 +26,11 @@ export default class WizardForm extends Component {
         }
     }
     nextStep() {
-        console.log(ClientSignupStore.requestBody);
-        this.props.nextStep();
+        if (this.props.currentStep === 5) {
+            API.registerAsClient().catch(err => console.log(err));
+        } else {
+            this.props.nextStep();
+        }
     }
     updateBudget(min, max) {
         ClientSignupStore.setMinBudget(min);
@@ -152,10 +157,10 @@ export default class WizardForm extends Component {
                                 <p className="form-subheading">When do you wanna start and end the project</p>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <DatePicker />
+                                        <DatePicker onChange={ClientSignupStore.setStartDate} />
                                     </div>
                                     <div className="col-md-6">
-                                        <DatePicker />
+                                        <DatePicker onChange={ClientSignupStore.setEndDate} />
                                     </div>
                                 </div>
                             </div>

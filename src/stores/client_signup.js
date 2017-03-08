@@ -26,6 +26,25 @@ class ClientSignupStore {
     MARKETING: 'marketing',
   };
 
+  constructor() {
+    const self = this;
+
+    self.setFirstName = self.setFirstName.bind(self);
+    self.setLastName = self.setLastName.bind(self);
+    self.setUsername = self.setUsername.bind(self);
+    self.setPassword = self.setPassword.bind(self);
+    self.setEmail = self.setEmail.bind(self);
+    self.setCategory = self.setCategory.bind(self);
+    self.setType = self.setType.bind(self);
+    self.setProjectName = self.setProjectName.bind(self);
+    self.setProjectDescription = self.setProjectDescription.bind(self);
+    self.setContractType = self.setContractType.bind(self);
+    self.setMinBudget = self.setMinBudget.bind(self);
+    self.setMaxBudget = self.setMaxBudget.bind(self);
+    self.setStartDate = self.setStartDate.bind(self);
+    self.setEndDate = self.setEndDate.bind(self);
+  }
+
   @action setFirstName(val) {
     const self = this;
 
