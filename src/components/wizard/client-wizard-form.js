@@ -24,17 +24,20 @@ export default class WizardForm extends Component {
         }
     }
     nextStep() {
-        console.log(ClientSignupStore);
+        console.log(ClientSignupStore.requestBody);
         this.props.nextStep();
     }
-    updateBudget() {
-
+    updateBudget(min, max) {
+        ClientSignupStore.setMinBudget(min);
+        ClientSignupStore.setMaxBudget(max);
     }
     updateCategoryCard(type) {
-        this.setState({category: type})
+        ClientSignupStore.setCategory(type);
     }
     updateTypeCard(type) {
+        // TODO: This will be STORE ONLY.
         this.setState({type: type})
+        ClientSignupStore.setType(type);
     }
     checkType(type){
         if(this.state.type == type){
@@ -58,28 +61,29 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading">First Name</label>
-                                <input type="text" placeholder="John" ref="firstname"/>
+                                <input type="text" value={ClientSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => ClientSignupStore.setFirstName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
-                                <label className="form-heading">First Name</label>
-                                <input type="text" placeholder="Smith" ref="lastname"/>
+                                <label className="form-heading">Last Name</label>
+                                <input type="text" value={ClientSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => ClientSignupStore.setLastName(event.target.value)}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Email</label>
-                                <input type="email" placeholder="john@example.com" ref="email"/>
+                                <input type="email" value={ClientSignupStore.email} placeholder="john@example.com" ref="email" onChange={(event) => ClientSignupStore.setEmail(event.target.value)}/>
                             </div>
                         </div>
                     </div>
                     <div className={this.getClass("", 2)}>
                         <div className="row">
                             <div className="col-md-12 card-container">
-                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'webdev'} heading={'Web & Mobile App Development'} img={require('../../../public/img/clientsAssets/app-developmentAsset1.png')}/>
-                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'design'} heading={'Branding & Design'} img={require('../../../public/img/clientsAssets/ui-uxAsset1.png')}/>
-                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'marketing'} heading={'Marketing'} img={require('../../../public/img/clientsAssets/freelancer2Asset1.png')}/>
+                                <Card currentCategory={ClientSignupStore.category} updateCategory={this.updateCategoryCard.bind(this)} type={ClientSignupStore.CATEGORIES.WEB_MOBILE_APP} heading={'Web & Mobile App Development'} img={require('../../../public/img/clientsAssets/app-developmentAsset1.png')}/>
+                                <Card currentCategory={ClientSignupStore.category} updateCategory={this.updateCategoryCard.bind(this)} type={ClientSignupStore.CATEGORIES.BRANDING_DESIGN} heading={'Branding & Design'} img={require('../../../public/img/clientsAssets/ui-uxAsset1.png')}/>
+                                <Card currentCategory={ClientSignupStore.category} updateCategory={this.updateCategoryCard.bind(this)} type={ClientSignupStore.CATEGORIES.MARKETING} heading={'Marketing'} img={require('../../../public/img/clientsAssets/freelancer2Asset1.png')}/>
                                 <div className="clear"/>
                             </div>
                         </div>
                     </div>
+                    {/* This part is missing, needs to be created. */}
                     <div className={this.getClass("container", 3)}>
                         <div className="row">
                             <div className="col-md-12">
@@ -118,11 +122,11 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Project Name</label>
-                                <input type="text" placeholder="Example: Banana Project" ref="projectName"/>
+                                <input type="text" value={ClientSignupStore.projectName} placeholder="Example: Banana Project" ref="projectName" onChange={(event) => ClientSignupStore.setProjectName(event.target.value)}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Project Brief</label>
-                                <textarea rows={4} placeholder="I wanna build e-commerce app as a SaaS" ref="projectDescription"></textarea>
+                                <textarea rows={4} value={ClientSignupStore.projectDescription} placeholder="I wanna build e-commerce app as a SaaS" ref="projectDescription" onChange={(event) => ClientSignupStore.setProjectDescription(event.target.value)}></textarea>
                             </div>
                         </div>
                     </div>
@@ -131,11 +135,11 @@ export default class WizardForm extends Component {
                             <div className="form col-md-12">
                                 <label className="form-heading">Contract Type</label>
                                 <label className="radio-label">
-                                    <input type="radio" name="contract-type"/>
+                                    <input type="radio" name="contract-type" onChange={() => ClientSignupStore.setContractType('fixed') /* TODO: Make this into an array */}/>
                                     Fixed
                                 </label>
                                 <label className="radio-label">
-                                    <input type="radio" name="contract-type"/>
+                                    <input type="radio" name="contract-type" onChange={() => ClientSignupStore.setContractType('hourly') /* TODO: Make this into an array */}/>
                                     Hourly
                                 </label>
                             </div>

@@ -20,6 +20,12 @@ class ClientSignupStore {
   @observable startDate = null;
   @observable endDate = null;
 
+  @observable CATEGORIES = {
+    WEB_MOBILE_APP: 'webdev',
+    BRANDING_DESIGN: 'design',
+    MARKETING: 'marketing',
+  };
+
   @action setFirstName(val) {
     const self = this;
 
@@ -65,7 +71,14 @@ class ClientSignupStore {
     const self = this;
 
     if (typeof val === 'string') {
-      self.category = val;
+      switch (val) {
+        case self.CATEGORIES.WEB_MOBILE_APP:
+        case self.CATEGORIES.BRANDING_DESIGN:
+        case self.CATEGORIES.MARKETING:
+          self.category = val;
+        default:
+          break;
+      }
     }
   }
 
@@ -137,8 +150,33 @@ class ClientSignupStore {
     }
   }
 
-  @computed get queryBody() {
+  @computed get requestBody() {
+    const self = this;
 
+    const budgetRange = {
+      min: self.minBudget,
+      max: self.maxBudget,
+    };
+
+    const dateRange = {
+      start: self.startDate,
+      end: self.endDate,
+    };
+
+    return {
+      first_name: self.firstName,
+      last_name: self.lastName,
+      username: self.username,
+      password: self.password,
+      email: self.email,
+      category: self.category,
+      type: self.type,
+      project_name: self.projectName,
+      project_description: self.projectDescription,
+      contract_type: self.contractType,
+      budget_range: budgetRange,
+      date_range: dateRange,
+    };
   }
 }
 
