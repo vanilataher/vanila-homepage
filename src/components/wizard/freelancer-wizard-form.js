@@ -2,13 +2,17 @@ import React, {Component} from 'react';
 import Card from './wizard-card';
 import Slider from './slider';
 import DatePicker from './datepicker';
+import SearchableDropDown from './dropdown';
 
 export default class WizardForm extends Component {
     constructor() {
         super();
         this.state = {
             category:'',
-            type:''
+            type:'',
+            country:['Pakistan','Serbia','United States','France','Germany','United Arab Emirates'],
+            role:['Frontend Developer','Backend Developer','Designer'],
+            languages:['React JS','Angular JS','Javascript','JQuery','Meteor','React JS','Angular JS','Javascript','JQuery','Meteor']
         }
     }
     getClass(current, step) {
@@ -48,6 +52,10 @@ export default class WizardForm extends Component {
         if(this.props.currentStep == 1){
             buttonClass = 'hidden';
         }
+        var url = (this.state.avatar != null) ? this.state.avatar : require('../../../public/img/freelancerAssets/placeholder.jpg');
+        var avatarImage = {
+          backgroundImage:`url(${url})`
+        }
         return (
             <div className="wizard-form">
                 <div className="col-md-12">
@@ -81,9 +89,13 @@ export default class WizardForm extends Component {
                     </div>
                     <div className={this.getClass("container", 3)}>
                         <div className="row">
+                            <div className="col-md-12 text-center">
+                                <div className="avatar-container" style={avatarImage}/>
+                                <button className="image-upload-button">Upload Avatar</button>
+                            </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Country</label>
-                                <input type="text" placeholder="France" ref="county"/>
+                                <SearchableDropDown value={this.state.country} placeholder="Example: France" multiple={false}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">City</label>
@@ -95,11 +107,11 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Select your Title</label>
-                                <input type="text" placeholder="Example: Frontend Developer" ref="title"/>
+                                <SearchableDropDown value={this.state.role}  multiple={false}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Add your skills</label>
-                                <input type="text" placeholder="Example: Javascript" ref="skills"/>
+                                <SearchableDropDown value={this.state.languages} placeholder="Example: Javascript" multiple={true}/>
                             </div>
                         </div>
                     </div>
@@ -115,7 +127,7 @@ export default class WizardForm extends Component {
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Github Username</label>
-                                <input type="text" placeholder="Example: johndoe" ref="skills"/>
+                                <input type="text" placeholder="Example: johnsmith" ref="github"/>
                             </div>
                         </div>
                     </div>
