@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
+import {observer} from 'mobx-react';
+
+import ClientSignupStore from '../../stores/client_signup';
+
 import Card from './wizard-card';
 import Slider from './slider';
 import DatePicker from './datepicker';
 
+@observer
 export default class WizardForm extends Component {
     constructor() {
         super();
@@ -19,6 +24,7 @@ export default class WizardForm extends Component {
         }
     }
     nextStep() {
+        console.log(ClientSignupStore);
         this.props.nextStep();
     }
     updateBudget() {
