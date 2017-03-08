@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
+import Client from '../../views/Client.js';
 
 class Footer extends React.Component {
   render() {
@@ -9,7 +11,7 @@ class Footer extends React.Component {
           Start your project today and get fair estimation
         </h3>
         <div className="buttonGroup">
-          <button className="btn btn-primary btnGetStarted">Get started</button><span>or</span><button className="btn btn-default btnWatchVideo">Watch video</button>
+          <Link to="Client" className="btn btn-primary btnGetStarted">Get started</Link><span>or</span><button className="btn btn-default btnWatchVideo">Watch video</button>
         </div>
       </div>
     );

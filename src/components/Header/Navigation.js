@@ -1,4 +1,7 @@
 import React from 'react';
+import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
+import Client from '../../views/Client.js';
+import Freelancer from '../../views/Freelancer.js';
 
 class Navigation extends React.Component {
   render() {
@@ -20,8 +23,8 @@ class Navigation extends React.Component {
               <li><a href="#">Home</a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">Team</a></li>
-              <li><a href="#"><strong>Start Project</strong></a></li>
-              <li><a href="#"><strong>We are hiring</strong></a></li>
+              <li><Link to="Client"><strong>Start Project</strong></Link></li>
+              <li><Link to="Freelancer"><strong>We are hiring</strong></Link></li>
             </ul>
           </div>
         </div>
