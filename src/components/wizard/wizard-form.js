@@ -6,8 +6,11 @@ import DatePicker from './datepicker';
 export default class WizardForm extends Component {
     constructor() {
         super();
+        this.state = {
+            category:'',
+            type:''
+        }
     }
-    componentWillMount() {}
     getClass(current, step) {
         if (step == this.props.currentStep) {
             return current;
@@ -18,8 +21,22 @@ export default class WizardForm extends Component {
     nextStep() {
         this.props.nextStep();
     }
-    updateBudget(){
+    updateBudget() {
 
+    }
+    updateCategoryCard(type) {
+        this.setState({category: type})
+    }
+    updateTypeCard(type) {
+        this.setState({type: type})
+    }
+    checkType(type){
+        if(this.state.type == type){
+            return 'checked';
+        }
+        else{
+            return '';
+        }
     }
     render() {
         var buttonText = this.props.currentStep == 5
@@ -50,9 +67,9 @@ export default class WizardForm extends Component {
                     <div className={this.getClass("", 2)}>
                         <div className="row">
                             <div className="col-md-12 card-container">
-                                <Card heading={'Web & Mobile App Development'} img={require('../../../public/img/clientsAssets/app-developmentAsset1.png')}/>
-                                <Card heading={'Branding & Design'} img={require('../../../public/img/clientsAssets/ui-uxAsset1.png')}/>
-                                <Card heading={'Marketing'} img={require('../../../public/img/clientsAssets/freelancer2Asset 1.png')}/>
+                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'webdev'} heading={'Web & Mobile App Development'} img={require('../../../public/img/clientsAssets/app-developmentAsset1.png')}/>
+                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'design'} heading={'Branding & Design'} img={require('../../../public/img/clientsAssets/ui-uxAsset1.png')}/>
+                                <Card currentCategory={this.state.category} updateCategory={this.updateCategoryCard.bind(this)} type={'marketing'} heading={'Marketing'} img={require('../../../public/img/clientsAssets/freelancer2Asset 1.png')}/>
                                 <div className="clear"/>
                             </div>
                         </div>
@@ -60,9 +77,9 @@ export default class WizardForm extends Component {
                     <div className={this.getClass("container", 3)}>
                         <div className="row">
                             <div className="col-md-12">
-                                <div className="device-type-card">
+                                <div className="device-type-card" onClick={this.updateTypeCard.bind(this,'website')}>
                                     <div className="form radiobox-container">
-                                        <input type="radio" name="device-type"/>
+                                        <input type="radio" name="device-type" checked={this.checkType('website')}/>
                                     </div>
                                     <div className="detail-container">
                                         <h1>Webiste / Web App</h1>
@@ -74,9 +91,9 @@ export default class WizardForm extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="device-type-card">
+                                <div className="device-type-card" onClick={this.updateTypeCard.bind(this,'mobile')}>
                                     <div className="form radiobox-container">
-                                        <input type="radio" name="device-type"/>
+                                        <input type="radio" name="device-type" checked={this.checkType('mobile')}/>
                                     </div>
                                     <div className="detail-container">
                                         <h1>Mobile App</h1>
