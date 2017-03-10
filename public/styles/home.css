@@ -1,4 +1,5 @@
 /* General */
+@import url(fonts.css);
 
 html,
 body {
@@ -11,6 +12,10 @@ body {
 .mainWrapperInner {
     height: auto;
 }
+
+.btn{
+  font-family: SegoeRegular;
+}
 /* Header - Navigation */
 
 .navbar-default {
@@ -20,15 +25,18 @@ body {
     padding-bottom: 120px;
 }
 .navbar-brand {
-    padding: 0 15px;
+    padding: 0 15px!important;
+    margin-top:-5px;
 }
 .navbar-right li a {
     color: #888888;
     font-size: 1.3em;
     cursor: pointer;
+    font-family: SegoeRegular;
 }
 .navbar-right li a strong {
     color: #444444;
+    font-family: SegoeBold;
 }
 /* Header - Intro */
 
@@ -45,9 +53,11 @@ body {
     -webkit-animation-delay: 0.5s!important;
     -moz-animation-delay: 0.5s!important;
     animation-delay: 0.5s!important;
+    font-family: SegoeExtraLight;
 }
 .rowHeader h1 strong {
-    color: #444444;
+  color: #444444;
+font-family: SegoeBold;
 }
 .rowHeader p {
     color: #999999;
@@ -56,12 +66,14 @@ body {
     -webkit-animation-delay: 0.8s!important;
     -moz-animation-delay: 0.8s!important;
     animation-delay: 0.8s!important;
+    font-family: SegoeRegular;
 }
 .rowHeader p strong {
     color: #666666;
+    font-family: SegoeBold;
 }
 .rowHeader h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: SegoeRegular;
     color: #95989a;
     line-height: 1.4;
     font-size: 2.2em;
@@ -69,6 +81,7 @@ body {
     -webkit-animation-delay: 0.7s!important;
     -moz-animation-delay: 0.7s!important;
     animation-delay: 0.7s!important;
+
 }
 .buttonGroup {
     margin-top: 60px;
@@ -104,21 +117,68 @@ body {
 }
 /* Projects */
 
+.rowProjects{
+      padding-bottom: 100px;
+      overflow-x:hidden;
+}
 .rowProjects h4 {
     font-size: 3.6em;
     color: #444444;
     font-weight: bold;
+    font-family: SegoeBold;
 }
 .rowProjects h5 {
     color: #95989a;
-    font-size: 1.6em;
+    font-size: 1.8em;
+    font-family: SegoeRegular;
+    line-height: 1.4em;
+    margin-top:15px;
+    margin-bottom:50px;
 }
 .rowProjects ul {
     padding: 0;
     position: relative;
     overflow: hidden;
 }
-.projectBox {}
+.rowProjects img{
+  -webkit-box-shadow: -10px 14px 34px 2px rgba(199,199,199,1);
+  -moz-box-shadow: -10px 14px 34px 2px rgba(199,199,199,1);
+  box-shadow: -10px 14px 34px 2px rgba(199,199,199,1);
+}
+.projectAutomatio{
+  padding-top:150px;
+}
+.projectAutomatio h5{
+  width:85%;
+}
+.projectWireflow{
+  padding-top:90px;
+  margin-left: -100px
+}
+.projectWireflow h4{
+  float: left;
+  margin-right: 30px;
+}
+.projectWireflow h5{
+  width:90%;
+}
+.projectWekan{
+  margin-top:-200px;
+  float: right;
+}
+.projectWekan img{
+  float: right;
+  width: 93% !important;
+}
+.projectWekanTxt{
+  padding-top:200px;
+
+}
+.projectWekanTxt h5{
+    width:100%!important;
+}
+
+
 /* About */
 
 .rowAbout {
@@ -148,10 +208,12 @@ body {
 .aboutJavascript p {
     color: #a1a3a5;
     font-size: 1.6em;
+    font-family: SegoeRegular;
 }
 .rowAbout h2 {
     color: #444444;
     font-size: 2.6em;
+    font-family: SegoeBold;
 }
 /* CTA */
 
@@ -162,11 +224,16 @@ body {
 }
 .rowCTA h2 {
     font-size: 3.6em;
+    font-family: SegoeExtraLight;
+}
+.rowCTA strong{
+  font-family: SegoeBold;
 }
 .rowCTA p {
     color: #a8a7a7;
     margin-top: 30px;
     font-size: 1.4em;
+    font-family: SegoeRegular;
 }
 .rowCTA .btn {
     border-radius: 2px;
@@ -211,9 +278,11 @@ body {
     font-size: 1.7em;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: SegoeRegular;
 }
 .teamBoxInner h4 {
     font-size: 3em;
+    font-family: SegoeRegular;
 }
 .communityBlockInner {
     font-weight: bold;
@@ -229,6 +298,7 @@ body {
 }
 .communityBlockInner p {
     opacity: 0.8;
+    font-family: SegoeBold;
 }
 .communityBlock .purple {
     display: block;
@@ -248,6 +318,7 @@ body {
     border: 2px solid #fff;
     font-weight: bold;
     font-size: 0.4em;
+    font-family: SegoeRegular;
 }
 /* Feedback */
 
@@ -256,12 +327,14 @@ body {
     font-size: 4em;
     font-weight: bold;
     margin-top: 40px;
+    font-family: SegoeBold;
 }
 .rowFeedback h3 {
     color: #adadad;
     margin-top: 30px;
     font-size: 2em;
     line-height: 1.4em;
+    font-family: SegoeRegular;
 }
 .rowFeedback .details {
     display: block;
@@ -288,6 +361,9 @@ body {
     display: block;
     float: left;
 }
+.rowFeedback .details li .media-left a img{
+  margin-right:20px;
+}
 .rowFeedback .details li:nth-child(odd) {
     margin-left: 15%;
 }
@@ -299,14 +375,17 @@ body {
     font-size: 2em;
     font-style: italic;
     line-height: initial;
+    font-family: SegoeRegular;
 }
 .rowFeedback .details li h4 {
     color: #333;
     font-size: 2.4em;
     margin-bottom: 20px;
+    font-family: SegoeRegular;
 }
 .rowFeedback .details li h5 {
     margin-bottom: 20px;
+    font-family: SegoeRegular;
 }
 .rowFeedback .details li h5 span:first-child {
     color: #999;
@@ -323,12 +402,17 @@ body {
     color: #444444;
     font-size: 3.6em;
     margin-top: 60px;
+    font-family: SegoeExtraLight;
+}
+.rowTech h2 strong {
+  font-family: SegoeBold;
 }
 .rowTech h3 {
     color: #adadad;
     margin-top: 30px;
     font-size: 1.4em;
     line-height: 1.4em;
+    font-family: SegoeRegular;
 }
 .rowTech ul {
     display: block;
@@ -341,10 +425,10 @@ body {
 .rowTech li {
     padding: 30px 0px;
     margin-top: 0;
-    padding-right: 100px;
+    padding-right: 15px;
 }
 .rowTech li:nth-child(2n+2) {
-    padding-left: 100px;
+    padding-left: 15px;
     float: right;
     padding-right: 0;
 }
@@ -356,10 +440,11 @@ body {
 .techCardInner .media-body div:first-child {
     float: left;
     display: block;
-    width: calc(100% - 200px);
+    width: calc(100% - 140px);
+padding-top: 30px;
 }
 .techCardInner .media-left {
-    padding-right: 30px;
+    padding-right: 20px;
     padding-left: 30px;
 }
 .techCardInner .media-body div:last-child {
@@ -369,6 +454,12 @@ body {
     padding-top: 5px;
     margin-right: 15px;
 }
+.techCardInner .media-left a{
+  display: block;
+      width: 250px;
+      overflow: hidden;
+      border-right: 1px solid #f0f1f1;
+}
 .techGithubLogo {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -376,11 +467,11 @@ body {
 .githubStars {
     font-size: 1.4em;
     display: block;
-    font-weight: bold;
     width: auto;
     float: right;
     margin-right: 10px;
     margin-top: -2px;
+    font-family: SegoeBold;
 }
 .media-body,
 .media-left,
@@ -390,10 +481,12 @@ body {
 .media-heading strong {
     color: #2d2c2c;
     font-size: 1.2em;
+    font-family: SegoeBold;
 }
 .media-heading p {
     color: #c6c7c8;
     font-size: 1.1em;
+        font-family: SegoeRegular;
 }
 /* Socials */
 
@@ -405,14 +498,15 @@ body {
 }
 .rowSocials h2 {
     color: #444444;
-    font-weight: bold;
     font-size: 4em;
     margin-top: 60px;
     text-transform: capitalize;
+    font-family: SegoeBold;
 }
 .rowSocials h3 {
     color: #95989a;
     line-height: 1.4em;
+    font-family: SegoeRegular;
 }
 .rowSocials ul {
     display: block;
@@ -447,10 +541,12 @@ body {
     margin-top: 20px;
     display: block;
     text-transform: uppercase;
+    font-family: SegoeBold;
 }
 .instaDescription {
     color: #333333;
     font-weight: bold;
+    font-family: SegoeRegular;
 }
 .instaTags {
     display: block;
@@ -464,6 +560,7 @@ body {
     padding: 5px 10px;
     margin-right: 5px;
     margin-bottom: 40px;
+    font-family: SegoeRegular;
 }
 .instaFollow {
     display: block;
@@ -475,17 +572,19 @@ body {
     width: 50%;
     float: left;
     text-align: center;
+    font-family: SegoeRegular;
 }
 .instaFollowers .no,
 .instaFollowing .no {
-    font-weight: bold;
     font-size: 3em;
     color: #353d4d;
+    font-family: SegoeBold;
 }
 .instaFollowers .txt,
 .instaFollowing .txt {
     font-size: 1.3em;
     color: #353d4d;
+    font-family: SegoeRegular;
 }
 /* Footer */
 
@@ -498,10 +597,89 @@ body {
     color: #444444;
     margin-top: 80px;
     font-size: 3.6em;
+    font-family: SegoeExtraLight;
+}
+
+.rowFooter h2 strong{
+  font-family: SegoeBold;
 }
 .rowFooter h3 {
     color: #929292;
     font-size: 1.4em;
     margin-top: 40px;
     margin-bottom: 40px;
+    font-family: SegoeRegular;
+}
+
+/* Responsive */
+
+@media (max-width:1900px) {
+  .rowProjects h4{
+    font-size: 3em;
+  }
+  .rowProjects h5{
+    font-size: 1.4em;
+  }
+  .rowProjects img{
+    width:100%;
+  }
+  .techCardInner .media-left a {
+    display: block;
+    width: 200px;
+  }
+  .techCardInner .media-left a img{
+    width: 90%;
+  }
+}
+
+@media (max-width:1760px) {
+  .rowHeader h1{
+    font-size: 3.2em;
+  }
+  .rowHeader h2{
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width:1500px) {
+  .techCardInner .media-left a {
+    display: block;
+    width: 120px;
+  }
+}
+
+@media (max-width:1400px){
+  .techCardInner .media-body{
+    display: none!important;
+  }
+  .rowTech li {
+    width: 25%;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .rowTech li:nth-child(2n+2) {
+      padding-left: 15px;
+      float: right;
+      padding-right: 15px;
+  }
+  .techCardInner .media-left a{
+    width: auto;
+border: none;
+vertical-align: middle;
+display: table-cell;
+  }
+  .techCardInner .media-left{
+    width: 100%;
+height: 100%;
+display: table;
+  }
+}
+
+@media (max-width:900px) {
+  .container{
+    width:100%!important;
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+  }
 }
