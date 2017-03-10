@@ -29,6 +29,7 @@ export default class WizardForm extends Component {
         if (this.props.currentStep === 5) {
             API.registerAsClient().catch(err => console.log(err));
         } else {
+            console.log(ClientSignupStore.type);
             this.props.nextStep();
         }
     }
@@ -52,6 +53,27 @@ export default class WizardForm extends Component {
             return '';
         }
     }
+
+    renderTypeRow({ id, title, description, icon }) {
+
+        return (
+            <div className="device-type-card" onClick={this.updateTypeCard.bind(this, id)}>
+                <div className="form radiobox-container">
+                    <input type="radio" name="device-type" checked={this.checkType(id)}/>
+                </div>
+                <div className="detail-container">
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                </div>
+                <div className="icon-container">
+                    <div className="image-container pull-right">
+                        <img className="" src={icon}/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     render() {
         var buttonText = this.props.currentStep == 5
             ? 'finish'
@@ -71,6 +93,14 @@ export default class WizardForm extends Component {
                             <div className="form col-md-6">
                                 <label className="form-heading">Last Name</label>
                                 <input type="text" value={ClientSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => ClientSignupStore.setLastName(event.target.value)}/>
+                            </div>
+                            <div className="form col-md-6">
+                                <label className="form-heading">Username</label>
+                                <input type="text" value={ClientSignupStore.username} placeholder="johny" ref="username" onChange={(event) => ClientSignupStore.setUsername(event.target.value)}/>
+                            </div>
+                            <div className="form col-md-6">
+                                <label className="form-heading">Password</label>
+                                <input type="password" value={ClientSignupStore.password} placeholder="password" ref="password" onChange={(event) => ClientSignupStore.setPassword(event.target.value)}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Email</label>
@@ -92,34 +122,12 @@ export default class WizardForm extends Component {
                     <div className={this.getClass("container", 3)}>
                         <div className="row">
                             <div className="col-md-12">
-                                <div className="device-type-card" onClick={this.updateTypeCard.bind(this,'website')}>
-                                    <div className="form radiobox-container">
-                                        <input type="radio" name="device-type" checked={this.checkType('website')}/>
-                                    </div>
-                                    <div className="detail-container">
-                                        <h1>Website / Web App</h1>
-                                        <p>Build a personal or company website, blog, online store, or social community app, game, etc.</p>
-                                    </div>
-                                    <div className="icon-container">
-                                        <div className="image-container pull-right">
-                                            <img className="" src={require('../../../public/img/clientsAssets/listIcon.png')}/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="device-type-card" onClick={this.updateTypeCard.bind(this,'mobile')}>
-                                    <div className="form radiobox-container">
-                                        <input type="radio" name="device-type" checked={this.checkType('mobile')}/>
-                                    </div>
-                                    <div className="detail-container">
-                                        <h1>Mobile App</h1>
-                                        <p>Android & IOS mobile apps. You have idea for next mobile app, let us hear about it.</p>
-                                    </div>
-                                    <div className="icon-container">
-                                        <div className="image-container pull-right">
-                                            <img className="" src={require('../../../public/img/clientsAssets/mobileIcon.png')}/>
-                                        </div>
-                                    </div>
-                                </div>
+                                {
+                                    ClientSignupStore.subcategories.map((arg) => {
+                                        console.log(arg);
+                                        return this.renderTypeRow({ ...arg });
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

@@ -26,6 +26,57 @@ class ClientSignupStore {
     MARKETING: 'marketing',
   };
 
+  @observable TYPES = {
+    WEB_MOBILE_APP: [
+      {
+        id: 'website',
+        title: 'Website / Web App',
+        description: 'Build a personal or company website, blog, online store, or social community app, game, etc.',
+        icon: require('../../public/img/clientsAssets/listIcon.png'),
+      },
+      {
+        id: 'mobile',
+        title: 'Mobile App',
+        description: 'Android & IOS mobile apps. You have idea for next mobile app, let us hear about it.',
+        icon: require('../../public/img/clientsAssets/mobileIcon.png'),
+      },
+    ],
+    BRANDING_DESIGN: [
+      {
+        id: 'ui-ux',
+        title: 'UI / UX',
+        description: 'UI/ UX DESCRIPTION',
+      },
+      {
+        id: 'logo',
+        title: 'Logo',
+        description: 'LOGO DESCRIPTION',
+      },
+      {
+        id: 'illustration',
+        title: 'Illustration',
+        description: 'ILLUSTRATION DESCRIPTION',
+      },
+    ],
+    MARKETING: [
+      {
+        id: 'seo',
+        title: 'SEO',
+        description: 'SEO DESCRIPTION',
+      },
+      {
+        id: 'social-growth',
+        title: 'Social Growth',
+        description: 'SOCIAL GROWTH DESCRIPTION',
+      },
+      {
+        id: 'content',
+        title: 'Content',
+        description: 'CONTENT DESCRIPTION',
+      },
+    ],
+  };
+
   constructor() {
     const self = this;
 
@@ -166,6 +217,21 @@ class ClientSignupStore {
 
     if (typeof val === 'string') {
       self.endDate = val;
+    }
+  }
+
+  @computed get subcategories() {
+    const self = this;
+
+    switch (self.category) {
+      case self.CATEGORIES.WEB_MOBILE_APP:
+        return self.TYPES.WEB_MOBILE_APP;
+      case self.CATEGORIES.BRANDING_DESIGN:
+        return self.TYPES.BRANDING_DESIGN;
+      case self.CATEGORIES.MARKETING:
+        return self.TYPES.MARKETING;
+      default:
+        return [];
     }
   }
 

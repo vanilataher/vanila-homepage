@@ -17,8 +17,6 @@ class ApiClient {
         method: 'POST',
         body: JSON.stringify({
           ...ClientSignupStore.requestBody,
-          username: 'test_username_vanile',
-          password: 'testpassword',
         }),
       })
         .then(response => response.json())
