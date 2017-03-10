@@ -22,11 +22,11 @@ const ProjectEach = (props) => {
 
   const projectEach = projectsInfo.map( ( projectEach, index ) => {
     return (
-      <div className="projectBox" key={index}>
+      <li className="projectBox" key={index}>
           <h4 className="example">{projectEach.title}</h4>
           <h5>{projectEach.description}</h5>
           <img src={projectEach.photo}/>
-      </div>
+      </li>
       );
       })
 

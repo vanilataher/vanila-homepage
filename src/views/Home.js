@@ -113,13 +113,6 @@ export default class App extends Component {
         scale: 1
       },80);
 
-      sr.reveal('.enterRight-f', {
-        origin: 'right',
-        distance: '100%',
-        duration: 1000,
-        scale: 1
-      });
-
       sr.reveal('.teamBoxReveal',  {
         duration: 1000,
         scale: 0.1
@@ -132,13 +125,6 @@ export default class App extends Component {
         scale: 1
       },80);
 
-      sr.reveal('.enterRight-t', {
-        origin: 'right',
-        distance: '100%',
-        duration: 1000,
-        scale: 1
-      });
-
       sr.reveal('.techBoxReveal',  {
         origin: 'left',
         distance: '100%',
@@ -146,13 +132,50 @@ export default class App extends Component {
         scale: 0.5,
         delay:  500
       },250);
+
+      sr.reveal('.enterLeft-social', {
+        origin: 'left',
+        distance: '100%',
+        duration: 1000,
+        scale: 1
+      },80);
+
+      sr.reveal('.socialBoxReveal',  {
+        duration: 1000,
+        scale: 0.1
+      },250);
+
+      sr.reveal('.enterFooter', {
+        duration: 1000
+      },80);
+
+      sr.reveal('.enterProjectLeft', {
+        origin: 'left',
+        distance: '100%',
+        duration: 1000,
+        scale: 1
+      },80);
+      sr.reveal('.enterProjectRight', {
+        origin: 'right',
+        distance: '100%',
+        duration: 1000,
+        scale: 1,
+        delay:800
+      },80);
+      sr.reveal('.enterProjectBottom', {
+        origin: 'bottom',
+        distance: '100%',
+        duration: 1000,
+        scale: 1,
+        delay:400
+      },80);
     }
     render() {
         return (
             <div className="mainWrapperInner">
               <Header />
               <About />
-              {/*<Projects />*/}
+              <Projects />
               <CTA />
               <Team />
               <Feedback />
