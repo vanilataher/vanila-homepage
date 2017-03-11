@@ -8,7 +8,6 @@ export default class Dropdown extends Component {
     }
     componentDidMount() {
         $(`#${this.props.id}`).select2({placeholder: this.props.placeholder, allowClear: false}).on('change', (e) => {
-            console.log(e.target.value);
             this.props.callback(e.target.value);
         });
     }
