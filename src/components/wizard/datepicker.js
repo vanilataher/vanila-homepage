@@ -13,6 +13,14 @@ const overlayStyle = {
 };
 
 export default class DatePicker extends Component {
+    static propTypes = {
+        onChange: React.PropTypes.func,
+    }
+
+    static defaultProps = {
+        onChange: () => {},
+    }
+
     constructor(props) {
         super(props);
         this.handleDayClick = this.handleDayClick.bind(this);
@@ -63,8 +71,13 @@ export default class DatePicker extends Component {
     }
 
     handleInputChange(e) {
+        const self = this;
+
         const {value} = e.target;
         const momentDay = moment(value, 'L', true);
+
+        self.props.onChange(value);
+
         if (momentDay.isValid()) {
             this.setState({
                 selectedDay: momentDay.toDate(),
@@ -78,8 +91,10 @@ export default class DatePicker extends Component {
     }
 
     handleDayClick(day) {
-        this.setState({value: moment(day).format('L'), selectedDay: day, showOverlay: false});
-        this.input.blur();
+        const self = this;
+        self.props.onChange(moment(day).format('L')); 
+        self.setState({value: moment(day).format('L'), selectedDay: day, showOverlay: false});
+        self.input.blur();
     }
     render() {
         return (
