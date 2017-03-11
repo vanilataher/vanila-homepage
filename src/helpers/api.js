@@ -31,6 +31,11 @@ class ApiClient {
         .catch(err => reject(err));
     });
   }
+
+
+  registerAsFreelancer() {
+    console.log('TO DO: IMPLEMENT THIS');
+  }
 }
 
 const apiClientSingleton = new ApiClient();
