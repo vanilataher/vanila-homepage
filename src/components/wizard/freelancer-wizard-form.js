@@ -15,12 +15,16 @@ export default class WizardForm extends Component {
     constructor() {
         super();
         this.state = {
-            category:'',
-            type:'',
-            country:['Pakistan','Serbia','United States','France','Germany','United Arab Emirates'],
-            role:['Frontend Developer','Backend Developer','Designer'],
-            languages:['React JS','Angular JS','Javascript','JQuery','Meteor','React JS','Angular JS','Javascript','JQuery','Meteor']
+            //category:'',
+            //type:'',
+            //country:['Pakistan','Serbia','United States','France','Germany','United Arab Emirates'],
+            //role:['Frontend Developer','Backend Developer','Designer'],
+            //languages:['React JS','Angular JS','Javascript','JQuery','Meteor','React JS','Angular JS','Javascript','JQuery','Meteor']
         }
+
+        FreelancerSignupStore.hydrateCountries();
+        FreelancerSignupStore.hydrateSkills();
+        FreelancerSignupStore.hydrateTitles();
     }
     getClass(current, step) {
         if (step == this.props.currentStep) {
@@ -31,6 +35,11 @@ export default class WizardForm extends Component {
     }
     nextStep() {
         console.log(FreelancerSignupStore.requestBody);
+
+        if (this.props.currentStep === 5) {
+            API.registerAsFreelancer();
+        }
+
         this.props.nextStep();
     }
     updateBudget() {

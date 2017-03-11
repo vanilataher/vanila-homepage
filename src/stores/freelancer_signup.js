@@ -29,10 +29,6 @@ class FreelancerSignupStore {
   constructor() {
     const self = this;
 
-    self.hydrateCountries();
-    self.hydrateSkills();
-    self.hydrateTitles();
-
     self.toggleSkills = self.toggleSkills.bind(self);
     self.setTitle = self.setTitle.bind(self);
     self.setCountry = self.setCountry.bind(self);
