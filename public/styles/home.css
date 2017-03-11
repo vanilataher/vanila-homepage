@@ -343,7 +343,7 @@ font-family: SegoeBold;
     background-image: url("../../public/img/homeAssets/feedbackBg.png");
     background-position: -700px 0px;
     background-size: initial;
-    padding-bottom: 350px;
+    padding-bottom: 150px;
 }
 .rowFeedback .details li {
     border: 2px solid #ececec;
@@ -645,6 +645,12 @@ padding-top: 30px;
     display: block;
     width: 120px;
   }
+
+  .aboutJavascript img,
+  .aboutAppDev img,
+  .aboutWebDesign img{
+    width:80%;
+  }
 }
 
 @media (max-width:1400px){
@@ -664,14 +670,14 @@ padding-top: 30px;
   }
   .techCardInner .media-left a{
     width: auto;
-border: none;
-vertical-align: middle;
-display: table-cell;
+    border: none;
+    vertical-align: middle;
+    display: table-cell;
   }
   .techCardInner .media-left{
     width: 100%;
-height: 100%;
-display: table;
+    height: 100%;
+    display: table;
   }
 }
 
