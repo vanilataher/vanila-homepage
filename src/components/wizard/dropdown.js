@@ -7,21 +7,31 @@ export default class Dropdown extends Component {
         super()
     }
     componentDidMount(){
-        $('.searchable-dropdown').select2({
+        /*$('.searchable-dropdown').select2({
             placeholder: this.props.placeholder,
             allowClear: false
-        });
+        });*/
     }
-    updateValue(){
-        this.props.callback();
+    updateValue(event) {
+        this.props.callback(event.target.value);
     }
     render() {
         return (
-            <select className="form-control searchable-dropdown" onChange={this.updateValue.bind(this)} multiple={this.props.multiple} defaultValue={this.props.default}>
+            <select value={this.props.value} className="form-control searchable-dropdown" onChange={this.updateValue.bind(this)} multiple={this.props.multiple} defaultValue={this.props.default}>
               {
-                  this.props.value.map(function(data, index) {
+                  this.props.values.map(function(data, index) {
+                      let id, name;
+
+                      if (typeof data === 'string') {
+                          id = data;
+                          name = data;
+                      } else {
+                          id = data.id;
+                          name = data.name;
+                      }
+
                       return (
-                          <option key={index} value={data}>{data}</option>
+                          <option key={index} value={id}>{name}</option>
                       )
                   })
               }

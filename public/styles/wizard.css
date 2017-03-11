@@ -73,6 +73,7 @@
           color: #95989A; }
         .wizard-container .left-container .wizard-form .form input[type="email"],
         .wizard-container .left-container .wizard-form .form input[type="password"],
+        .wizard-container .left-container .wizard-form .form input[type="number"],
         .wizard-container .left-container .wizard-form .form input[type="text"] {
           width: 100%;
           padding: 15px 20px;
