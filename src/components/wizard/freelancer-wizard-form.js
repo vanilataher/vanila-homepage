@@ -112,7 +112,7 @@ export default class WizardForm extends Component {
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Country</label>
-                                <SearchableDropDown value={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
+                                <SearchableDropDown id="country-dropdown" value={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">City</label>
@@ -124,11 +124,11 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Select your Title</label>
-                                <SearchableDropDown value={FreelancerSignupStore.title} values={FreelancerSignupStore.TITLES}  multiple={false} callback={FreelancerSignupStore.setTitle}/>
+                                <SearchableDropDown id="title-dropdown" value={FreelancerSignupStore.title} values={FreelancerSignupStore.TITLES}  multiple={false} callback={FreelancerSignupStore.setTitle}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Add your skills</label>
-                                <SearchableDropDown value={FreelancerSignupStore.skills} values={FreelancerSignupStore.SKILLS} placeholder="Example: Javascript" multiple={true} callback={FreelancerSignupStore.toggleSkills}/>
+                                <SearchableDropDown id="skills-dropdown" value={FreelancerSignupStore.skills} values={FreelancerSignupStore.SKILLS} placeholder="Example: Javascript" multiple={true} callback={FreelancerSignupStore.toggleSkills}/>
                             </div>
                         </div>
                     </div>
