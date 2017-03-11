@@ -4,7 +4,7 @@ class ApiClient {
   constructor() {
     const self = this;
 
-    self.BASE_URL = 'http://localhost:1200';
+    self.BASE_URL = 'http://159.203.97.116:7000';
 
     self.registerAsClient = self.registerAsClient.bind(self);
   }
