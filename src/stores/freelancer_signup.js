@@ -20,7 +20,7 @@ class FreelancerSignupStore {
   @observable hourly = null;
   @observable salary = null;
   @observable github = null;
-  @observable salaryType = null;
+  @observable salaryType = 'fulltime';
 
   @observable COUNTRIES = [];
   @observable TITLES = [];
@@ -32,6 +32,10 @@ class FreelancerSignupStore {
     self.hydrateCountries();
     self.hydrateSkills();
     self.hydrateTitles();
+
+    self.toggleSkills = self.toggleSkills.bind(self);
+    self.setTitle = self.setTitle.bind(self);
+    self.setCountry = self.setCountry.bind(self);
   }
 
   @action hydrateCountries() {
@@ -42,6 +46,7 @@ class FreelancerSignupStore {
 
       if (countries) {
         self.COUNTRIES = countries;
+        self.country = self.COUNTRIES[0].id;
       }
 
       console.log('Successfully hydrated countries.');
@@ -70,6 +75,7 @@ class FreelancerSignupStore {
 
       if (titles) {
         self.TITLES = titles;
+        self.title = self.TITLES[0].id;
       }
 
       console.log('Successfully hydrated titles.');
@@ -77,55 +83,138 @@ class FreelancerSignupStore {
   }
 
   @action setUsername(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.username = val;
+    }
   }
 
   @action setPassword(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.password = val;
+    }
   }
 
   @action setFirstName(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.firstName = val;
+    }
   }
 
   @action setLastName(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.lastName = val;
+    }
   }
 
   @action setEmail(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.email = val;
+    }
   }
 
   @action setCountry(val) {
+    const self = this;
+    const foundElement = self.COUNTRIES.find(element => element.id === val);
 
+    if (foundElement !== undefined) {
+      self.country = foundElement.id;
+    }
   }
 
   @action setCity(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.city = val;
+    }
   }
 
   @action setTitle(val) {
+    const self = this;
+    const foundElement = self.TITLES.find(element => element.id === val);
 
+    if (foundElement !== undefined) {
+      self.title = foundElement.id;
+    }
   }
 
   @action toggleSkills(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      const existingElementIndex = self.skills.indexOf(val);
+
+      if (existingElementIndex !== -1) {
+        self.skills = self.skills.splice(existingElementIndex, 1);
+      } else {
+        const foundElement = self.SKILLS.find(element => element.id === val);
+
+        if (foundElement !== undefined) {
+          self.skills.push(val);
+        }
+      }
+    }
   }
 
   @action setHourlyRate(val) {
+    const self = this;
 
+    let valNumber;
+
+    if (typeof val === 'string') {
+      if (val === '') {
+        valNumber = 0;
+        self.hourly = valNumber;
+      } else {
+        valNumber = parseInt(val);
+
+        if (typeof valNumber === 'number' && valNumber >= 0) {
+          self.hourly = valNumber;
+        }
+      }
+    }
   }
 
   @action setSalary(val) {
+    const self = this;
+    let valNumber;
 
+    if (typeof val === 'string') {
+      if (val === '') {
+        valNumber = 0;
+        self.salary = valNumber;
+      } else {
+        valNumber = parseInt(val);
+
+        if (typeof valNumber === 'number' && valNumber >= 0) {
+          self.salary = valNumber;
+        }
+      }
+    }
+
+    console.log(self.salary);
   }
 
   @action setSalaryType(val) {
-    
+    // TODO: Should we implement this?
   }
 
   @action setGithubUsername(val) {
+    const self = this;
 
+    if (typeof val === 'string') {
+      self.github = val;
+    }
   }
 
   @computed get requestBody() {

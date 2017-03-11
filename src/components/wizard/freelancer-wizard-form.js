@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
+
+import {observer} from 'mobx-react';
+
 import Card from './wizard-card';
 import Slider from './slider';
 import DatePicker from './datepicker';
 import SearchableDropDown from './dropdown';
 
+import FreelancerSignupStore from '../../stores/freelancer_signup';
+import API from '../../helpers/api';
+
+@observer
 export default class WizardForm extends Component {
     constructor() {
         super();
@@ -23,6 +30,7 @@ export default class WizardForm extends Component {
         }
     }
     nextStep() {
+        console.log(FreelancerSignupStore.requestBody);
         this.props.nextStep();
     }
     updateBudget() {
@@ -75,15 +83,15 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading">First Name</label>
-                                <input type="text" placeholder="John" ref="firstname"/>
+                                <input type="text" value={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
-                                <label className="form-heading">First Name</label>
-                                <input type="text" placeholder="Smith" ref="lastname"/>
+                                <label className="form-heading">Last Name</label>
+                                <input type="text" value={FreelancerSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => FreelancerSignupStore.setLastName(event.target.value)}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Email</label>
-                                <input type="email" placeholder="john@example.com" ref="email"/>
+                                <input type="email" value={FreelancerSignupStore.email} placeholder="john@example.com" ref="email" onChange={(event) => FreelancerSignupStore.setEmail(event.target.value)}/>
                             </div>
                         </div>
                     </div>
@@ -95,11 +103,11 @@ export default class WizardForm extends Component {
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Country</label>
-                                <SearchableDropDown value={this.state.country} placeholder="Example: France" multiple={false}/>
+                                <SearchableDropDown value={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">City</label>
-                                <input type="text" placeholder="Paris" ref="city"/>
+                                <input type="text" value={FreelancerSignupStore.city} placeholder="Paris" onChange={(event) => FreelancerSignupStore.setCity(event.target.value)}/>
                             </div>
                         </div>
                     </div>
@@ -107,11 +115,11 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Select your Title</label>
-                                <SearchableDropDown value={this.state.role}  multiple={false}/>
+                                <SearchableDropDown value={FreelancerSignupStore.title} values={FreelancerSignupStore.TITLES}  multiple={false} callback={FreelancerSignupStore.setTitle}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Add your skills</label>
-                                <SearchableDropDown value={this.state.languages} placeholder="Example: Javascript" multiple={true}/>
+                                <SearchableDropDown value={FreelancerSignupStore.skills} values={FreelancerSignupStore.SKILLS} placeholder="Example: Javascript" multiple={true} callback={FreelancerSignupStore.toggleSkills}/>
                             </div>
                         </div>
                     </div>
@@ -119,15 +127,15 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-5">
                                 <label className="form-heading">Your Rates</label>
-                                <input type="text" placeholder="$20 / hr" ref="rate"/>
+                                <input type="number" min="0" value={FreelancerSignupStore.hourly} placeholder="$20 / hr" onChange={(event) => FreelancerSignupStore.setHourlyRate(event.target.value)}/>
                             </div>
                             <div className="form col-md-7">
                                 <label className="form-heading">Monthly Salary</label>
-                                <input type="text" placeholder="$2000" ref="salary"/>
+                                <input type="number" min="0" value={FreelancerSignupStore.salary} placeholder="$2000" onChange={(event) => FreelancerSignupStore.setSalary(event.target.value)}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Github Username</label>
-                                <input type="text" placeholder="Example: johnsmith" ref="github"/>
+                                <input type="text" value={FreelancerSignupStore.github} placeholder="Example: johnsmith" onChange={(event) => FreelancerSignupStore.setGithubUsername(event.target.value)}/>
                             </div>
                         </div>
                     </div>
