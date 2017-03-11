@@ -4,6 +4,8 @@ import {
   computed,
 } from 'mobx';
 
+import API from '../helpers/api';
+
 class FreelancerSignupStore {
   // TODO: Select default vals for city and title
   @observable username = null;
@@ -19,6 +21,60 @@ class FreelancerSignupStore {
   @observable salary = null;
   @observable github = null;
   @observable salaryType = null;
+
+  @observable COUNTRIES = [];
+  @observable TITLES = [];
+  @observable SKILLS = [];
+
+  constructor() {
+    const self = this;
+
+    self.hydrateCountries();
+    self.hydrateSkills();
+    self.hydrateTitles();
+  }
+
+  @action hydrateCountries() {
+    const self = this;
+
+    API.retrieveCountries().then((response) => {
+      const { countries } = response;
+
+      if (countries) {
+        self.COUNTRIES = countries;
+      }
+
+      console.log('Successfully hydrated countries.');
+    }).catch(err => console.log(err));
+  }
+
+  @action hydrateSkills() {
+    const self = this;
+
+    API.retrieveSkillsForFreelancer().then((response) => {
+      const { skills } = response;
+
+      if (skills) {
+        self.SKILLS = skills;
+      }
+
+      console.log('Successfully hydrated skills.');
+    }).catch(err => console.log(err));
+  }
+
+  @action hydrateTitles() {
+    const self = this;
+
+    API.retrieveTitlesForFreelancer().then((response) => {
+      const { titles } = response;
+
+      if (titles) {
+        self.TITLES = titles;
+      }
+
+      console.log('Successfully hydrated titles.');
+    }).catch(err => console.log(err));
+  }
 
   @action setUsername(val) {
 
@@ -73,21 +129,6 @@ class FreelancerSignupStore {
   }
 
   @computed get requestBody() {
-    /*
-      "first_name": "Tony",
-      "last_name": "Stark",
-      "username": "oldbastard",
-      "password": "oldiesbutgoldies",
-      "email": "vietkong@darpa.mil",
-      "title": "backend-dev",
-      "skills": ["react-native", "javascript", "node"],
-      "country": "japan",
-      "city": "nagasaki",
-      "rate_per_hour": 20,
-      "salary": 2000,
-      "salary_type": "full-time",
-      "github": "htkibar"
-    */
     const self = this;
 
     return {
@@ -107,3 +148,6 @@ class FreelancerSignupStore {
     };
   }
 }
+
+const freelancerSignupStoreSingleton = new FreelancerSignupStore();
+export default freelancerSignupStoreSingleton;
