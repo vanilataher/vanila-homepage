@@ -98,6 +98,14 @@ export default class WizardForm extends Component {
                                 <label className="form-heading">Last Name</label>
                                 <input type="text" value={FreelancerSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => FreelancerSignupStore.setLastName(event.target.value)}/>
                             </div>
+                            <div className="form col-md-6">
+                                <label className="form-heading">Username</label>
+                                <input type="text" value={FreelancerSignupStore.username} placeholder="johny" onChange={(event) => FreelancerSignupStore.setUsername(event.target.value)}/>
+                            </div>
+                            <div className="form col-md-6">
+                                <label className="form-heading">Password</label>
+                                <input type="password" value={FreelancerSignupStore.password} placeholder="password" onChange={(event) => FreelancerSignupStore.setPassword(event.target.value)}/>
+                            </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Email</label>
                                 <input type="email" value={FreelancerSignupStore.email} placeholder="john@example.com" ref="email" onChange={(event) => FreelancerSignupStore.setEmail(event.target.value)}/>

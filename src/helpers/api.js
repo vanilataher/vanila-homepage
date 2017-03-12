@@ -46,8 +46,6 @@ class ApiClient {
         method: 'POST',
         body: JSON.stringify({
           ...FreelancerSignupStore.requestBody,
-          username: 'testy_usernamey_freelancey',
-          password: 'testpassword',
         }),
       })
         .then(response => response.json())
