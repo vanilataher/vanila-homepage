@@ -37,7 +37,9 @@ export default class WizardForm extends Component {
         console.log(FreelancerSignupStore.requestBody);
 
         if (this.props.currentStep === 5) {
-            API.registerAsFreelancer();
+            API.registerAsFreelancer().then(() => {
+                window.location.href = 'http://159.203.97.116/';
+            });
         }
 
         if (this.props.currentStep === 2) {
