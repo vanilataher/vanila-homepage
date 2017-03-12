@@ -4,6 +4,8 @@ import {
   computed,
 } from 'mobx';
 
+import moment from 'moment';
+
 class ClientSignupStore {
   @observable firstName = null;
   @observable lastName = null;
@@ -206,18 +208,14 @@ class ClientSignupStore {
     // TODO: How to handle date?
     const self = this;
 
-    if (typeof val === 'string') {
-      self.startDate = val;
-    }
+    self.startDate = val;
   }
 
   @action setEndDate(val) {
     // TODO: How to handle date?
     const self = this;
 
-    if (typeof val === 'string') {
-      self.endDate = val;
-    }
+    self.endDate = val;
   }
 
   @computed get subcategories() {
@@ -244,8 +242,8 @@ class ClientSignupStore {
     };
 
     const dateRange = {
-      start: self.startDate,
-      end: self.endDate,
+      start: moment(self.startDate).format('L'),
+      end: moment(self.endDate).format('L'),
     };
 
     return {
