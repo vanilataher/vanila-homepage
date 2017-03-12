@@ -40,7 +40,17 @@ export default class WizardForm extends Component {
             API.registerAsFreelancer();
         }
 
-        this.props.nextStep();
+        if (this.props.currentStep === 2) {
+            API.retrieveUser({ username: FreelancerSignupStore.username })
+                .then((data) => { FreelancerSignupStore.setUsername(''); })
+                .catch((data) => {
+                    if (data.err === undefined) {
+                        this.props.nextStep();
+                    }
+                });
+        } else {
+            this.props.nextStep();
+        }
     }
     updateBudget() {
 
