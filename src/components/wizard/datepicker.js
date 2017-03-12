@@ -36,6 +36,13 @@ export default class DatePicker extends Component {
         selectedDay: null
     };
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            value: nextProps.value === null ? null : moment(nextProps.value).format('L'),
+            selectedDay: nextProps.value
+        });
+    }
+
     componentWillUnmount() {
         clearTimeout(this.clickTimeout);
     }
@@ -92,7 +99,7 @@ export default class DatePicker extends Component {
 
     handleDayClick(day) {
         const self = this;
-        self.props.onChange(moment(day).format('L')); 
+        self.props.onChange(day); 
         self.setState({value: moment(day).format('L'), selectedDay: day, showOverlay: false});
         self.input.blur();
     }
