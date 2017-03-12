@@ -27,7 +27,9 @@ export default class WizardForm extends Component {
     }
     nextStep() {
         if (this.props.currentStep === 5) {
-            API.registerAsClient().catch(err => console.log(err));
+            API.registerAsClient().then(() => {
+                window.location.href = 'http://159.203.97.116/';
+            }).catch(err => console.log(err));
         } else {
             console.log(ClientSignupStore.type);
             this.props.nextStep();
