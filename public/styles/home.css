@@ -686,13 +686,7 @@ padding-right: 10px;
     display: block;
     width: 120px;
   }
-<<<<<<< HEAD
 
-  .aboutJavascript img,
-  .aboutAppDev img,
-  .aboutWebDesign img{
-    width:80%;
-=======
   .rowAbout br{
     display: none;
   }
