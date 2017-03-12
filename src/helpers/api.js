@@ -12,6 +12,7 @@ class ApiClient {
     self.retrieveSkillsForFreelancer = self.retrieveSkillsForFreelancer.bind(self);
     self.retrieveTitlesForFreelancer = self.retrieveTitlesForFreelancer.bind(self);
     self.retrieveCountries = self.retrieveCountries.bind(self);
+    self.retrieveUser = self.retrieveUser.bind(self);
   }
 
   registerAsClient() {
@@ -104,6 +105,29 @@ class ApiClient {
         .then((responseJson) => {
           console.log(responseJson);
           resolve(responseJson);
+        })
+        .catch(err => reject(err));
+    });
+  }
+
+  retrieveUser({ username }) {
+    const self = this;
+
+    return new Promise((resolve, reject) => {
+      fetch(`${self.BASE_URL}/user`, {
+        method: 'POST',
+        body: JSON.stringify({
+          username,
+        }),
+      })
+        .then(response => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          if (responseJson.success) {
+            resolve(responseJson);
+          } else {
+            reject(responseJson);
+          }
         })
         .catch(err => reject(err));
     });
