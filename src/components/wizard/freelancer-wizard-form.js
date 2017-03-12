@@ -98,6 +98,14 @@ export default class WizardForm extends Component {
                                 <label className="form-heading">Last Name</label>
                                 <input type="text" value={FreelancerSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => FreelancerSignupStore.setLastName(event.target.value)}/>
                             </div>
+                            <div className="form col-md-6">
+                                <label className="form-heading">Username</label>
+                                <input type="text" value={FreelancerSignupStore.username} placeholder="johny" onChange={(event) => FreelancerSignupStore.setUsername(event.target.value)}/>
+                            </div>
+                            <div className="form col-md-6">
+                                <label className="form-heading">Password</label>
+                                <input type="password" value={FreelancerSignupStore.password} placeholder="password" onChange={(event) => FreelancerSignupStore.setPassword(event.target.value)}/>
+                            </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Email</label>
                                 <input type="email" value={FreelancerSignupStore.email} placeholder="john@example.com" ref="email" onChange={(event) => FreelancerSignupStore.setEmail(event.target.value)}/>
@@ -112,7 +120,7 @@ export default class WizardForm extends Component {
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Country</label>
-                                <SearchableDropDown value={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
+                                <SearchableDropDown id="country-dropdown" value={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">City</label>
@@ -124,11 +132,11 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Select your Title</label>
-                                <SearchableDropDown value={FreelancerSignupStore.title} values={FreelancerSignupStore.TITLES}  multiple={false} callback={FreelancerSignupStore.setTitle}/>
+                                <SearchableDropDown id="title-dropdown" value={FreelancerSignupStore.title} values={FreelancerSignupStore.TITLES}  multiple={false} callback={FreelancerSignupStore.setTitle}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Add your skills</label>
-                                <SearchableDropDown value={FreelancerSignupStore.skills} values={FreelancerSignupStore.SKILLS} placeholder="Example: Javascript" multiple={true} callback={FreelancerSignupStore.toggleSkills}/>
+                                <SearchableDropDown id="skills-dropdown" value={FreelancerSignupStore.skills} values={FreelancerSignupStore.SKILLS} placeholder="Example: Javascript" multiple={true} callback={FreelancerSignupStore.toggleSkills}/>
                             </div>
                         </div>
                     </div>
