@@ -27,6 +27,7 @@ export default class WizardForm extends Component {
     }
     nextStep() {
         if (this.props.currentStep === 5) {
+            console.log(ClientSignupStore.requestBody);
             API.registerAsClient().then(() => {
                 window.location.href = 'http://159.203.97.116/';
             }).catch(err => console.log(err));
@@ -48,11 +49,11 @@ export default class WizardForm extends Component {
         ClientSignupStore.setType(type);
     }
     checkType(type){
-        if(this.state.type == type){
-            return 'checked';
+        if(ClientSignupStore.type === type){
+            return true;
         }
         else{
-            return '';
+            return false;
         }
     }
 
@@ -150,11 +151,11 @@ export default class WizardForm extends Component {
                             <div className="form col-md-12">
                                 <label className="form-heading">Contract Type</label>
                                 <label className="radio-label">
-                                    <input type="radio" name="contract-type" onChange={() => ClientSignupStore.setContractType('fixed') /* TODO: Make this into an array */}/>
+                                    <input type="radio" checked={ClientSignupStore.contractType === 'fixed'} name="contract-type" onChange={() => ClientSignupStore.setContractType('fixed') /* TODO: Make this into an array */}/>
                                     Fixed
                                 </label>
                                 <label className="radio-label">
-                                    <input type="radio" name="contract-type" onChange={() => ClientSignupStore.setContractType('hourly') /* TODO: Make this into an array */}/>
+                                    <input type="radio" checked={ClientSignupStore.contractType === 'hourly'} name="contract-type" onChange={() => ClientSignupStore.setContractType('hourly') /* TODO: Make this into an array */}/>
                                     Hourly
                                 </label>
                             </div>
@@ -167,10 +168,10 @@ export default class WizardForm extends Component {
                                 <p className="form-subheading">When do you wanna start and end the project</p>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <DatePicker onChange={ClientSignupStore.setStartDate} />
+                                        <DatePicker value={ClientSignupStore.startDate} onChange={ClientSignupStore.setStartDate} />
                                     </div>
                                     <div className="col-md-6">
-                                        <DatePicker onChange={ClientSignupStore.setEndDate} />
+                                        <DatePicker value={ClientSignupStore.endDate} onChange={ClientSignupStore.setEndDate} />
                                     </div>
                                 </div>
                             </div>
