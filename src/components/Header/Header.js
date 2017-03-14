@@ -30,7 +30,7 @@ class Header extends React.Component {
       				Audio not supported.
       			</audio>
               <Link to="/Client">
-                <button id="button" className="btn btn-lg btn-primary btnGetStarted" onClick={this.handleClick}>Get started</button>
+              <button id="button" className="btn btn-lg btn-primary btnGetStarted" onClick={this.handleClick.bind(this)}>Get started</button>
               </Link> or <button className="btn btn-lg btn-default btnWatchVideo">Watch video</button>
             </div>
           </div>
