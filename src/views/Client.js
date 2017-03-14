@@ -3,6 +3,8 @@ import WizardStep from '../components/wizard/wizard-step';
 import WizardForm from '../components/wizard/client-wizard-form';
 import WizardImages from '../components/wizard/client-wizard-images';
 import '../../public/styles/wizard.css'
+
+
 export default class Client extends Component {
     constructor() {
         super();
@@ -10,6 +12,7 @@ export default class Client extends Component {
             currentStep: 1
         }
     }
+
     nextStep(){
         if(this.state.currentStep < 5){
             this.setState({

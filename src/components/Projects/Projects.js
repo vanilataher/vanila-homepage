@@ -18,7 +18,7 @@ class Projects extends React.Component {
           <img className="enterProjectRight" src={require('../../../public/img/homeAssets/wireflow.png')}/>
           </div>
           <div className="col-md-12 projectWekan">
-            <div className="col-md-8">
+            <div className="col-md-8 onlyDesktop">
               <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/wekan.png')}/>
             </div>
             <div className="projectWekanTxt col-md-4">
@@ -28,6 +28,9 @@ class Projects extends React.Component {
                   <br></br>
                   It's real time and you can import your current Trello board to it and have your own self hosted organization board.
               </h5>
+            </div>
+            <div className="col-md-8 onlyMobile">
+              <img className="enterProjectBottom" src={require('../../../public/img/homeAssets/wekan.png')}/>
             </div>
           </div>
         </div>

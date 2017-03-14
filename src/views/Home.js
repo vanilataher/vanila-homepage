@@ -125,7 +125,15 @@ export default class App extends Component {
         scale: 1
       },80);
 
-      sr.reveal('.techBoxReveal',  {
+      sr.reveal('.rowTech li:nth-child(odd)',  {
+        origin: 'right',
+        distance: '100%',
+        duration: 1000,
+        scale: 0.5,
+        delay:  500
+      },250);
+
+      sr.reveal('.rowTech li:nth-child(even)',  {
         origin: 'left',
         distance: '100%',
         duration: 1000,
