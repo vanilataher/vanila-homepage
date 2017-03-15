@@ -33,8 +33,45 @@ export default class WizardForm extends Component {
             return current + ' hidden';
         }
     }
+
+    isNullOrEmpty(val) {
+        return val === null || val.length === 0;
+    }
+
     nextStep() {
         console.log(FreelancerSignupStore.requestBody);
+
+        switch (this.props.currentStep) {
+            case 1:
+                break;
+            case 2:
+                if (this.isNullOrEmpty(FreelancerSignupStore.firstName) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.lastName) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.username) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.password) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.email)) {
+                        return;
+                    }
+                break;
+            case 3:
+                if (this.isNullOrEmpty(FreelancerSignupStore.country) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.city)) {
+                        return;
+                    }
+                break;
+            case 4:
+                if (this.isNullOrEmpty(FreelancerSignupStore.title) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.skills)) {
+                        return;
+                    }
+                break;
+            case 5:
+                if (this.isNullOrEmpty(FreelancerSignupStore.hourly) ||
+                    this.isNullOrEmpty(FreelancerSignupStore.salary)) {
+                        return;
+                    }
+                break;
+        }
 
         if (this.props.currentStep === 5) {
             API.registerAsFreelancer().then(() => {
