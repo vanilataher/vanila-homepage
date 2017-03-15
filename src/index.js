@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, browserHistory} from 'react-router';
 import routes from './config/routes';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Css Files
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';

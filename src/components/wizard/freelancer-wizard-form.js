@@ -141,7 +141,7 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading">First Name</label>
-                                <input type="text" name="fname" autocomplete="given-name" value={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
+                                <input type="text" name="fname" autocomplete="fname" value={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Last Name</label>
