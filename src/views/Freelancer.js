@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import WizardStep from '../components/wizard/wizard-step';
 import WizardForm from '../components/wizard/freelancer-wizard-form';
 import '../../public/styles/wizard.css'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 export default class Client extends Component {
     constructor() {
         super();
@@ -18,6 +20,11 @@ export default class Client extends Component {
     }
     render() {
         return (
+          <ReactCSSTransitionGroup
+              transitionName="example" transitionAppear={true}
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
             <div className="wizard-container freelancer">
                 <div className="left-container">
                     <div className="container">
@@ -52,6 +59,7 @@ export default class Client extends Component {
                 </div>
                 <div className="clear"/>
             </div>
+            </ReactCSSTransitionGroup>
         )
     }
 }
