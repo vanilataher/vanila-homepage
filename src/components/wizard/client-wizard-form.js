@@ -17,8 +17,18 @@ export default class WizardForm extends Component {
     constructor() {
         super();
         this.state = {
-            category:'',
-            type:''
+            category: '',
+            type: '',
+            fixed: {
+                min: 0,
+                max: 20000,
+                step:100
+            },
+            hourly: {
+                min: 0,
+                max: 200,
+                step: 1
+            }
         }
     }
 
@@ -54,16 +64,15 @@ export default class WizardForm extends Component {
         this.setState({type: type})
         ClientSignupStore.setType(type);
     }
-    checkType(type){
-        if(ClientSignupStore.type === type){
+    checkType(type) {
+        if (ClientSignupStore.type === type) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
 
-    renderTypeRow({ id, title, description, icon }) {
+    renderTypeRow({id, title, description, icon}) {
 
         return (
             <div className="device-type-card" onClick={this.updateTypeCard.bind(this, id)}>
@@ -90,6 +99,16 @@ export default class WizardForm extends Component {
         var buttonClass = this.props.currentStep == 5
             ? 'danger'
             : '';
+        var sliderMin = (ClientSignupStore.contractType == "fixed")
+            ? this.state.fixed.min
+            : this.state.hourly.min;
+        var sliderMax = (ClientSignupStore.contractType == "fixed")
+            ? this.state.fixed.max
+            : this.state.hourly.max;
+        var sliderStep = (ClientSignupStore.contractType == "fixed")
+            ? this.state.fixed.step
+            : this.state.hourly.step;
+        console.log(ClientSignupStore.contractType,sliderMin,sliderMax,sliderStep);
         return (
             <div className="wizard-form">
                 <div className="col-md-12">
@@ -131,12 +150,13 @@ export default class WizardForm extends Component {
                     <div className={this.getClass("container", 3)}>
                         <div className="row">
                             <div className="col-md-12">
-                                {
-                                    ClientSignupStore.subcategories.map((arg) => {
-                                        console.log(arg);
-                                        return this.renderTypeRow({ ...arg });
-                                    })
-                                }
+                                {ClientSignupStore.subcategories.map((arg) => {
+                                    console.log(arg);
+                                    return this.renderTypeRow({
+                                        ...arg
+                                    });
+                                })
+}
                             </div>
                         </div>
                     </div>
@@ -157,27 +177,27 @@ export default class WizardForm extends Component {
                             <div className="form col-md-12">
                                 <label className="form-heading">Contract Type</label>
                                 <label className="radio-label">
-                                    <input type="radio" checked={ClientSignupStore.contractType === 'fixed'} name="contract-type" onChange={() => ClientSignupStore.setContractType('fixed') /* TODO: Make this into an array */}/>
+                                    <input type="radio" checked={ClientSignupStore.contractType === 'fixed'} name="contract-type" onChange={() => ClientSignupStore.setContractType('fixed')/* TODO: Make this into an array */}/>
                                     Fixed
                                 </label>
                                 <label className="radio-label">
-                                    <input type="radio" checked={ClientSignupStore.contractType === 'hourly'} name="contract-type" onChange={() => ClientSignupStore.setContractType('hourly') /* TODO: Make this into an array */}/>
+                                    <input type="radio" checked={ClientSignupStore.contractType === 'hourly'} name="contract-type" onChange={() => ClientSignupStore.setContractType('hourly')/* TODO: Make this into an array */}/>
                                     Hourly
                                 </label>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Budget Range</label>
-                                <Slider id={"budget-slider"} setValue={this.updateBudget.bind(this)} default={[5000,14000]} min={0} max={20000} step={1}/>
+                                <Slider id={"budget-slider"} setValue={this.updateBudget.bind(this)} default={[sliderMin, sliderMax]} min={sliderMin} max={sliderMax} step={sliderStep}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Start / End Date</label>
                                 <p className="form-subheading">When do you wanna start and end the project</p>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <DatePicker value={ClientSignupStore.startDate} onChange={ClientSignupStore.setStartDate} />
+                                        <DatePicker value={ClientSignupStore.startDate} onChange={ClientSignupStore.setStartDate}/>
                                     </div>
                                     <div className="col-md-6">
-                                        <DatePicker value={ClientSignupStore.endDate} onChange={ClientSignupStore.setEndDate} />
+                                        <DatePicker value={ClientSignupStore.endDate} onChange={ClientSignupStore.setEndDate}/>
                                     </div>
                                 </div>
                             </div>
