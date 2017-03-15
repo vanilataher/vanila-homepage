@@ -3,6 +3,9 @@ import WizardStep from '../components/wizard/wizard-step';
 import WizardForm from '../components/wizard/client-wizard-form';
 import WizardImages from '../components/wizard/client-wizard-images';
 import '../../public/styles/wizard.css'
+
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 import { Link } from 'react-router';
 
 
@@ -14,8 +17,8 @@ export default class Client extends Component {
         }
     }
     nextStep(){
-        var audio = document.getElementById("audioBtnClick");
-        audio.play();
+      var audio = document.getElementById("audioBtnClick");
+      audio.play();
 
         if(this.state.currentStep < 5){
             this.setState({
@@ -23,6 +26,7 @@ export default class Client extends Component {
             })
         }
     }
+
     componentDidMount(){
         var audio = document.getElementById("audio");
         audio.play();
@@ -30,7 +34,11 @@ export default class Client extends Component {
 
     render() {
         return (
-
+          <ReactCSSTransitionGroup
+              transitionName="example" transitionAppear={true}
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
             <div className="wizard-container client">
             <audio id="audio" src="https://vanila.io/sound/sound3.mp3"></audio>
                 <div className="left-container">
@@ -65,6 +73,7 @@ export default class Client extends Component {
                 </div>
                 <div className="clear"/>
             </div>
+              </ReactCSSTransitionGroup>
         )
     }
 }

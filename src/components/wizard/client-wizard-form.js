@@ -110,7 +110,7 @@ export default class WizardForm extends Component {
         return (
             <div className="wizard-form">
                 <div className="col-md-12">
-                    <div className={this.getClass("animated fadeInLeft container", 1)}>
+                    <div className={this.getClass("container", 1)}>
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading enterLeft-client">First Name</label>

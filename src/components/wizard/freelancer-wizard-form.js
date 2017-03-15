@@ -149,7 +149,7 @@ export default class WizardForm extends Component {
                     className="toast-top-right"
                 />
                 <div className="col-md-12">
-                    <div className={this.getClass("container animated fadeInLeft", 1)}>
+                    <div className={this.getClass("container", 1)}>
                         <div className="row">
                             <div className="col-md-12 text-center login-button-container">
                                 <button className="facebook-button" onClick={this.nextStep.bind(this)}>
@@ -165,23 +165,23 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading">First Name</label>
-                                <input type="text" name="fname" autoComplete="given-name" defaultValue={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
+                                <input type="text" name="fname" autocomplete="given-name" defaultValue={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Last Name</label>
-                                <input type="text" name="lname" autoComplete="family-name" defaultValue={FreelancerSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => FreelancerSignupStore.setLastName(event.target.value)}/>
+                                <input type="text" name="lname" autocomplete="family-name" defaultValue={FreelancerSignupStore.lastName} placeholder="Smith" ref="lastname" onChange={(event) => FreelancerSignupStore.setLastName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Username</label>
-                                <input type="text" name="username" autoComplete="username" defaultValue={FreelancerSignupStore.username} placeholder="johny" onChange={(event) => FreelancerSignupStore.setUsername(event.target.value)}/>
+                                <input type="text" name="username" autocomplete="username" defaultValue={FreelancerSignupStore.username} placeholder="johny" onChange={(event) => FreelancerSignupStore.setUsername(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Password</label>
-                                <input type="password" name="password" autoComplete="new-password" defaultValue={FreelancerSignupStore.password} placeholder="password" onChange={(event) => FreelancerSignupStore.setPassword(event.target.value)}/>
+                                <input type="password" name="password" autocomplete="new-password" defaultValue={FreelancerSignupStore.password} placeholder="password" onChange={(event) => FreelancerSignupStore.setPassword(event.target.value)}/>
                             </div>
                             <div className="form col-md-12">
                                 <label className="form-heading">Email</label>
-                                <input type="email" name="email" autoComplete="email" defaultValue={FreelancerSignupStore.email} placeholder="john@example.com" ref="email" onChange={(event) => FreelancerSignupStore.setEmail(event.target.value)}/>
+                                <input type="email" name="email" autocomplete="email" defaultValue={FreelancerSignupStore.email} placeholder="john@example.com" ref="email" onChange={(event) => FreelancerSignupStore.setEmail(event.target.value)}/>
                             </div>
                         </div>
                     </div>
@@ -193,11 +193,11 @@ export default class WizardForm extends Component {
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Country</label>
-                                <SearchableDropDown id="country-dropdown" name="country" autoComplete="country" defaultValue={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
+                                <SearchableDropDown id="country-dropdown" name="country" autocomplete="country" defaultValue={FreelancerSignupStore.country} values={FreelancerSignupStore.COUNTRIES} placeholder="Example: France" multiple={false} callback={FreelancerSignupStore.setCountry}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">City</label>
-                                <input type="text" name="city" autoComplete="address-level2" defaultValue={FreelancerSignupStore.city} placeholder="Paris" onChange={(event) => FreelancerSignupStore.setCity(event.target.value)}/>
+                                <input type="text" name="city" autocomplete="address-level2" defaultValue={FreelancerSignupStore.city} placeholder="Paris" onChange={(event) => FreelancerSignupStore.setCity(event.target.value)}/>
                             </div>
                         </div>
                     </div>

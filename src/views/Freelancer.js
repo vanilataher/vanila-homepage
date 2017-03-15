@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import WizardStep from '../components/wizard/wizard-step';
 import WizardForm from '../components/wizard/freelancer-wizard-form';
+
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 import '../../public/styles/wizard.css'
 export default class Client extends Component {
     constructor() {
@@ -25,6 +28,11 @@ export default class Client extends Component {
     }
     render() {
         return (
+          <ReactCSSTransitionGroup
+              transitionName="example" transitionAppear={true}
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
             <div className="wizard-container freelancer">
             <audio id="audio" src="https://vanila.io/sound/sound3.mp3"></audio>
                 <div className="left-container">
@@ -61,6 +69,7 @@ export default class Client extends Component {
                 </div>
                 <div className="clear"/>
             </div>
+            </ReactCSSTransitionGroup>
         )
     }
 }

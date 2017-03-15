@@ -59,9 +59,9 @@ export default class Slider extends Component {
     render() {
         return (
             <div className="slider-container">
-                <div className="slider-label">${this.state.min}</div>
+                <div className="slider-label">${this.state.min}/h</div>
                 <div className="slider" id={this.props.id}></div>
-                <div className="slider-label">${this.state.max}</div>
+                <div className="slider-label">${this.state.max}/h</div>
             </div>
         )
     }

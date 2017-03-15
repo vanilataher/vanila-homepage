@@ -16,6 +16,11 @@ export default class App extends Component {
     constructor(){
         super();
     }
+
+  
+
+
+
     componentDidMount(){
       var sr = new ScrollReveal();
       sr.reveal('.navbar-default', {

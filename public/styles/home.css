@@ -1135,59 +1135,20 @@ float: none;
 }
 }
 
-/* Scale Animation */
-
-.example-enter {
-  opacity: 0.01;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}
 
 
 /**/
+.example-appear {
+   opacity: 0;
+   transform:   translate(-450px,0);
+      transform: translate3d(-450px,0,0);
+ }
 
-.example1-enter {
-  opacity: 0.01;
-}
-
-.example1-enter.example1-enter-active {
-  opacity: 1;
-  transition: opacity 8000ms ease-in;
-}
-
-.example1-leave {
-  opacity: 1;
-}
-
-.example1-leave.example1-leave-active {
-  opacity: 0.01;
-  transition: opacity 8000ms ease-in;
-}
-.example1-appear {
-  opacity: 0.01;
-}
-
-.example1-appear.example1-appear-active {
-  opacity: 1;
-  transition: opacity 1s ease-in;
-}
+ .example-appear.example-appear-active {
+       opacity: 1;
+       transform:   translate(0,0);
+     transform: translate3d(0,0,0);
+      transition-property: transform, opacity;
+      transition-duration: 500ms;
+      transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+ }
