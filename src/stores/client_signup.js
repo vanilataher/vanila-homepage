@@ -16,7 +16,7 @@ class ClientSignupStore {
   @observable type = null;
   @observable projectName = null;
   @observable projectDescription = null;
-  @observable contractType = null;
+  @observable contractType = 'fixed';
   @observable minBudget = null;
   @observable maxBudget = null;
   @observable startDate = null;
