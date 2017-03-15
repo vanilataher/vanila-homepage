@@ -147,18 +147,15 @@ class FreelancerSignupStore {
   @action toggleSkills(val) {
     const self = this;
 
-    if (typeof val === 'string') {
-      const existingElementIndex = self.skills.indexOf(val);
+    if (typeof val === typeof []) {
+      self.skills.clear();
+      val.forEach((skill) => {
+        const existingSkill = self.SKILLS.find(s => String(s.id) === String(skill));
 
-      if (existingElementIndex !== -1) {
-        self.skills = self.skills.splice(existingElementIndex, 1);
-      } else {
-        const foundElement = self.SKILLS.find(element => element.id === val);
-
-        if (foundElement !== undefined) {
-          self.skills.push(val);
+        if (existingSkill !== undefined) {
+          self.skills.push(existingSkill.id);
         }
-      }
+      });
     }
   }
 
