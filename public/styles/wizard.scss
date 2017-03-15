@@ -444,6 +444,18 @@ $color-warning: #F18944;
         }
     }
 }
+.bounceInLeft {
+  -webkit-animation: bounceInLeft 0.5s !important; /* Safari 4+ */
+  -moz-animation:    bounceInLeft 0.5s !important; /* Fx 5+ */
+  -o-animation:      bounceInLeft 0.5s !important; /* Opera 12+ */
+  animation:         bounceInLeft 0.5s !important; /* IE 10+, Fx 29+ */
+}
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 0.5s !important; /* Safari 4+ */
+  -moz-animation:    fadeInLeft 0.5s !important; /* Fx 5+ */
+  -o-animation:      fadeInLeft 0.5s !important; /* Opera 12+ */
+  animation:         fadeInLeft 0.5s !important; /* IE 10+, Fx 29+ */
+}
 @media only screen and (max-width: 1280px) {
     .wizard-container {
         .left-container {

@@ -22,7 +22,7 @@ export default class WizardForm extends Component {
             fixed: {
                 min: 0,
                 max: 20000,
-                step:100
+                step: 100
             },
             hourly: {
                 min: 0,
@@ -108,11 +108,11 @@ export default class WizardForm extends Component {
         var sliderStep = (ClientSignupStore.contractType == "fixed")
             ? this.state.fixed.step
             : this.state.hourly.step;
-        console.log(ClientSignupStore.contractType,sliderMin,sliderMax,sliderStep);
+        console.log(ClientSignupStore.contractType, sliderMin, sliderMax, sliderStep);
         return (
             <div className="wizard-form">
                 <div className="col-md-12">
-                    <div className={this.getClass("container", 1)}>
+                    <div className={this.getClass("animated fadeInLeft container", 1)}>
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading enterLeft-client">First Name</label>
@@ -136,7 +136,7 @@ export default class WizardForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("", 2)}>
+                    <div className={this.getClass("animated fadeInLeft", 2)}>
                         <div className="row">
                             <div className="col-md-12 card-container">
                                 <Card currentCategory={ClientSignupStore.category} updateCategory={this.updateCategoryCard.bind(this)} type={ClientSignupStore.CATEGORIES.WEB_MOBILE_APP} heading={'Web & Mobile App Development'} img={require('../../../public/img/clientsAssets/app-developmentAsset1.png')}/>
@@ -147,20 +147,21 @@ export default class WizardForm extends Component {
                         </div>
                     </div>
                     {/* This part is missing, needs to be created. */}
-                    <div className={this.getClass("container", 3)}>
+                    <div className={this.getClass("animated fadeInLeft container", 3)}>
                         <div className="row">
                             <div className="col-md-12">
-                                {ClientSignupStore.subcategories.map((arg) => {
-                                    console.log(arg);
-                                    return this.renderTypeRow({
-                                        ...arg
-                                    });
-                                })
-}
+                                {
+                                    ClientSignupStore.subcategories.map((arg) => {
+                                        console.log(arg);
+                                        return this.renderTypeRow({
+                                            ...arg
+                                        });
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("container", 4)}>
+                    <div className={this.getClass("animated fadeInLeft container", 4)}>
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Project Name</label>
@@ -172,7 +173,7 @@ export default class WizardForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("container", 5)}>
+                    <div className={this.getClass("animated fadeInLeft container", 5)}>
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Contract Type</label>

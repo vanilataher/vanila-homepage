@@ -52,6 +52,7 @@ export default class Slider extends Component {
     componentWillReceiveProps(nextprops){
       $(`#${this.props.id}`).slider( "option", "min", nextprops.min);
       $(`#${this.props.id}`).slider( "option", "max", nextprops.max);
+      $(`#${this.props.id}`).slider( "option", "step", nextprops.step);
       $(`#${this.props.id}`).slider( "option", "values", [nextprops.min,nextprops.max]);
       this.setState({min: nextprops.min, max: nextprops.max});
     }
