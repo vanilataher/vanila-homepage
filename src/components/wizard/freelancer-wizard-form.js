@@ -149,7 +149,7 @@ export default class WizardForm extends Component {
                     className="toast-top-right"
                 />
                 <div className="col-md-12">
-                    <div className={this.getClass("container", 1)}>
+                    <div className={this.getClass("container animated bounceInLeft", 1)}>
                         <div className="row">
                             <div className="col-md-12 text-center login-button-container">
                                 <button className="facebook-button" onClick={this.nextStep.bind(this)}>
@@ -161,7 +161,7 @@ export default class WizardForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("container", 2)}>
+                    <div className={this.getClass("container animated bounceInLeft", 2)}>
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading">First Name</label>
@@ -185,7 +185,7 @@ export default class WizardForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("container", 3)}>
+                    <div className={this.getClass("container animated bounceInLeft", 3)}>
                         <div className="row">
                             <div className="col-md-12 text-center">
                                 <div className="avatar-container" style={avatarImage}/>
@@ -201,7 +201,7 @@ export default class WizardForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("container", 4)}>
+                    <div className={this.getClass("container animated bounceInLeft", 4)}>
                         <div className="row">
                             <div className="form col-md-12">
                                 <label className="form-heading">Select your Title</label>
@@ -213,13 +213,13 @@ export default class WizardForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={this.getClass("container", 5)}>
+                    <div className={this.getClass("container animated bounceInLeft", 5)}>
                         <div className="row">
-                            <div className="form col-lg-5">
+                            <div className="form col-md-5">
                                 <label className="form-heading">Your Rates</label>
                                 <input type="number" min="0" defaultValue={FreelancerSignupStore.hourly} placeholder="$20 / hr" onChange={(event) => FreelancerSignupStore.setHourlyRate(event.target.value)}/>
                             </div>
-                            <div className="form col-lg-7 form-group">
+                            <div className="form col-md-7 form-group">
                                 <label className="form-heading">Monthly Salary</label>
                                 <input type="number" min="0" defaultValue={FreelancerSignupStore.salary} placeholder="$2000" onChange={(event) => FreelancerSignupStore.setSalary(event.target.value)}/>
                                 <select>
