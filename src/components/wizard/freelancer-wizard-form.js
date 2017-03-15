@@ -86,7 +86,7 @@ export default class WizardForm extends Component {
           backgroundImage:`url(${url})`
         }
         return (
-            <div className="wizard-form">
+            <div className="wizard-form row">
                 <div className="col-md-12">
                     <div className={this.getClass("container", 1)}>
                         <div className="row">

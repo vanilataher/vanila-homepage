@@ -15,7 +15,7 @@
     .wizard-container .left-container b {
       font-family: SegoeBold; }
     .wizard-container .left-container .container {
-      padding: 0 100px;
+      padding: 0 60px;
       width: 100%; }
     .wizard-container .left-container .title {
       color: #444444;
@@ -72,8 +72,6 @@
           font-size: 15px;
           color: #95989A; }
         .wizard-container .left-container .wizard-form .form input[type="email"],
-        .wizard-container .left-container .wizard-form .form input[type="password"],
-        .wizard-container .left-container .wizard-form .form input[type="number"],
         .wizard-container .left-container .wizard-form .form input[type="text"] {
           width: 100%;
           padding: 15px 20px;
