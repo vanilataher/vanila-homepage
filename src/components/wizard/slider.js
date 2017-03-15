@@ -15,7 +15,6 @@ export default class Slider extends Component {
         }
     }
     componentDidMount() {
-        const that = this;
         const defaultMin = this.props.default
             ? this.props.default[0]
             : this.props.min;
@@ -32,23 +31,30 @@ export default class Slider extends Component {
         })
         $(`#${this.props.id}`).slider({
             range: true,
-            min: that.props.min,
-            max: that.props.max,
-            step: that.props.step
-                ? that.props.step
+            min: this.props.min,
+            max: this.props.max,
+            step: this.props.step
+                ? this.props.step
                 : 1,
             values: [
                 defaultMin, defaultMax
             ],
             slide: (event, ui) => {
-                that.setState({min: ui.values[0], max: ui.values[1]})
+                this.setState({min: ui.values[0], max: ui.values[1]})
             },
             change: (event, ui) => {
-                if (typeof that.props.setValue != "undefined") {
-                    that.props.setValue(ui.values[0], ui.values[1]);
+                if (typeof this.props.setValue != "undefined") {
+                    this.props.setValue(ui.values[0], ui.values[1]);
                 }
             }
         });
+    }
+    componentWillReceiveProps(nextprops){
+      $(`#${this.props.id}`).slider( "option", "min", nextprops.min);
+      $(`#${this.props.id}`).slider( "option", "max", nextprops.max);
+      $(`#${this.props.id}`).slider( "option", "step", nextprops.step);
+      $(`#${this.props.id}`).slider( "option", "values", [nextprops.min,nextprops.max]);
+      this.setState({min: nextprops.min, max: nextprops.max});
     }
     render() {
         return (
