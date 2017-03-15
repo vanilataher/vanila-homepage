@@ -331,6 +331,10 @@
   animation: fadeInLeft 0.5s !important;
   /* IE 10+, Fx 29+ */ }
 
+  .select2-container--default .select2-results__option[aria-selected=true]{
+    display: none;
+  }
+
 @media only screen and (max-width: 1280px) {
   .wizard-container .left-container .container {
     padding: 0 40px; }
