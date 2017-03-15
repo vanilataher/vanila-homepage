@@ -10,7 +10,7 @@ export default class Client extends Component {
     constructor() {
         super();
         this.state = {
-            currentStep: 5
+            currentStep: 1
         }
     }
 
