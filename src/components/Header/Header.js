@@ -7,11 +7,9 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
   }
-
       handleClick(){
         var audio = document.getElementById("audio");
         audio.play();
-
     }
 
   render() {
@@ -29,7 +27,6 @@ class Header extends React.Component {
               <Link to="client">
               <button className="btn btn-lg btn-primary btnGetStarted" id="button" onClick={this.handleClick.bind(this)}>Get started</button>
               </Link>
-
                or <button className="btn btn-lg btn-default btnWatchVideo">Watch video</button>
             </div>
           </div>

@@ -14,8 +14,6 @@ export default class Client extends Component {
         }
     }
     nextStep(){
-
-
         if(this.state.currentStep < 5){
             this.setState({
               currentStep:this.state.currentStep+1
@@ -45,9 +43,7 @@ export default class Client extends Component {
                             </h4>
                         </div>
                         <div className="row">
-
                             <WizardStep currentStep={this.state.currentStep}/>
-
                         </div>
                     </div>
                     <div className="row">

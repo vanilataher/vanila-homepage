@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { ToastContainer, ToastMessage } from 'react-toastr';
 
 import {observer} from 'mobx-react';
 
@@ -9,6 +10,8 @@ import SearchableDropDown from './dropdown';
 
 import FreelancerSignupStore from '../../stores/freelancer_signup';
 import API from '../../helpers/api';
+
+const ToastMessageFactory = React.createFactory(ToastMessage.animation);
 
 @observer
 export default class WizardForm extends Component {
@@ -25,6 +28,11 @@ export default class WizardForm extends Component {
         FreelancerSignupStore.hydrateCountries();
         FreelancerSignupStore.hydrateSkills();
         FreelancerSignupStore.hydrateTitles();
+
+        this.addAlert = this.addAlert.bind(this);
+        this.clearAlert = this.clearAlert.bind(this);
+
+        setTimeout(this.addAlert, 1000);
     }
     getClass(current, step) {
         if (step == this.props.currentStep) {
@@ -108,6 +116,17 @@ export default class WizardForm extends Component {
             return '';
         }
     }
+
+    addAlert() {
+        this.refs.container.success(`Welcome to vanila!`, `Alert`, {
+            closeButton: true,
+        });
+    }
+
+    clearAlert() {
+        this.refs.container.clear();
+    }
+
     render() {
         var buttonText = this.props.currentStep == 5
             ? 'finish'
@@ -123,16 +142,12 @@ export default class WizardForm extends Component {
           backgroundImage:`url(${url})`
         }
         return (
-<<<<<<< HEAD
-            <div className="wizard-form">
-=======
             <div className="wizard-form row">
                 <ToastContainer
                     toastMessageFactory={ToastMessageFactory}
                     ref="container"
                     className="toast-top-right"
                 />
->>>>>>> 6e75539150a4eae5a6666889a6a4a86c1fcbebf1
                 <div className="col-md-12">
                     <div className={this.getClass("container animated fadeInLeft", 1)}>
                         <div className="row">
