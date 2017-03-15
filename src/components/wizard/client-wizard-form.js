@@ -10,8 +10,6 @@ import Slider from './slider';
 import DatePicker from './datepicker';
 
 
-
-
 @observer
 export default class WizardForm extends Component {
     constructor() {
