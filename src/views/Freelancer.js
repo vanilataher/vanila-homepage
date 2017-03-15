@@ -10,15 +10,23 @@ export default class Client extends Component {
         }
     }
     nextStep(){
+        var audio = document.getElementById("audioBtnClick");
+        audio.play();
+
         if(this.state.currentStep < 5){
             this.setState({
               currentStep:this.state.currentStep+1
             })
         }
     }
+    componentDidMount(){
+        var audio = document.getElementById("audio");
+        audio.play();
+    }
     render() {
         return (
             <div className="wizard-container freelancer">
+            <audio id="audio" src="https://vanila.io/sound/sound3.mp3"></audio>
                 <div className="left-container">
                     <div className="container">
                         <div className="row">
@@ -42,6 +50,7 @@ export default class Client extends Component {
                         </div>
                     </div>
                     <div>
+                        <audio id="audioBtnClick" src="http://mihailo.centarzatalente.com/sounds/click.mp3"></audio>
                         <WizardForm nextStep={this.nextStep.bind(this)} currentStep={this.state.currentStep}/>
                     </div>
                 </div>

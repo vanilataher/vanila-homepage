@@ -7,10 +7,10 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
   }
-      handleClick(){
-        var audio = document.getElementById("audio");
-        audio.play();
-    }
+  componentDidMount(){
+      var audio = document.getElementById("audio");
+      audio.play();
+  }
 
   render() {
     return (
@@ -25,7 +25,7 @@ class Header extends React.Component {
             <div className="buttonGroup enterLeft-header">
             <audio id="audio" src="https://vanila.io/sound/sound3.mp3"></audio>
               <Link to="client">
-              <button className="btn btn-lg btn-primary btnGetStarted" id="button" onClick={this.handleClick.bind(this)}>Get started</button>
+              <button className="btn btn-lg btn-primary btnGetStarted" id="button">Get started</button>
               </Link>
                or <button className="btn btn-lg btn-default btnWatchVideo">Watch video</button>
             </div>

@@ -10,7 +10,7 @@ export default class Login extends Component {
               <div className="container">
                   <div className="row">
                       <h1 className="title">
-                          Login timeout Vanila.io
+                          Login Vanila.io
                           <b>
                               &nbsp;community&nbsp;
                           </b>
