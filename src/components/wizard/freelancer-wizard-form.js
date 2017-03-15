@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { ToastContainer, ToastMessage } from 'react-toastr';
 
 import {observer} from 'mobx-react';
 
@@ -10,8 +9,6 @@ import SearchableDropDown from './dropdown';
 
 import FreelancerSignupStore from '../../stores/freelancer_signup';
 import API from '../../helpers/api';
-
-const ToastMessageFactory = React.createFactory(ToastMessage.animation);
 
 @observer
 export default class WizardForm extends Component {
@@ -28,11 +25,6 @@ export default class WizardForm extends Component {
         FreelancerSignupStore.hydrateCountries();
         FreelancerSignupStore.hydrateSkills();
         FreelancerSignupStore.hydrateTitles();
-
-        this.addAlert = this.addAlert.bind(this);
-        this.clearAlert = this.clearAlert.bind(this);
-
-        setTimeout(this.addAlert, 1000);
     }
     getClass(current, step) {
         if (step == this.props.currentStep) {
@@ -116,17 +108,6 @@ export default class WizardForm extends Component {
             return '';
         }
     }
-
-    addAlert() {
-        this.refs.container.success(`Welcome to vanila!`, `Alert`, {
-            closeButton: true,
-        });
-    }
-
-    clearAlert() {
-        this.refs.container.clear();
-    }
-
     render() {
         var buttonText = this.props.currentStep == 5
             ? 'finish'
@@ -143,11 +124,6 @@ export default class WizardForm extends Component {
         }
         return (
             <div className="wizard-form">
-                <ToastContainer
-                    toastMessageFactory={ToastMessageFactory}
-                    ref="container"
-                    className="toast-top-right"
-                />
                 <div className="col-md-12">
                     <div className={this.getClass("container", 1)}>
                         <div className="row">
@@ -165,7 +141,7 @@ export default class WizardForm extends Component {
                         <div className="row">
                             <div className="form col-md-6">
                                 <label className="form-heading">First Name</label>
-                                <input type="text" name="fname" autocomplete="fname" value={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
+                                <input type="text" name="fname" autocomplete="given-name" value={FreelancerSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => FreelancerSignupStore.setFirstName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">
                                 <label className="form-heading">Last Name</label>
