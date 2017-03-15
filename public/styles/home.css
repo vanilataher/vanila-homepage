@@ -1136,7 +1136,9 @@ float: none;
 }
 
 
-
+.select2-container--default .select2-results__option[aria-selected=true]{
+  display: none!important;
+}
 /**/
 .example-appear {
    opacity: 0;
