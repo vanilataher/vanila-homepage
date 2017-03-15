@@ -3,7 +3,6 @@ import WizardStep from '../components/wizard/wizard-step';
 import WizardForm from '../components/wizard/client-wizard-form';
 import WizardImages from '../components/wizard/client-wizard-images';
 import '../../public/styles/wizard.css'
-import { RouteTransition } from 'react-router-transition';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
