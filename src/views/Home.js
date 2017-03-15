@@ -9,7 +9,7 @@ import Tech from '../components/Tech/Tech';
 import Social from '../components/Social/Social';
 import Footer from '../components/Footer/Footer';
 import '../../public/styles/home.css'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ScrollReveal from 'scrollreveal';
 
 export default class App extends Component {
@@ -125,7 +125,15 @@ export default class App extends Component {
         scale: 1
       },80);
 
-      sr.reveal('.techBoxReveal',  {
+      sr.reveal('.rowTech li:nth-child(odd)',  {
+        origin: 'right',
+        distance: '100%',
+        duration: 1000,
+        scale: 0.5,
+        delay:  500
+      },250);
+
+      sr.reveal('.rowTech li:nth-child(even)',  {
         origin: 'left',
         distance: '100%',
         duration: 1000,
@@ -172,6 +180,11 @@ export default class App extends Component {
     }
     render() {
         return (
+          <ReactCSSTransitionGroup
+              transitionName="example" transitionAppear={true}
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
             <div className="mainWrapperInner">
               <Header />
               <About />
@@ -183,6 +196,7 @@ export default class App extends Component {
               <Social />
               <Footer />
             </div>
+            </ReactCSSTransitionGroup>
         );
     }
 }

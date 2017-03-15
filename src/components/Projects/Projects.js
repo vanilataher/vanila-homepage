@@ -4,20 +4,21 @@ import React from 'react';
 class Projects extends React.Component {
   render() {
     return (
-      <div className="row rowProjects">
+      <div className="rowProjects">
+      <div className="row">
         <div  className="container">
           <div className="col-md-6 projectAutomatio">
             <h4 className="enterProjectLeft">Instagram Automation Tool</h4>
             <h5 className="enterProjectLeft">For a better productivity we build various tools which help you to lead project better.</h5>
             <img className="enterProjectLeft" src={require('../../../public/img/homeAssets/automation.png')}/>
           </div>
-          <div className="col-md-6 projectWireflow">
+      <div className="col-md-6 projectWireflow">
           <h4 className="enterProjectRight">WireFlow</h4>
           <h5 className="enterProjectRight">Easiest user flow chart tool for real-time collaborative work.</h5>
           <img className="enterProjectRight" src={require('../../../public/img/homeAssets/wireflow.png')}/>
           </div>
           <div className="col-md-12 projectWekan">
-            <div className="col-md-8">
+            <div className="col-md-8 onlyDesktop">
               <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/wekan.png')}/>
             </div>
             <div className="projectWekanTxt col-md-4">
@@ -28,8 +29,12 @@ class Projects extends React.Component {
                   It's real time and you can import your current Trello board to it and have your own self hosted organization board.
               </h5>
             </div>
+            <div className="col-md-8 onlyMobile">
+              <img className="enterProjectBottom" src={require('../../../public/img/homeAssets/wekan.png')}/>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

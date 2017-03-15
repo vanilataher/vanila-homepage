@@ -3,6 +3,9 @@ import WizardStep from '../components/wizard/wizard-step';
 import WizardForm from '../components/wizard/client-wizard-form';
 import WizardImages from '../components/wizard/client-wizard-images';
 import '../../public/styles/wizard.css'
+
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 export default class Client extends Component {
     constructor() {
         super();
@@ -10,6 +13,7 @@ export default class Client extends Component {
             currentStep: 5
         }
     }
+
     nextStep(){
         if(this.state.currentStep < 5){
             this.setState({
@@ -19,6 +23,11 @@ export default class Client extends Component {
     }
     render() {
         return (
+          <ReactCSSTransitionGroup
+              transitionName="example" transitionAppear={true}
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
             <div className="wizard-container client">
                 <div className="left-container">
                     <div className="container">
@@ -50,6 +59,7 @@ export default class Client extends Component {
                 </div>
                 <div className="clear"/>
             </div>
+            </ReactCSSTransitionGroup>
         )
     }
 }

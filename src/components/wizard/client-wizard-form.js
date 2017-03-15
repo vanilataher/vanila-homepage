@@ -9,6 +9,9 @@ import Card from './wizard-card';
 import Slider from './slider';
 import DatePicker from './datepicker';
 
+
+
+
 @observer
 export default class WizardForm extends Component {
     constructor() {
@@ -28,6 +31,9 @@ export default class WizardForm extends Component {
             }
         }
     }
+
+
+
     getClass(current, step) {
         if (step == this.props.currentStep) {
             return current;
@@ -109,7 +115,7 @@ export default class WizardForm extends Component {
                     <div className={this.getClass("container", 1)}>
                         <div className="row">
                             <div className="form col-md-6">
-                                <label className="form-heading">First Name</label>
+                                <label className="form-heading enterLeft-client">First Name</label>
                                 <input type="text" value={ClientSignupStore.firstName} placeholder="John" ref="firstname" onChange={(event) => ClientSignupStore.setFirstName(event.target.value)}/>
                             </div>
                             <div className="form col-md-6">

@@ -6,7 +6,7 @@ class WebDesign extends React.Component {
       <div className="aboutWebDesign">
         <div className="row">
         <div className="container">
-          <div className="col-md-6">
+          <div className="col-md-6 aboutWebDesign-txt">
             <h2 className="enterLeft-des"><strong>Web Design & Logos</strong></h2>
             <p className="enterLeft-des">Vanila design team is highly experienced in creating unique and <br></br>modern design.</p>
              <br></br>
@@ -15,7 +15,7 @@ class WebDesign extends React.Component {
             <p className="enterLeft-des">Also, we believe that beauty is in personal touch, giving your brand <br></br>
             your personality. So dream as big as you can, because we are as good <br></br>as one design freaks could be!</p>
           </div>
-          <div className="col-md-6"><img className="enterRight-des" src={require('../../../public/img/homeAssets/web-design.png')} /></div>
+          <div className="col-md-6 aboutWebDesign-img"><img className="enterRight-des" src={require('../../../public/img/homeAssets/web-design.png')} /></div>
         </div>
         </div>
       </div>
