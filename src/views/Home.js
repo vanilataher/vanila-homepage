@@ -9,7 +9,7 @@ import Tech from '../components/Tech/Tech';
 import Social from '../components/Social/Social';
 import Footer from '../components/Footer/Footer';
 import '../../public/styles/home.css'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ScrollReveal from 'scrollreveal';
 
 export default class App extends Component {
@@ -180,6 +180,11 @@ export default class App extends Component {
     }
     render() {
         return (
+          <ReactCSSTransitionGroup
+              transitionName="example" transitionAppear={true}
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
             <div className="mainWrapperInner">
               <Header />
               <About />
@@ -191,6 +196,7 @@ export default class App extends Component {
               <Social />
               <Footer />
             </div>
+            </ReactCSSTransitionGroup>
         );
     }
 }

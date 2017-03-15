@@ -6,16 +6,17 @@ import Client from '../../views/Client.js';
 
 class Header extends React.Component {
   constructor() {
-      super();
+    super();
   }
 
   handleClick(){
-  	var audio = $("#clickSound")[0];
-  	  audio.play();
-}
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
+
   render() {
     return (
-      <div className="headerIntro">
+      <div id="zoomScale" className="headerIntro">
         <Navigation />
         <div className="row rowHeader">
         <div className="container">
@@ -24,13 +25,9 @@ class Header extends React.Component {
             <h2 className="enterLeft-header">For a better productivity we build various tools <br></br>which help you to lead project better.</h2>
             <p className="enterLeft-header">Have project for us, small or big our <strong>team of experts </strong>will handle it for you. <br></br>Click in button below <strong>to start your first project</strong></p>
             <div className="buttonGroup enterLeft-header">
-            <audio id="clickSound">
-      				<source src="http://mihailo.centarzatalente.com/sounds/click.mp3"></source>
-      				<source src="http://mihailo.centarzatalente.com/sounds/click.ogg"></source>
-      				Audio not supported.
-      			</audio>
+            <audio id="audio" src="http://mihailo.centarzatalente.com/sounds/click.ogg"></audio>
               <Link to="/Client">
-              <button id="button" className="btn btn-lg btn-primary btnGetStarted" onClick={this.handleClick.bind(this)}>Get started</button>
+              <button className="btn btn-lg btn-primary btnGetStarted" id="button" onClick={this.handleClick.bind(this)}>Get started</button>
               </Link> or <button className="btn btn-lg btn-default btnWatchVideo">Watch video</button>
             </div>
           </div>
