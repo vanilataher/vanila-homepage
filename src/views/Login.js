@@ -42,7 +42,7 @@ export default class Login extends Component {
         window.parent.postMessage({
           event: 'login-with-token',
           loginToken: data.authToken,
-        }, 'http://app.vanila.io:8080/');
+        }, 'http://app.vanila.io/chat');
       }).catch(err => console.log(err));
     }, 500);
 
@@ -59,7 +59,7 @@ export default class Login extends Component {
       window.parent.postMessage({
         event: 'login-with-token',
         loginToken: data.authToken,
-      }, 'http://app.vanila.io:8080/');
+      }, 'http://app.vanila.io/chat');
     }).catch(err => console.log(err));
   }
 
