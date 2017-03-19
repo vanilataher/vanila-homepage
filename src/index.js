@@ -18,6 +18,7 @@ import LoginStore from './stores/login';
 
 class App extends React.Component {
     constructor() {
+        super();
         FreelancerSignupStore.init();
         ClientSignupStore.init();
         LoginStore.init();
