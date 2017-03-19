@@ -47,6 +47,8 @@ export default class Login extends Component {
         }, 'http://app.vanila.io:8080');
       }).catch(err => console.log(err));
     }, 500);
+
+    self.login = self.login.bind(self);
   }
 
   login() {
