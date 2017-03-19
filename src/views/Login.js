@@ -21,7 +21,7 @@ export default class Login extends Component {
       window.parent.postMessage({
         event: 'login-with-token',
         loginToken: data.authToken,
-      }, 'http://localhost:3000');
+      }, 'http://app.vanila.io/chat');
     }).catch(err => console.log(err));
   }
 

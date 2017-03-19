@@ -5,8 +5,7 @@ class ApiClient {
   constructor() {
     const self = this;
 
-    self.BASE_URL = 'http://159.203.97.116:7000';
-    self.BASE_URL = 'http://localhost:1200';
+    self.BASE_URL = 'http://app.vanila.io/api';
 
     self.registerAsClient = self.registerAsClient.bind(self);
     self.registerAsFreelancer = self.registerAsFreelancer.bind(self);
