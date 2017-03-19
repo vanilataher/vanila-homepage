@@ -50,6 +50,8 @@ export default class Login extends Component {
   }
 
   login() {
+    const self = this;
+
     self.loginAPI({
       username: LoginStore.username,
       password: LoginStore.password
