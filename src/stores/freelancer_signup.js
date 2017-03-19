@@ -33,7 +33,11 @@ class FreelancerSignupStore {
     self.setTitle = self.setTitle.bind(self);
     self.setCountry = self.setCountry.bind(self);
   }
-
+  
+  @action init() {
+    console.log('Initialized FreelancerSignup');
+  }
+  
   @action hydrateCountries() {
     const self = this;
 
