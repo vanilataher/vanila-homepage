@@ -1,7 +1,29 @@
 import React, {Component} from 'react';
 import '../../public/styles/login.css'
 
+import LoginStore from '../stores/login';
+import API from '../helpers/api';
+
 export default class Login extends Component {
+
+  constructor() {
+    super();
+    const self = this;
+
+    self.login();
+  }
+
+  login() {
+    API.login({
+      username: LoginStore.username,
+      password: LoginStore.password
+    }).then((data) => {
+      window.parent.postMessage({
+        event: 'login-with-token',
+        loginToken: data.authToken,
+      }, 'http://app.vanila.io/chat');
+    }).catch(err => console.log(err));
+  }
 
   render() {
       return (
@@ -27,16 +49,16 @@ export default class Login extends Component {
                   <div className="row rowLoginInput">
                   <div className="form col-md-6">
                       <label className="form-heading">Username</label>
-                      <input type="text" name="username" autocomplete="username" value="username" placeholder="johny" onChange={(event) => FreelancerSignupStore.setUsername(event.target.value)}/>
+                      <input type="text" name="username" autoComplete="username" value={LoginStore.username} placeholder="johny" onChange={(event) => LoginStore.setUsername(event.target.value)}/>
                   </div>
                   <div className="form col-md-6">
                       <label className="form-heading">Password</label>
-                      <input type="password" name="password" autocomplete="new-password" value="password" placeholder="password" onChange={(event) => FreelancerSignupStore.setPassword(event.target.value)}/>
+                      <input type="password" name="password" autoComplete="new-password" value={LoginStore.password} placeholder="password" onChange={(event) => LoginStore.setPassword(event.target.value)}/>
                   </div>
                   </div>
                   <div className="row">
                     <div className="form col-md-12">
-                      <button className="login-button">Login</button>
+                      <button className="login-button" onClick={this.login}>Login</button>
                       <hr></hr>
                     </div>
                   </div>
