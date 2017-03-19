@@ -6,6 +6,7 @@ class ApiClient {
     const self = this;
 
     self.BASE_URL = 'http://159.203.97.116:7000';
+    self.BASE_URL = 'http://localhost:1200';
 
     self.registerAsClient = self.registerAsClient.bind(self);
     self.registerAsFreelancer = self.registerAsFreelancer.bind(self);
@@ -13,6 +14,7 @@ class ApiClient {
     self.retrieveTitlesForFreelancer = self.retrieveTitlesForFreelancer.bind(self);
     self.retrieveCountries = self.retrieveCountries.bind(self);
     self.retrieveUser = self.retrieveUser.bind(self);
+    self.login = self.login.bind(self);
   }
 
   registerAsClient() {
@@ -125,6 +127,30 @@ class ApiClient {
           console.log(responseJson);
           if (responseJson.success) {
             resolve(responseJson);
+          } else {
+            reject(responseJson);
+          }
+        })
+        .catch(err => reject(err));
+    });
+  }
+
+  login({ username, password }) {
+    const self = this;
+
+    return new Promise((resolve, reject) => {
+      fetch(`${self.BASE_URL}/login`, {
+        method: 'POST',
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      })
+        .then(response => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          if (responseJson.status === 'success') {
+            resolve(responseJson.data);
           } else {
             reject(responseJson);
           }
