@@ -85,7 +85,7 @@ export default class Login extends Component {
                   <div className="row rowLoginInput">
                   <div className="form col-md-6">
                       <label className="form-heading">Username</label>
-                      <input type="text" name="username" autoComplete="username" value={LoginStore.username} placeholder="johny" onChange={(event) => alert(event.target.value)}/>
+                      <input type="text" name="username" autoComplete="username" value={LoginStore.username} placeholder="johny" onChange={(event) => LoginStore.setUsername(event.target.value)}/>
                   </div>
                   <div className="form col-md-6">
                       <label className="form-heading">Password</label>
