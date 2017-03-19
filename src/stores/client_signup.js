@@ -98,6 +98,10 @@ class ClientSignupStore {
     self.setEndDate = self.setEndDate.bind(self);
   }
 
+  @action init() {
+    console.log('Initialized ClientSignup');
+  }
+
   @action setFirstName(val) {
     const self = this;
 

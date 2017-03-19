@@ -10,8 +10,18 @@ import './../node_modules/animate.css/animate.min.css';
 import '../public/styles/style.css';
 import '../public/styles/home.css';
 
+// Stores
+import FreelancerSignupStore from './stores/freelancer_signup';
+import ClientSignupStore from './stores/client_signup';
+import LoginStore from './stores/login';
+
 
 class App extends React.Component {
+    constructor() {
+        FreelancerSignupStore.init();
+        ClientSignupStore.init();
+        LoginStore.init();
+    }
     render() {
         return (
             <Router history={browserHistory}>{routes}</Router>

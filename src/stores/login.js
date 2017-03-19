@@ -20,6 +20,10 @@ class LoginStore {
     self.password = self.nullOrString(cookie.load('vanila_password'));
   }
 
+  @action init() {
+    console.log('Initialized Login');
+  }
+
   nullOrString(val) {
     if (typeof val === 'string') {
       return val;
