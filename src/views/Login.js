@@ -2,16 +2,42 @@ import React, {Component} from 'react';
 import '../../public/styles/login.css'
 
 import LoginStore from '../stores/login';
-import API from '../helpers/api';
+
 
 export default class Login extends Component {
+
+  loginAPI({ username, password }) {
+    const self = this;
+
+    return new Promise((resolve, reject) => {
+      fetch(`${self.BASE_URL}/login`, {
+        method: 'POST',
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      })
+        .then(response => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          if (responseJson.status === 'success') {
+            resolve(responseJson.data);
+          } else {
+            reject(responseJson);
+          }
+        })
+        .catch(err => reject(err));
+    });
+  }
 
   constructor() {
     super();
     const self = this;
 
+    self.BASE_URL = 'http://app.vanila.io/api';
+
     setTimeout(() => {
-      API.login({
+      self.loginAPI({
         username: LoginStore.username,
         password: LoginStore.password
       }).then((data) => {
@@ -24,7 +50,7 @@ export default class Login extends Component {
   }
 
   login() {
-    API.login({
+    self.loginAPI({
       username: LoginStore.username,
       password: LoginStore.password
     }).then((data) => {
