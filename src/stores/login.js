@@ -6,8 +6,6 @@ import {
   computed,
 } from 'mobx';
 
-import API from '../helpers/api';
-
 class LoginStore {
   @observable username = null;
   @observable password = null;
