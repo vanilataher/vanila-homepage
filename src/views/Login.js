@@ -10,7 +10,17 @@ export default class Login extends Component {
     super();
     const self = this;
 
-    self.login();
+    setTimeout(() => {
+      API.login({
+        username: LoginStore.username,
+        password: LoginStore.password
+      }).then((data) => {
+        window.parent.postMessage({
+          event: 'login-with-token',
+          loginToken: data.authToken,
+        }, 'http://app.vanila.io/chat');
+      }).catch(err => console.log(err));
+    }, 500);
   }
 
   login() {
