@@ -7,8 +7,10 @@ import LoginStore from '../stores/login';
 export default class Login extends Component {
 
   loginAPI({ username, password }) {
+    const BASE_URL = 'http://app.vanila.io/api';
+
     return new Promise((resolve, reject) => {
-      fetch(`${self.BASE_URL}/login`, {
+      fetch(`${BASE_URL}/login`, {
         method: 'POST',
         body: JSON.stringify({
           username,
