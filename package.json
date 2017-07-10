@@ -7,7 +7,7 @@
     "lint": "eslint src"
   },
   "keywords": [],
-  "author": "Taqi Mustafa <taqi.mustafa@hotmail.com>",
+  "author": "stefan@vanila.io",
   "devDependencies": {
     "babel-core": "^6.0.20",
     "babel-eslint": "^4.1.3",
