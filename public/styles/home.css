@@ -629,6 +629,55 @@ padding-right: 10px;
     margin-bottom: 40px;
     font-family: SegoeRegular;
 }
+#contact-form-waiting{
+  width:50%;
+  display: block;
+  margin:0 auto;
+  text-align: left;
+}
+
+.form-control {
+    padding: 25px!important;
+    background: transparent!important;
+    border-color: #444444!important;
+    color: #929292!important;
+    font-size: 1.2em!important;
+}
+
+.check{
+  color: #929292;
+  font-size: 1.4em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: SegoeRegular;
+}
+
+.checkbox-inline{
+  margin-top:0!important;
+}
+
+.checkbox-inline label{
+  padding-left:0!important;
+  color: #929292;
+  font-size: 1.2em!important;
+}
+
+textarea.form-control {
+    margin-top: 40px;
+}
+
+#contact-form-waiting .btnGetStarted{
+  width: 100%;
+  color: #fff;
+  font-size: 1.4em;
+  padding: 10px!important;
+}
+
+.btnGetStarted:hover, .rowCTA .btn:hover {
+    color: #fff;
+    background-color: #1d85ad!important;
+    border-color: #1d85ad!important;
+}
 
 /* Responsive */
 

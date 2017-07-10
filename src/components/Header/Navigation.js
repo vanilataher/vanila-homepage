@@ -1,9 +1,14 @@
 import React from 'react';
 import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
-import Client from '../../views/Client.js';
-import Freelancer from '../../views/Freelancer.js';
 
 class Navigation extends React.Component {
+
+  onClickPlay () {
+    var clickSound = document.getElementById("clickSound");
+    clickSound.volume = 0.6;
+    clickSound.play();
+  }
+
   render() {
     return (
       <nav className="navbar navbar-default">
@@ -16,15 +21,18 @@ class Navigation extends React.Component {
               <span className="icon-bar"></span>
             </button>
             <a className="navbar-brand" href="#"><img src={require('../../../public/img/homeAssets/logo.png')}/></a>
+            <audio id="clickSound" src="https://vanila.io/sound/click.ogg"></audio>
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Team</a></li>
-              <li><Link to="Client"><strong>Start Project</strong></Link></li>
-              <li><Link to="Freelancer"><strong>We are hiring</strong></Link></li>
+              <li><a href="#" onClick={this.onClickPlay}>Home</a></li>
+              <li><a href="#" onClick={this.onClickPlay}>Services</a></li>
+              <li><a href="#" onClick={this.onClickPlay}>Team</a></li>
+              <li><a href="https://lab.vanila.io/" target="_blank" onClick={this.onClickPlay}>Lab</a></li>
+              <li><a href="https://links.vanila.io/" target="_blank" onClick={this.onClickPlay}>Community links</a></li>
+              <li><a href="https://blog.vanila.io/" target="_blank" onClick={this.onClickPlay}>Blog</a></li>
+              <li><a href="#" onClick={this.onClickPlay}><strong>Start Project</strong></a></li>
             </ul>
           </div>
         </div>

@@ -10,13 +10,13 @@ const TeamCards = (props) => {
     },
     {
         name: 'Jelena Jovanovic',
-        position: 'Co-founder and frontend developer at Vanila.io',
+        position: 'Co-founder and frontend developer',
         avatar: require('../../../public/img/homeAssets/jelena.png')
     },
     {
-        name: 'Taqi Mustafa',
-        position: 'Frontend and backend developer, javascript',
-        avatar:require('../../../public/img/homeAssets/taqi.png')
+        name: 'Md Abu Taher',
+        position: 'Fullstack developer, javascript',
+        avatar:require('../../../public/img/homeAssets/tahy.jpg')
     },
     {
         name: 'Jeramel Gauntu',
@@ -39,11 +39,13 @@ const TeamCards = (props) => {
         avatar: require('../../../public/img/homeAssets/marija.png')
     },
     {
-        name: 'H. Tugkan Kibar',
-        position: 'Backend developer',
-        avatar:require('../../../public/img/homeAssets/tugkan.png')
+        name: 'Marko Vujanic',
+        position: 'Fullstack developer',
+        avatar:require('../../../public/img/homeAssets/markov.jpg')
     }
   ]
+
+
 
   const teamPersonEach = teamInfo.map( ( teamPersonEach, index ) => {
     return (

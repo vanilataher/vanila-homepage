@@ -8,40 +8,40 @@ const SocialCards = (props) => {
         logo: require('../../../public/img/homeAssets/social-vaniladesign.png'),
         title: 'vanila.design',
         description: 'Logos, Illustrations, Vector',
-        followers: '53.7k',
-        posts:'1.2k',
+        followers: '90.3k',
+        posts:'1.6k',
         url: 'https://www.instagram.com/vanila.design/'
     },
     {
       logo: require('../../../public/img/homeAssets/social-uiux.png'),
       title: 'ui__ux',
       description: 'UI/UX Daily Inspiration',
-      followers: '17.2k',
-      posts:'136',
+      followers: '39k',
+      posts:'246',
       url: 'https://www.instagram.com/ui__ux/'
     },
     {
       logo: require('../../../public/img/homeAssets/social-wireflow.png'),
       title: 'wireflow',
       description: 'Wireframing, Prototyping, Sketching',
-      followers: '16.1k',
-      posts:'98',
+      followers: '22k',
+      posts:'131',
       url: 'https://www.instagram.com/wireflow/'
     },
     {
       logo: require('../../../public/img/homeAssets/social-startupspace.png'),
       title: 'startup.space',
       description: 'UI/UX Daily Inspiration',
-      followers: '12.3k',
-      posts:'580',
+      followers: '12k',
+      posts:'585',
       url: 'https://www.instagram.com/startup.space/'
     },
     {
       logo: require('../../../public/img/homeAssets/social-vanilaio.png'),
       title: 'vanila.io',
       description: 'Web & Mobile App Development',
-      followers: '3.6k',
-      posts:'37',
+      followers: '4.9k',
+      posts:'49',
       url: 'https://www.instagram.com/vanila.io/'
     }
   ]
