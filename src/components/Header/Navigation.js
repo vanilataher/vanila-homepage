@@ -4,7 +4,7 @@ import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
 class Navigation extends React.Component {
 
   onClickPlay () {
-    var clickSound = document.getElementById("clickSound");
+    var clickSound = document.getElementById('clickSound');
     clickSound.volume = 0.6;
     clickSound.play();
   }
@@ -32,7 +32,7 @@ class Navigation extends React.Component {
               <li><a href="https://lab.vanila.io/" target="_blank" onClick={this.onClickPlay}>Lab</a></li>
               <li><a href="https://links.vanila.io/" target="_blank" onClick={this.onClickPlay}>Community links</a></li>
               <li><a href="https://blog.vanila.io/" target="_blank" onClick={this.onClickPlay}>Blog</a></li>
-              <li><a href="#" onClick={this.onClickPlay}><strong>Start Project</strong></a></li>
+              <li><a href="#contact" onClick={this.onClickPlay}><strong>Start Project</strong></a></li>
             </ul>
           </div>
         </div>

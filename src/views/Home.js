@@ -177,6 +177,8 @@ export default class App extends Component {
         scale: 1,
         delay:400
       },80);
+
+      
     }
     render() {
         return (

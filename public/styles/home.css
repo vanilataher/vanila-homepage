@@ -143,9 +143,10 @@ font-family: SegoeBold;
     overflow: hidden;
 }
 .rowProjects img{
-  -webkit-box-shadow: -10px 14px 34px 2px rgba(199,199,199,1);
-  -moz-box-shadow: -10px 14px 34px 2px rgba(199,199,199,1);
-  box-shadow: -10px 14px 34px 2px rgba(199,199,199,1);
+  -webkit-box-shadow: -10px 14px 34px 2px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -10px 14px 34px 2px rgba(0, 0, 0, 0.38);
+  box-shadow: -10px 14px 34px 2px rgba(0, 0, 0, 0.38);
+
 }
 .projectAutomatio{
   padding-top:150px;

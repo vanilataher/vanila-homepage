@@ -4,14 +4,22 @@ import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
 class Contact extends React.Component {
 
   onClickPlay () {
-    var clickSound = document.getElementById("clickSound");
+    var clickSound = document.getElementById('clickSound');
     clickSound.volume = 0.6;
     clickSound.play();
   }
 
+  componentDidMount() {
+    var postUrl='https://vanila.io/mail/submit';var form=$('#contact-form');function success(b,c,a){if(c==='success'){$('#contact-form-waiting').css('display','none');$('#contact-form-success').css('display','block')}else{$('#contact-form-fail').css('display','block')}}form.submit(function(a){a.preventDefault();var b=form.serialize();console.log(b);$.ajax({type:'POST',url:postUrl,data:b,success:success})});
+  }
+
+
+
   render() {
+    const divStyle = {
+    display: 'none',
+    };
     return (
-    <div id="contact" className="rowContact">
       <div id="contact" className="row rowContact">
         <div id="contact-form-waiting">
           <form className="contactForm" id="contact-form">
@@ -46,13 +54,12 @@ class Contact extends React.Component {
             <input className="form-control iconBudget" type="number" name="budget" required="" placeholder="Your budget" />
             </p>
             <button type="submit" className="btn btn-default btnGetStarted">Send</button>
-            <p id="contact-form-fail"><span>An error occured.</span> </p>
+            <p id="contact-form-fail" style={divStyle}><span>An error occured.</span> </p>
         </form>
         </div>
-      <div className="col-md-4" id="contact-form-success">
+      <div className="col-md-12" id="contact-form-success" style={divStyle}>
       <h2>Email sent.</h2> </div>
       </div>
-    </div>
     );
   }
 }

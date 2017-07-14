@@ -27,8 +27,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css">
 
-    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>var postUrl="https://vanila.io/mail/submit";var form=$("#contact-form");function success(b,c,a){if(c==="success"){$("#contact-form-waiting").css("display","none");$("#contact-form-success").css("display","block")}else{$("#contact-form-fail").css("display","block")}}form.submit(function(a){a.preventDefault();var b=form.serialize();console.log(b);$.ajax({type:"POST",url:postUrl,data:b,success:success})});</script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script>
+    
+    console.log("I am loaded from index.html");
+    </script>
     <script src="/static/bundle.js"></script>
 
   </body>
