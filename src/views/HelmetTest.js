@@ -5,7 +5,11 @@ class HelmetTest extends React.Component {
   render() {
     return (
       <div style={{height: '200px'}}>
-        <Helmet title="You Are Doing Great" />
+        <Helmet
+          title="my-title"
+          meta={[
+            { name: 'description', content: 'super-uber application' }
+          ]} />
         <div className="App-header">
           <h2>Welcome to React</h2>
         </div>

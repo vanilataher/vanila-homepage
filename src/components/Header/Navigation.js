@@ -2,16 +2,23 @@ import React from 'react';
 import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
 
 class Navigation extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount(){
+      var audio = document.getElementById('audio');
+      audio.volume = 0.1;
+      audio.play();
+  }
   onClickPlay () {
     var clickSound = document.getElementById('clickSound');
     clickSound.volume = 0.6;
     clickSound.play();
   }
-
   render() {
     return (
       <nav className="navbar navbar-default">
+        <audio id="audio" src="https://vanila.io/sound/sound4.mp3"></audio>
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

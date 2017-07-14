@@ -1204,3 +1204,118 @@ float: none;
       transition-duration: 500ms;
       transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
  }
+
+.meteorAdv{
+  padding-left: 0;
+display: block;
+list-style: none;
+overflow: hidden;
+}
+
+.meteorAdv li{
+  float: left;
+  width: 100%;
+  color: #999;
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-family: SegoeRegular;
+}
+
+.meteorAdv li img{
+  width: 35px;
+  height: 35px;
+  margin-top: 0;
+  margin-right: 20px;
+}
+
+
+.aboutMeteorDev nav, .aboutMobileDev nav{
+  margin-bottom: 0!important;
+padding-bottom: 40px!important;
+}
+
+.aboutMeteorDev .rowHeader, .aboutMobileDev .rowHeader{
+  background: #fff;
+  padding: 120px 0;
+  border-top: 2px solid #f9f6f6;
+  border-bottom: 2px solid #f9f6f6;
+}
+.aboutMeteorDev h1, .aboutMobileDev h1{
+  color: #444444;
+font-weight: normal!important;
+font-size: 4em;
+font-family: SegoeExtraLight;
+}
+.aboutMeteorDev h2 {
+  color: rgba(200, 200, 200, .9);
+    font-family: SegoeRegular;
+    line-height: 1.4;
+    font-size: 2.2em;
+}
+.aboutMeteorDev .aboutAppDev, .aboutMobileDev .aboutAppDev{
+  background:#fff;
+}
+.aboutMeteorDev .headerIntro, .aboutMobileDev .headerIntro{
+  padding-bottom:0;
+}
+.aboutMeteorDev .aboutAppDev h2, .rowWhyMeteor h2, .rowMeteorTech h2, .aboutMobileDev .aboutAppDev h2{
+  color: #444444;
+font-size: 2.6em;
+font-family: SegoeBold;
+}
+.aboutMeteorDev .aboutAppDev-img img{
+  width: 40%;
+margin-top: 30px;
+}
+.aboutMeteorDev .col-md-5 img{
+  width:100%;
+}
+.rowWhyMeteor {
+  background: #f9f6f6;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.rowWhyMeteor span{
+  color: #a1a3a5;
+font-size: 1.6em;
+font-family: SegoeRegular;
+display: block;
+margin: 0 auto;
+margin-bottom: 70px;
+}
+.rowWhyMeteor h3, .rowMeteorTech h3{
+  font-size: 2.2em;
+    font-family: SegoeExtraLight;
+      color:#333;
+}
+.rowWhyMeteor .col-md-4 p, .rowMeteorTech .col-md-4 p{
+  font-size: 1.2em;
+text-align: left;
+color: #a1a3a5;
+font-family: SegoeRegular;
+}
+.rowWhyMeteor .col-md-4{
+  overflow: hidden;
+      height: 260px!important;
+}
+.rowMeteorTech{
+  padding-top: 80px;
+padding-bottom: 80px;
+}
+.rowMeteorTech h2, .rowMeteorTech h3{
+  text-align: center;
+}
+.rowMeteorTech h2{
+      margin-bottom: 50px;
+}
+.rowMeteorTech ul{
+  list-style-type: disc;
+  padding:40px!important;
+}
+.aboutMobileDev .col-md-5 img{
+  width:100%;
+}
+.aboutMobileDev .col-md-4 p{
+  text-align: center;
+}

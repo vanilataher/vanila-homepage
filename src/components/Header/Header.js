@@ -4,15 +4,6 @@ import { Link } from 'react-router';
 
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount(){
-      var audio = document.getElementById("audio");
-      audio.volume = 0.1;
-      audio.play();
-  }
-
   render() {
     return (
       <div id="zoomScale" className="headerIntro">
@@ -25,7 +16,6 @@ class Header extends React.Component {
             <h2 className="enterLeft-header">For a better productivity we build various tools <br></br>which help you to lead project better.</h2>
             <p className="enterLeft-header">Have project for us, small or big our <strong>team of experts </strong>will handle it for you. <br></br>Click in button below <strong>to start your first project</strong></p>
             <div className="buttonGroup enterLeft-header">
-            <audio id="audio" src="https://vanila.io/sound/sound4.mp3"></audio>
               <a href="#contact" className="btn btn-lg btn-primary btnGetStarted" id="button" onClick={this.onClickPlay}>Get started</a>
             </div>
           </div>
