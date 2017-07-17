@@ -65,9 +65,7 @@ const TechCards = (props) => {
       <li className="media col-md-6 techBoxReveal" key={index}>
       <div className="techCardInner">
         <div className="media-left">
-          <a href="#">
             <img className="media-object" src={techCard.logo}/>
-          </a>
         </div>
         <div className="media-body">
           <div className="media-heading"><strong>{techCard.title}</strong><br></br>

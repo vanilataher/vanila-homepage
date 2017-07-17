@@ -331,6 +331,9 @@ font-family: SegoeBold;
     font-size: 0.4em;
     font-family: SegoeRegular;
 }
+.communityBlockInner button a{
+  color: #fff;
+}
 /* Feedback */
 
 .rowFeedback h2 {
@@ -556,6 +559,9 @@ padding-top: 30px;
     font-family: SegoeBold;
     padding-left: 10px;
 padding-right: 10px;
+}
+.instaUsername:hover{
+  color: #2d2c2c!important;
 }
 .instaDescription {
     color: #333333;
