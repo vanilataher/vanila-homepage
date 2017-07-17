@@ -585,6 +585,7 @@ padding-right: 10px;
     font-family: SegoeRegular;
     display: block;
     float: left;
+    font-size: 12px;
 }
 .instaFollow {
     display: block;
@@ -611,6 +612,9 @@ padding-right: 10px;
     font-size: 1.3em;
     color: #353d4d;
     font-family: SegoeRegular;
+}
+.rowSocials a:hover {
+  text-decoration: none!important;
 }
 /* Footer */
 

@@ -19,7 +19,7 @@ class Header extends React.Component {
               <a  href="#contact" className="btn btn-lg btn-primary btnGetStarted aContact" id="button" onClick={this.onClickPlay}>Get started</a>
             </div>
           </div>
-          <div className="col-md-5"><img className="enterRight-header" src={require('../../../public/img/homeAssets/office.png')} /></div>
+          <div className="col-md-5"><img className="enterRight-header" src={require('../../../public/img/homeAssets/home.png')} /></div>
         </div>
         </div>
       </div>
