@@ -17,7 +17,7 @@ class CTA extends React.Component {
         <div className="col-md-4 text-center example">
           <h2 className="enterCta">Do you have <strong>idea</strong> for <br></br>your next project ?</h2>
           <p className="enterCta">Tell us about it, we are glad to listen <br></br>and will provide you with a <strong>feedback</strong></p>
-          <a href="#contact" className="btn btn-primary enterCta" onClick={this.onClickPlay}>Get started</a>
+          <a href="#contact" className="btn btn-primary enterCta aContact" onClick={this.onClickPlay}>Get started</a>
         </div>
         <div className="col-md-4 text-right">
           <img className="enterRight-cta" src={require('../../../public/img/homeAssets/wallet.png')} />
