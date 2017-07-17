@@ -31,19 +31,19 @@ class Contact extends React.Component {
             </div>
               <div className="checkbox checkbox-inline">
               <input name="options" value="App Development" id="checkbox1" className="styled" type="checkbox" />
-              <label for="checkbox1"> App Development </label>
+              <label htmlFor="checkbox1"> App Development </label>
               </div>
               <div className="checkbox checkbox-inline">
               <input name="options" value="Web Designt" id="checkbox2" className="styled" type="checkbox" />
-              <label for="checkbox2"> Web Design </label>
+              <label htmlFor="checkbox2"> Web Design </label>
               </div>
               <div className="checkbox checkbox-inline">
                 <input name="options" value="Graphic Design" id="checkbox3" className="styled" type="checkbox" />
-                <label for="checkbox3"> Graphic Design </label>
+                <label htmlFor="checkbox3"> Graphic Design </label>
               </div>
               <div className="checkbox checkbox-inline">
                 <input name="options" value="SEO" id="checkbox4" className="styled" type="checkbox" />
-                <label for="checkbox4"> SEO </label>
+                <label htmlFor="checkbox4"> SEO </label>
               </div>
             <div className="form-group">
               <textarea className="form-control iconPencil" name="text" cols="40" rows="5" required="" placeholder="Message" />
