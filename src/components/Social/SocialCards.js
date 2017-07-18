@@ -50,7 +50,7 @@ const SocialCards = () => {
      <li className="col-md-2">
        <a href="https://www.instagram.com/startup.space/" target="_blank">
        <div className="socialCardInner socialBoxReveal">
-         <img className="media-object" src={require('../../../public/img/homeAssets/social-vaniladesign.png')}/>
+         <img className="media-object" src={require('../../../public/img/homeAssets/social-startupspace.png')}/>
          <p className="instaUsername"><strong>startup.space</strong></p>
          <p className="instaDescription">Place for Startups & Business</p>
          <div className="instaFollow">
