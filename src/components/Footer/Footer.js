@@ -11,6 +11,18 @@ class Footer extends React.Component {
           Start your project today and get fair estimation
         </h3>
         <Contact />
+          <div className="companyInfo">
+            <br/>
+            <br/>
+            Vanila.io
+            <br/>
+            <br/>
+            2647 Edgewater Ave<br/>
+          New Smyrna Beach, FL 32168<br/>
+        United States<br/>
+      <br/><br/>
+            (386) 243-9135
+          </div>
       </div>
     );
   }

@@ -624,7 +624,7 @@ padding-right: 10px;
 .rowFooter {
     background: #121212;
     text-align: center;
-    padding-bottom: 250px;
+    padding-bottom: 50px;
 }
 .rowFooter h2 {
     color: #444444;
@@ -691,6 +691,12 @@ textarea.form-control {
     color: #fff;
     background-color: #1d85ad!important;
     border-color: #1d85ad!important;
+}
+.companyInfo {
+    text-align: center;
+    color: #737373;
+    font-size: 1.4em;
+    font-weight: normal!important;
 }
 
 /* Responsive */
