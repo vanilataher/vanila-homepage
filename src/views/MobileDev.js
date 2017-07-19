@@ -5,11 +5,13 @@ import Footer from '../components/Footer/Footer';
 
 import '../../public/styles/home.css'
 
+import SEO from '../components/seo';
 
 export default class MobileDev extends Component {
     render() {
         return (
           <div className="aboutMobileDev">
+            <SEO url="mobile-app-dev" />
             <div id="zoomScale" className="headerIntro">
               <audio id="clickSound" src="https://vanila.io/sound/click.ogg"></audio>
               <Navigation />

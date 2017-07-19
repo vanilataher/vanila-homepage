@@ -11,6 +11,7 @@ import Footer from '../components/Footer/Footer';
 import '../../public/styles/home.css'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ScrollReveal from 'scrollreveal';
+import SEO from '../components/seo';
 
 export default class App extends Component {
     constructor(){
@@ -178,7 +179,7 @@ export default class App extends Component {
         delay:400
       },80);
 
-      
+
     }
     render() {
         return (
@@ -189,6 +190,7 @@ export default class App extends Component {
               transitionLeaveTimeout={300}>
             <div className="mainWrapperInner">
               <Header />
+              <SEO url="home" />
               <About />
               <Projects />
               <CTA />

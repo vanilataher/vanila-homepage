@@ -7,6 +7,8 @@ import '../../public/styles/home.css'
 
 import ScrollReveal from 'scrollreveal';
 
+import SEO from '../components/seo';
+
 export default class Meteor extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,7 @@ export default class Meteor extends Component {
     render() {
         return (
           <div className="aboutMeteorDev">
+            <SEO url="meteor" />
               <div id="zoomScale" className="headerIntro">
                 <audio id="clickSound" src="https://vanila.io/sound/click.ogg"></audio>
                 <Navigation />
