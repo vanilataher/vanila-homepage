@@ -22,10 +22,10 @@ class Contact extends React.Component {
         <div id="contact-form-waiting">
           <form className="contactForm" id="contact-form">
             <div className="form-group">
-              <input type="text" name="name" required="" className="form-control iconUser" placeholder="Name" />
+              <input type="text" name="name" required className="form-control iconUser" placeholder="Name" />
             </div>
             <div className="form-group">
-              <input required="" type="email" name="email" className="form-control iconEmail" id="exampleInputEmail1" placeholder="Email" />
+              <input required type="email" name="email" className="form-control iconEmail" id="exampleInputEmail1" placeholder="Email" />
             </div>
             <div className="check"> <span>In what service you are interested?</span>
             </div>
@@ -46,10 +46,10 @@ class Contact extends React.Component {
                 <label htmlFor="checkbox4"> SEO </label>
               </div>
             <div className="form-group">
-              <textarea className="form-control iconPencil" name="text" cols="40" rows="5" required="" placeholder="Message" />
+              <textarea className="form-control iconPencil" name="text" cols="40" rows="5" required placeholder="Message" />
             </div>
             <p>
-            <input className="form-control iconBudget" type="number" name="budget" required="" placeholder="Your budget" />
+            <input className="form-control iconBudget" type="number" name="budget" required placeholder="Your budget" />
             </p>
             <button type="submit" className="btn btn-default btnGetStarted">Send</button>
             <p id="contact-form-fail" style={divStyle}><span>An error occured.</span> </p>
