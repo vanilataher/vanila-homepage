@@ -2,6 +2,7 @@ var debug = process.env.NODE_ENV !== "production";
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   devtool: 'source-map',
@@ -33,7 +34,7 @@ module.exports = {
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurenceOrderPlugin(),
       new webpack.optimize.UglifyJsPlugin({
-        mangle: false, 
+        mangle: false,
         sourcemap: false,
         compress: {
           warnings: false
@@ -46,6 +47,13 @@ module.exports = {
           'jQuery': "jquery",
           'window.jQuery': "jquery",
           'window.$': 'jquery'
+      }),
+      new CompressionPlugin({
+          asset: "[path].gz[query]",
+          algorithm: "gzip",
+          test: /\.js$|\.css$|\.html$/,
+          threshold: 10240,
+          minRatio: 0.8
       })
   ],
   module: {

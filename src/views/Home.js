@@ -9,7 +9,6 @@ import Tech from '../components/Tech/Tech';
 import Social from '../components/Social/Social';
 import Footer from '../components/Footer/Footer';
 import '../../public/styles/home.css'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ScrollReveal from 'scrollreveal';
 import SEO from '../components/seo';
 
@@ -183,11 +182,6 @@ export default class App extends Component {
     }
     render() {
         return (
-          <ReactCSSTransitionGroup
-              transitionName="example" transitionAppear={true}
-              transitionAppearTimeout={1500}
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}>
             <div className="mainWrapperInner">
               <Header />
               <SEO url="home" />
@@ -200,7 +194,6 @@ export default class App extends Component {
               <Social />
               <Footer />
             </div>
-            </ReactCSSTransitionGroup>
         );
     }
 }
