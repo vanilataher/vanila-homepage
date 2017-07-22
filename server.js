@@ -25,7 +25,3 @@ app.listen(8000, function(err) {
 
   console.log('Listening at http://localhost:8000/');
 })
-
-var oneWeek = 86400000*7;
-
-app.use('/public', express.static(path.join(__dirname, 'public'), {maxAge: oneWeek, lastModified: true}));
