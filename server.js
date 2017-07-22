@@ -27,4 +27,5 @@ app.listen(8000, function(err) {
 })
 
 var oneWeek = 86400000*7;
-app.use(express.static(path.join(__dirname, "public"), { maxAge: oneWeek, lastModified: true }));
+
+app.use('/public', express.static(path.join(__dirname, 'public'), {maxAge: oneWeek, lastModified: true}));
