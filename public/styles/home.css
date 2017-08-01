@@ -1171,9 +1171,9 @@ padding-left: 0;
 }
 .rowTech li:nth-child(2n+2), .rowTech li:nth-child(2n+1)
  {
-    padding-left: 0;
+    padding-left: 0!important;
     float: none;
-    padding-right: 0;
+    padding-right: 0!important;
 }
 .techCardInner .media-left a img {
     display: block;
