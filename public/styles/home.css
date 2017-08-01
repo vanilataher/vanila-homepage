@@ -465,6 +465,7 @@ padding-top: 30px;
     padding-right: 20px;
     padding-left: 30px;
 }
+
 .techCardInner .media-body div:last-child {
     width: 100px;
     float: right;
@@ -1004,6 +1005,7 @@ float: none;
 .rowFeedback .details{
   background-image: none;
 }
+
 }
 
 
@@ -1011,6 +1013,13 @@ float: none;
   .rowFeedback .details li .media-left a img {
     margin: 0 auto;
     width: 140px;
+}
+.techCardInner .media-left a img{
+  width:60%;
+  margin:0 auto;
+}
+.rowTech li:nth-child(2n+1){
+  padding-right: 15px!important;
 }
 .rowFeedback .details li .media-left{
   display: block;
@@ -1160,15 +1169,18 @@ padding-left: 0;
     width: 100%;
     padding: 10px 0px;
 }
-.rowTech li:nth-child(2n+2) {
+.rowTech li:nth-child(2n+2), .rowTech li:nth-child(2n+1)
+ {
     padding-left: 0;
     float: none;
     padding-right: 0;
 }
 .techCardInner .media-left a img {
-    width: 70%;
     display: block;
     margin: 0 auto;
+    height: 50px !important;
+width: auto;
+
 }
 }
 
