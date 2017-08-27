@@ -699,7 +699,12 @@ textarea.form-control {
     font-size: 1.4em;
     font-weight: normal!important;
 }
-
+.termsTxt{
+  color: #444444;
+  font-weight: normal!important;
+  font-size: 2em;
+  font-family: SegoeExtraLight;
+}
 /* Responsive */
 
 @media (max-width:1900px) {
