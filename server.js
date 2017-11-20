@@ -1,10 +1,11 @@
-var path = require('path');
-var webpack = require('webpack');
-var express = require('express');
-var config = require('./webpack.config');
+const path = require('path');
+const webpack = require('webpack');
+const express = require('express');
+const config = require('./webpack.config');
+const port = process.env.PORT || 8000;
 
-var app = express();
-var compiler = webpack(config);
+const app = express();
+const compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath
@@ -14,14 +15,14 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use(express.static('public'));
 
-app.get('*', function(req, res) {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(8000, function(err) {
+app.listen(port, err => {
   if (err) {
     return console.error(err);
   }
 
-  console.log('Listening at http://localhost:8000/');
+  console.log(`Listening at http://localhost:${port}`);
 })
