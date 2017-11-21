@@ -10,7 +10,7 @@ class Contact extends React.Component {
   }
 
   componentDidMount() {
-    var postUrl='https://vanila.io/mail/submit';var form=$('#contact-form');function success(b,c,a){if(c==='success'){$('#contact-form-waiting').css('display','none');$('#contact-form-success').css('display','block')}else{$('#contact-form-fail').css('display','block')}}form.submit(function(a){a.preventDefault();var b=form.serialize();console.log(b);$.ajax({type:'POST',url:postUrl,data:b,success:success})});
+    var postUrl='http://104.236.109.247/mail/submit';var form=$('#contact-form');function success(b,c,a){if(c==='success'){$('#contact-form-waiting').css('display','none');$('#contact-form-success').css('display','block')}else{$('#contact-form-fail').css('display','block')}}form.submit(function(a){a.preventDefault();var b=form.serialize();console.log(b);$.ajax({type:'POST',url:postUrl,data:b,success:success})});
   }
 
   render() {
