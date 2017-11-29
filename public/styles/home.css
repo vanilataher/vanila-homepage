@@ -652,11 +652,12 @@ padding-right: 10px;
 }
 
 .form-control {
-    padding: 25px!important;
+    padding: 15px!important;
     background: transparent!important;
     border-color: #444444!important;
     color: #929292!important;
     font-size: 1.2em!important;
+    height:auto!important;
 }
 
 .check{
