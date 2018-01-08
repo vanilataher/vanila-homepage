@@ -19,9 +19,9 @@ const TeamCards = (props) => {
         avatar:require('../../../public/img/homeAssets/tahy.jpg')
     },
     {
-        name: 'Jeramel Gauntu',
-        position: 'Digital artist',
-        avatar:require('../../../public/img/homeAssets/jeramel.png')
+        name: 'Marko Rajkovic',
+        position: 'Frontend developer',
+        avatar:require('../../../public/img/homeAssets/belac.png')
     },
     {
         name: 'Mustafa Hossaini',
