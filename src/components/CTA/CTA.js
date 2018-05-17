@@ -1,11 +1,17 @@
 import React from 'react';
 import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
+import sr, {leftConf, rightConf} from '../sr';
 
 class CTA extends React.Component {
   onClickPlay () {
     var clickSound = document.getElementById("clickSound");
     clickSound.volume = 0.6;
     clickSound.play();
+  }
+  componentDidMount() {
+    sr.reveal(".enterCta",{duration:1e3,delay:500},80);
+    sr.reveal(".enterLeft-cta",leftConf);
+    sr.reveal(".enterRight-cta",rightConf);
   }
   render() {
     return (

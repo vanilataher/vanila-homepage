@@ -1,9 +1,11 @@
 import React from 'react';
 import SocialCards from './SocialCards';
-
+import sr, {leftConf, rightConf} from '../sr';
 
 class Social extends React.Component {
-
+  componentDidMount(){
+    sr.reveal(".enterLeft-social",leftConf,80);
+  }
   render() {
     return (
         <div className="row rowSocials">

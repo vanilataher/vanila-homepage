@@ -1,16 +1,23 @@
 import React from 'react';
 import { Route, Router, IndexRedirect, IndexRoute, Link } from 'react-router';
+import sr, {leftConf, rightConf} from '../sr';
 
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount(){
+  componentDidMount() {
+    sr.reveal(".navbar-default",{origin:"top",duration:500});
+
+    function playWelcome() {
       var audio = document.getElementById('audio');
       audio.volume = 0.1;
       audio.play();
+      document.body.removeEventListener('mousemove', playWelcome, false);
+    }
+    document.body.addEventListener('mousemove', playWelcome, false);
   }
-  onClickPlay () {
+  onClickPlay() {
     var clickSound = document.getElementById('clickSound');
     clickSound.volume = 0.6;
     clickSound.play();
@@ -18,24 +25,67 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-default">
-        <audio id="audio" src="https://front-end-noobs.com/jecko/assets/sound4.mp3"></audio>
+        <audio
+          id="audio"
+          src="https://front-end-noobs.com/jecko/assets/sound4.mp3"
+        />
         <div className="container">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button
+              type="button"
+              className="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
               <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
             </button>
-            <a className="navbar-brand" href="#"><img src={require('../../../public/img/homeAssets/logo.png')}/></a>
-            <audio id="clickSound" src="https://front-end-noobs.com/jecko/assets/click.ogg"></audio>
+            <a className="navbar-brand" href="#">
+              <img src={require('../../../public/img/homeAssets/logo.png')} />
+            </a>
+            <audio
+              id="clickSound"
+              src="https://front-end-noobs.com/jecko/assets/click.ogg"
+            />
           </div>
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div
+            className="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="https://links.vanila.io/" target="_blank" rel="noopener" onClick={this.onClickPlay}>Community links</a></li>
-              <li><a href="https://blog.vanila.io/" target="_blank" rel="noopener" onClick={this.onClickPlay}>Blog</a></li>
-              <li><a href="#contact" className="aContact" onClick={this.onClickPlay}><strong>Start Project</strong></a></li>
+              <li>
+                <a
+                  href="https://links.vanila.io/"
+                  target="_blank"
+                  rel="noopener"
+                  onClick={this.onClickPlay}
+                >
+                  Community links
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://blog.vanila.io/"
+                  target="_blank"
+                  rel="noopener"
+                  onClick={this.onClickPlay}
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="aContact"
+                  onClick={this.onClickPlay}
+                >
+                  <strong>Start Project</strong>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

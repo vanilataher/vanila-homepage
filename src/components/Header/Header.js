@@ -2,8 +2,12 @@ import React from 'react';
 import Navigation from './Navigation';
 import { Link } from 'react-router';
 
-
+import sr, {leftConf, rightConf} from '../sr';
 class Header extends React.Component {
+  componentDidMount() {
+    sr.reveal(".enterLeft-header",leftConf,80);
+    sr.reveal(".enterRight-header",rightConf);
+  }
   render() {
     return (
       <div id="zoomScale" className="headerIntro">

@@ -1,6 +1,11 @@
 import React from 'react';
+import sr, {leftConf, rightConf} from '../sr';
 
 class Javascript extends React.Component {
+  componentDidMount() {
+    sr.reveal(".enterRight-js",rightConf,80);
+    sr.reveal(".enterLeft-js",leftConf,80);
+  }
   render() {
     return (
       <div className="aboutJavascript">

@@ -1,6 +1,11 @@
 import React from 'react';
+import sr, {leftConf, rightConf} from '../sr';
 
 class AppDev extends React.Component {
+  componentDidMount() {
+    sr.reveal(".enterRight-dev",rightConf,80);
+    sr.reveal(".enterLeft-dev",leftConf,80);
+  }
   render() {
     return (
       <div className="aboutAppDev">

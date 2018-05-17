@@ -1,6 +1,12 @@
 import React from 'react';
+import sr, {leftConf, rightConf} from '../sr';
 
 class Projects extends React.Component {
+  componentDidMount(){
+    sr.reveal(".enterProjectLeft",leftConf,80);
+    sr.reveal(".enterProjectRight",{origin:"right",distance:"100%",duration:1e3,scale:1,delay:800},80);
+    sr.reveal(".enterProjectBottom",{origin:"bottom",distance:"100%",duration:1e3,scale:1,delay:400},80);;
+  }
   render() {
     return (
       <div id="projects" className="rowProjects">

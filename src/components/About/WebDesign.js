@@ -1,6 +1,11 @@
 import React from 'react';
+import sr, {leftConf, rightConf} from '../sr';
 
 class WebDesign extends React.Component {
+  componentDidMount() {
+    sr.reveal(".enterRight-des",rightConf,80);
+    sr.reveal(".enterLeft-des",leftConf,80);
+  }
   render() {
     return (
       <div className="aboutWebDesign">

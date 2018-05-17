@@ -1,10 +1,13 @@
 import React from 'react';
 import FeedbackDetail from './FeedbackDetail';
-
+import sr, {leftConf, rightConf} from '../sr';
 
 class Feedback extends React.Component {
   constructor(props) {
     super(props);
+  }
+  componentDidMount(){
+    sr.reveal(".enterLeft-f",leftConf,80);
   }
   render() {
     return (
