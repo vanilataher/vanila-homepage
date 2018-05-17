@@ -71,7 +71,7 @@ const TeamCards = (props) => {
         <div className="communityBlockInner">
           <p>1600 + trusted <br></br>
           community members</p>
-        <button  className="btn btn-default"><a href="https://chat.vanila.io/" target="_blank">View all</a></button>
+        <button  className="btn btn-default"><a href="https://chat.vanila.io/" target="_blank" rel="noopener">View all</a></button>
           </div>
           </div>
           </div>

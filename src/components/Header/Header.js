@@ -7,7 +7,7 @@ class Header extends React.Component {
   render() {
     return (
       <div id="zoomScale" className="headerIntro">
-        <audio id="clickSound" src="http://front-end-noobs.com/jecko/assets/click.ogg"></audio>
+        <audio id="clickSound" src="https://front-end-noobs.com/jecko/assets/click.ogg"></audio>
         <Navigation />
         <div className="row rowHeader">
         <div className="container">

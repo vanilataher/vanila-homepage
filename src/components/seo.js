@@ -3,14 +3,14 @@
 import React from 'react';
 import Meta from '../meta';
 import { Helmet } from 'react-helmet';
-import _ from 'lodash';
+import find from 'lodash/find';
 
 
 const SEO = (props) => {
 
-    let content = _.find( Meta, { url: props.url } );
+    let content = find( Meta, { url: props.url } );
     if ( ! content ) {
-        content = _.find( Meta, { url: 'default' } );
+        content = find( Meta, { url: 'default' } );
     }
 
     return (

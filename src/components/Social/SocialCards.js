@@ -6,7 +6,7 @@ const SocialCards = () => {
   return (
       <ul className="details">
         <li className="col-md-2">
-          <a href="https://www.instagram.com/vanila.design/" target="_blank">
+          <a href="https://www.instagram.com/vanila.design/" target="_blank" rel="noopener">
           <div className="socialCardInner socialBoxReveal">
             <img className="media-object" src={require('../../../public/img/homeAssets/social-vaniladesign.png')}/>
             <p className="instaUsername"><strong>vanila.design</strong></p>
@@ -20,7 +20,7 @@ const SocialCards = () => {
           </a>
        </li>
        <li className="col-md-2">
-         <a href="https://www.instagram.com/ui__ux/" target="_blank">
+         <a href="https://www.instagram.com/ui__ux/" target="_blank" rel="noopener">
          <div className="socialCardInner socialBoxReveal">
            <img className="media-object" src={require('../../../public/img/homeAssets/social-uiux.png')}/>
            <p className="instaUsername"><strong>ui__ux</strong></p>
@@ -34,7 +34,7 @@ const SocialCards = () => {
          </a>
       </li>
       <li className="col-md-2">
-        <a href="https://www.instagram.com/wireflow/" target="_blank">
+        <a href="https://www.instagram.com/wireflow/" target="_blank" rel="noopener">
         <div className="socialCardInner socialBoxReveal">
           <img className="media-object" src={require('../../../public/img/homeAssets/social-wireflow.png')}/>
           <p className="instaUsername"><strong>wireflow</strong></p>
@@ -48,7 +48,7 @@ const SocialCards = () => {
         </a>
      </li>
      <li className="col-md-2">
-       <a href="https://www.instagram.com/startup.space/" target="_blank">
+       <a href="https://www.instagram.com/startup.space/" target="_blank" rel="noopener">
        <div className="socialCardInner socialBoxReveal">
          <img className="media-object" src={require('../../../public/img/homeAssets/social-startupspace.png')}/>
          <p className="instaUsername"><strong>startup.space</strong></p>
@@ -62,7 +62,7 @@ const SocialCards = () => {
        </a>
     </li>
     <li className="col-md-2">
-      <a href="https://www.instagram.com/vanila.io/" target="_blank">
+      <a href="https://www.instagram.com/vanila.io/" target="_blank" rel="noopener">
       <div className="socialCardInner socialBoxReveal">
         <img className="media-object" src={require('../../../public/img/homeAssets/social-vanilaio.png')}/>
         <p className="instaUsername"><strong>vanila.io</strong></p>

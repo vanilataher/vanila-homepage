@@ -1,21 +1,33 @@
 const path = require('path');
-const webpack = require('webpack');
 const express = require('express');
-const config = require('./webpack.config');
+var compression = require('compression');
+
 const port = process.env.PORT || 8000;
+var serveStatic = require('serve-static');
+var favicon = require('serve-favicon');
 
 const app = express();
-const compiler = webpack(config);
+app.use(compression());
+app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.png')));
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  publicPath: config.output.publicPath
-}));
+// const webpack = require('webpack');
+// const config = require('./webpack.config');
+// const compiler = webpack(config);
+// app.use(
+//   require('webpack-dev-middleware')(compiler, {
+//     publicPath: config.output.publicPath
+//   })
+// );
+// app.use(require('webpack-hot-middleware')(compiler));
 
-app.use(require('webpack-hot-middleware')(compiler));
-
-app.use(express.static('public'));
-
+app.use(express.static('public', { maxAge: '1y' }));
+app.use(express.static('static', { maxAge: '1y' }));
+app.use('/static', express.static('static', { maxAge: '1y' }));
 app.get('*', (req, res) => {
+  if (!res.getHeader('Cache-Control') || !res.getHeader('Expires')) {
+    res.setHeader('Cache-Control', 'public, max-age=345600'); // ex. 4 days in seconds.
+    res.setHeader('Expires', new Date(Date.now() + 345600000).toUTCString()); // in ms.
+  }
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -25,4 +37,4 @@ app.listen(port, err => {
   }
 
   console.log(`Listening at http://localhost:${port}`);
-})
+});

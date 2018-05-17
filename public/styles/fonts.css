@@ -1,20 +1,15 @@
 @font-face {
   font-family: SegoeExtraLight;
   src: url(../fonts/segoeuil.ttf);
-}
-@font-face {
-	font-family: SegoeLight;
-	src: url(../fonts/segoeuisl.ttf);
+  font-display: fallback;
 }
 @font-face {
 	font-family: SegoeRegular;
+	font-display: fallback;
 	src: url(../fonts/segoeui.ttf);
 }
 @font-face {
 	font-family: SegoeBold;
+	font-display: fallback;
 	src: url(../fonts/segoeuib.ttf);
-}
-@font-face {
-	font-family: SegoeBlack;
-	src: url(../fonts/seguibl.ttf);
 }

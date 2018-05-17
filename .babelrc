@@ -1,4 +1,4 @@
 {
-  "presets": ["es2015", "stage-0", "react"],
-  "plugins": ["transform-decorators-legacy"]
+  "presets": ["env", "es2015", "stage-0", "stage-1", "stage-2", "stage-3", "react"],
+  "plugins": ["dynamic-import-webpack", "transform-decorators-legacy", "react-loadable/babel", "syntax-dynamic-import"]
 }
