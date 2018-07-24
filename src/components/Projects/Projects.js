@@ -9,7 +9,7 @@ class Projects extends React.Component {
         <div  className="container">
           <div className="col-md-6 projectAutomatio">
             <h4 className="enterProjectLeft">Wekan (Trello like)</h4>
-            <h5 className="enterProjectLeft">Wekan is Trello like Open Source app built with Meteor.js.
+            <h5 className="enterProjectLeft">Wekan is a Trello-like Open Source app built with Meteor.js.
               <br></br>
               <br></br>
               It's real time and you can import your current Trello board to it and have your own self hosted organization board.
