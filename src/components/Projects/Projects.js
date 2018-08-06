@@ -43,11 +43,6 @@ class Projects extends React.Component {
               <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/moonly.png')}/>
             </div>
           </div>
-          {/* <div className="col-md-6 projectMoonly">
-            <h4 className="enterProjectRight">Moonly</h4>
-            <h5 className="enterProjectRight">Moon.ly is a Google Chrome extension that shows curated content upon opening Chrome or a new tab.</h5>
-            <img className="enterProjectRight" src={require('../../../public/img/homeAssets/moonly.png')}/>
-          </div> */}
         </div>
       </div>
       </div>
