@@ -185,6 +185,8 @@ font-family: SegoeBold;
 }
 .projectMoonly{
   margin-top:-60px;
+  display: block;
+  overflow: hidden;
 }
 .projectMoonlyTxt{
   margin-top:140px;
@@ -944,11 +946,14 @@ float: none;
 }
 .projectWekan {
     margin-top: 90px;
-  }
-  .projectWekanTxt {
+}
+.projectWekanTxt {
     padding-top: 20px;
 }
-
+.projectMoonly{
+  margin-top:0px;
+  padding-bottom: 40px;
+}
 .rowTeam ul li{
   width: 50%;
   float: left;

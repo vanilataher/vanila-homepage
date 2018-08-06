@@ -39,7 +39,7 @@ class Projects extends React.Component {
               <h4 className="enterProjectBottom">Moonly</h4>
               <h5 className="enterProjectBottom">Moon.ly is a Google Chrome extension that shows curated content upon opening Chrome or a new tab.</h5>
             </div>
-            <div className="col-md-8 onlyDesktop">
+            <div className="col-md-8">
               <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/moonly.png')}/>
             </div>
           </div>
