@@ -10,38 +10,38 @@ const TeamCards = (props) => {
     },
     {
         name: 'Jelena Jovanovic',
-        position: 'Co-founder and frontend developer',
+        position: 'Co-founder and Frontend Developer',
         avatar: require('../../../public/img/homeAssets/jelena.png')
     },
     {
         name: 'Md Abu Taher',
-        position: 'Fullstack developer, javascript',
+        position: 'Full Stack Developer, JavaScript',
         avatar:require('../../../public/img/homeAssets/tahy.jpg')
     },
     {
         name: 'Marko Rajkovic',
-        position: 'Frontend developer',
+        position: 'Frontend Developer',
         avatar:require('../../../public/img/homeAssets/belac.png')
     },
     {
         name: 'Mustafa Hossaini',
-        position: 'Fullstack developer',
+        position: 'Full Stack Developer',
         avatar: require('../../../public/img/homeAssets/mustafa.png')
     },
     {
-        name: 'Tsegaselassie Tadesse',
-        position: 'Software engineer',
-        avatar: require('../../../public/img/homeAssets/tsega.png')
+        name: 'Boran Jocic',
+        position: 'Business Development',
+        avatar: require('../../../public/img/homeAssets/boran.png')
     },
     {
         name: 'Marija Jovanovic',
-        position: 'Graphic designer',
+        position: 'Graphic Designer',
         avatar: require('../../../public/img/homeAssets/marija.png')
     },
     {
-        name: 'Marko Vujanic',
-        position: 'Fullstack developer',
-        avatar:require('../../../public/img/homeAssets/markov.jpg')
+        name: 'Faizur Rehman',
+        position: 'Full Stack Designer',
+        avatar:require('../../../public/img/homeAssets/faizur.png')
     }
   ]
 

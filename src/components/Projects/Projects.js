@@ -16,10 +16,10 @@ class Projects extends React.Component {
             </h5>
             <img className="enterProjectLeft" src={require('../../../public/img/homeAssets/wekan.png')}/>
           </div>
-      <div className="col-md-6 projectWireflow">
-          <h4 className="enterProjectRight">WireFlow</h4>
-          <h5 className="enterProjectRight">Easiest user flow chart tool for real-time collaborative work.</h5>
-          <img className="enterProjectRight" src={require('../../../public/img/homeAssets/wireflow.png')}/>
+          <div className="col-md-6 projectWireflow">
+            <h4 className="enterProjectRight">WireFlow</h4>
+            <h5 className="enterProjectRight">Easiest user flow chart tool for real-time collaborative work.</h5>
+            <img className="enterProjectRight" src={require('../../../public/img/homeAssets/wireflow.png')}/>
           </div>
           <div className="col-md-12 projectWekan">
             <div className="col-md-8 onlyDesktop">
@@ -34,6 +34,20 @@ class Projects extends React.Component {
               <img className="enterProjectBottom" src={require('../../../public/img/homeAssets/automatio.png')}/>
             </div>
           </div>
+          <div className="col-md-12 projectMoonly">
+            <div className="projectMoonlyTxt col-md-4">
+              <h4 className="enterProjectBottom">Moonly</h4>
+              <h5 className="enterProjectBottom">Moon.ly is a Google Chrome extension that shows curated content upon opening Chrome or a new tab.</h5>
+            </div>
+            <div className="col-md-8 onlyDesktop">
+              <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/moonly.png')}/>
+            </div>
+          </div>
+          {/* <div className="col-md-6 projectMoonly">
+            <h4 className="enterProjectRight">Moonly</h4>
+            <h5 className="enterProjectRight">Moon.ly is a Google Chrome extension that shows curated content upon opening Chrome or a new tab.</h5>
+            <img className="enterProjectRight" src={require('../../../public/img/homeAssets/moonly.png')}/>
+          </div> */}
         </div>
       </div>
       </div>

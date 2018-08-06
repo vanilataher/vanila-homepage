@@ -13,7 +13,7 @@ class WebDesign extends React.Component {
             <p className="enterLeft-des">We will define your brand with the right details and make it <br></br>outstanding and memorable.</p>
              <br></br>
             <p className="enterLeft-des">Also, we believe that beauty is in personal touch, giving your brand <br></br>
-            your personality. So dream as big as you can, because we are as good <br></br>as one design freaks could be!</p>
+            your personality. So, dream as big as you wish, because we are design ninjas!</p>
           </div>
           <div className="col-md-6 aboutWebDesign-img"><img className="enterRight-des" src={require('../../../public/img/homeAssets/web-design.png')} /></div>
         </div>

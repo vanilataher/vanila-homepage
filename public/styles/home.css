@@ -183,7 +183,12 @@ font-family: SegoeBold;
 .projectWekanTxt h5{
     width:100%!important;
 }
-
+.projectMoonly{
+  margin-top:-60px;
+}
+.projectMoonlyTxt{
+  margin-top:140px;
+}
 
 /* About */
 
