@@ -33,14 +33,8 @@
     <script src="/static/bundle.js"></script>
 
     <script>
-      var
-      scrollContact = $(".aContact"),
-      menuLink = $(".navbar-right li")
-
-      menuLink.on("click", function() {
-      	$(".navbar-right li").removeClass("active");
-          $(this).addClass("active");
-      }),
+      
+      let scrollContact = $(".aContact")
 
       scrollContact.on("click", function() {
           $("#contact").velocity("scroll", {
