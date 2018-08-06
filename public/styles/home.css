@@ -99,8 +99,8 @@ font-family: SegoeBold;
 }
 .btnGetStarted {
     border-radius: 2px!important;
-    background-color: #249dcb!important;
-    border-color: #249dcb!important;
+    background-color: #0a99ff!important;
+    border-color: #198bdc!important;
     font-weight: bold!important;
     padding: 15px 30px!important;
     margin-right: 15px!important;
@@ -698,8 +698,8 @@ textarea.form-control {
 
 .btnGetStarted:hover, .rowCTA .btn:hover {
     color: #fff;
-    background-color: #1d85ad!important;
-    border-color: #1d85ad!important;
+    background-color: #0C6CB1!important;
+    border-color: #0C6CB1!important;
 }
 .companyInfo {
     text-align: center;

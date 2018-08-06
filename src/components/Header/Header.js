@@ -16,7 +16,7 @@ class Header extends React.Component {
             <h2 className="enterLeft-header">For a better productivity we build various tools <br></br>which help you to lead your projects better.</h2>
             <p className="enterLeft-header">Have a project for us, small or big, our <strong>team of experts </strong>will handle it for you. <br></br>Click on the button below <strong>to start your first project</strong></p>
             <div className="buttonGroup enterLeft-header">
-              <a  href="#contact" className="btn btn-lg btn-primary btnGetStarted aContact" id="button" onClick={this.onClickPlay}>Get started</a>
+              <a  href="#contact" className="btn btn-lg btn-primary btnGetStarted aContact" id="button" onClick={this.onClickPlay}>Contact Us Now</a>
             </div>
           </div>
           <div className="col-md-5"><img className="enterRight-header" src={require('../../../public/img/homeAssets/home.png')} /></div>

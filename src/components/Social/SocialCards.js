@@ -12,7 +12,7 @@ const SocialCards = () => {
             <p className="instaUsername"><strong>vanila.design</strong></p>
             <p className="instaDescription">Logos, Illustrations, Vector</p>
             <div className="instaFollow">
-            <div className="instaFollowers"><span className="no">129k </span><br></br><span className="txt">followers</span></div>
+            <div className="instaFollowers"><span className="no">132k </span><br></br><span className="txt">followers</span></div>
             <div className="instaFollowing"><span className="no">2.3k </span><br></br><span className="txt">posts</span></div>
             </div>
             <p className="instaTags"><span>illustration</span><span>logo</span><span>vector</span><span>graphics</span></p>
@@ -26,8 +26,8 @@ const SocialCards = () => {
            <p className="instaUsername"><strong>ui__ux</strong></p>
            <p className="instaDescription">UI/UX Daily Inspiration</p>
            <div className="instaFollow">
-           <div className="instaFollowers"><span className="no">126k </span><br></br><span className="txt">followers</span></div>
-           <div className="instaFollowing"><span className="no">785 </span><br></br><span className="txt">posts</span></div>
+           <div className="instaFollowers"><span className="no">132k </span><br></br><span className="txt">followers</span></div>
+           <div className="instaFollowing"><span className="no">809 </span><br></br><span className="txt">posts</span></div>
            </div>
            <p className="instaTags"><span>ui/ux</span><span>app design</span><span>web design</span><span>interface</span></p>
          </div>

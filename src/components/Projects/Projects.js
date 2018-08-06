@@ -26,7 +26,7 @@ class Projects extends React.Component {
               <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/automatio.png')}/>
             </div>
             <div className="projectWekanTxt col-md-4">
-              <h4 className="enterProjectBottom">Web Automation Tool</h4>
+              <h4 className="enterProjectBottom">Automatio.co</h4>
               <h5 className="enterProjectBottom">Web Automation without coding and in just a few clicks.
               </h5>
             </div>

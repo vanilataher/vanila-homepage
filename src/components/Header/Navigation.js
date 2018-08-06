@@ -35,7 +35,7 @@ class Navigation extends React.Component {
             <ul className="nav navbar-nav navbar-right">
               <li><a href="https://links.vanila.io/" target="_blank" onClick={this.onClickPlay}>Community links</a></li>
               <li><a href="https://blog.vanila.io/" target="_blank" onClick={this.onClickPlay}>Blog</a></li>
-              <li><a href="#contact" className="aContact" onClick={this.onClickPlay}><strong>Start Project</strong></a></li>
+              <li><a href="#contact" className="aContact" onClick={this.onClickPlay}><strong>Contact Us Now</strong></a></li>
             </ul>
           </div>
         </div>
