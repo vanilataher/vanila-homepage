@@ -48,16 +48,16 @@ const SocialCards = () => {
         </a>
      </li>
      <li className="col-md-2">
-       <a href="https://www.instagram.com/startup.space/" target="_blank">
+       <a href="https://www.instagram.com/uxstore/" target="_blank">
        <div className="socialCardInner socialBoxReveal">
-         <img className="media-object" src={require('../../../public/img/homeAssets/social-startupspace.png')}/>
-         <p className="instaUsername"><strong>startup.space</strong></p>
-         <p className="instaDescription">Place for Startups & Business</p>
+         <img className="media-object" src={require('../../../public/img/homeAssets/social-uxstore.jpg')}/>
+         <p className="instaUsername"><strong>uxstore</strong></p>
+         <p className="instaDescription">UX Design Tools - UX Store</p>
          <div className="instaFollow">
-         <div className="instaFollowers"><span className="no">10.8k </span><br></br><span className="txt">followers</span></div>
-         <div className="instaFollowing"><span className="no">591 </span><br></br><span className="txt">posts</span></div>
+         <div className="instaFollowers"><span className="no">6898 </span><br></br><span className="txt">followers</span></div>
+         <div className="instaFollowing"><span className="no">37 </span><br></br><span className="txt">posts</span></div>
          </div>
-         <p className="instaTags"><span>startup</span><span>business</span><span>success</span><span>entrepreneur</span></p>
+         <p className="instaTags"><span>ui/ux</span><span>wireframing</span><span>web design</span><span>ux tools</span></p>
        </div>
        </a>
     </li>

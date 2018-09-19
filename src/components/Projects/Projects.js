@@ -14,11 +14,13 @@ class Projects extends React.Component {
               <br></br>
               It's real time and you can import your current Trello board to it and have your own self hosted organization board.
             </h5>
+            <a href="https://wekan.github.io/" className="visitSite enterProjectLeft" target="_blank">Visit site</a>
             <img className="enterProjectLeft" src={require('../../../public/img/homeAssets/wekan.png')}/>
           </div>
           <div className="col-md-6 projectWireflow">
             <h4 className="enterProjectRight">WireFlow</h4>
             <h5 className="enterProjectRight">Easiest user flow chart tool for real-time collaborative work.</h5>
+            <a href="https://wireflow.co/" className="visitSite enterProjectRight" target="_blank">Visit site</a>
             <img className="enterProjectRight" src={require('../../../public/img/homeAssets/wireflow.png')}/>
           </div>
           <div className="col-md-12 projectWekan">
@@ -27,8 +29,8 @@ class Projects extends React.Component {
             </div>
             <div className="projectWekanTxt col-md-4">
               <h4 className="enterProjectBottom">Automatio.co</h4>
-              <h5 className="enterProjectBottom">Web Automation without coding and in just a few clicks.
-              </h5>
+              <h5 className="enterProjectBottom">Web Automation without coding and in just a few clicks.</h5>
+              <a href="https://automatio.co/" className="visitSite enterProjectBottom" target="_blank">Visit site</a>
             </div>
             <div className="col-md-8 onlyMobile">
               <img className="enterProjectBottom" src={require('../../../public/img/homeAssets/automatio.png')}/>
@@ -37,7 +39,8 @@ class Projects extends React.Component {
           <div className="col-md-12 projectMoonly">
             <div className="projectMoonlyTxt col-md-4">
               <h4 className="enterProjectBottom">Moonly</h4>
-              <h5 className="enterProjectBottom">Moon.ly is a Google Chrome extension that shows curated content upon opening Chrome or a new tab.</h5>
+              <h5 className="enterProjectBottom">Moonly is a Google Chrome extension and web app that shows curated content upon opening Chrome or a new tab.</h5>
+              <a href="https://moon.ly/" className="visitSite enterProjectBottom" target="_blank">Visit site</a>
             </div>
             <div className="col-md-8">
               <img  className="enterProjectBottom" src={require('../../../public/img/homeAssets/moonly.png')}/>
