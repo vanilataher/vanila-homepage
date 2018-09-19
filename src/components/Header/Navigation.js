@@ -33,8 +33,8 @@ class Navigation extends React.Component {
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="https://uxstore.com/" target="_blank" onClick={this.onClickPlay}>Our store</a></li>
               <li><a href="https://blog.vanila.io/" target="_blank" onClick={this.onClickPlay}>Blog</a></li>
+              <li><a href="https://uxstore.com/" target="_blank" onClick={this.onClickPlay}>UX Store</a></li>
               <li><a href="#contact" className="aContact" onClick={this.onClickPlay}><strong>Contact Us</strong></a></li>
             </ul>
           </div>

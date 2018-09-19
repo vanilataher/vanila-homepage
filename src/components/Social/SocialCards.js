@@ -48,10 +48,10 @@ const SocialCards = () => {
         </a>
      </li>
      <li className="col-md-2">
-       <a href="https://www.instagram.com/uxstore/" target="_blank">
+       <a href="https://www.instagram.com/ux_store/" target="_blank">
        <div className="socialCardInner socialBoxReveal">
          <img className="media-object" src={require('../../../public/img/homeAssets/social-uxstore.jpg')}/>
-         <p className="instaUsername"><strong>uxstore</strong></p>
+         <p className="instaUsername"><strong>UX_STORE</strong></p>
          <p className="instaDescription">UX Design Tools - UX Store</p>
          <div className="instaFollow">
          <div className="instaFollowers"><span className="no">6898 </span><br></br><span className="txt">followers</span></div>
@@ -68,7 +68,7 @@ const SocialCards = () => {
         <p className="instaUsername"><strong>vanila.io</strong></p>
         <p className="instaDescription">Web & Mobile App Development</p>
         <div className="instaFollow">
-        <div className="instaFollowers"><span className="no">5k </span><br></br><span className="txt">followers</span></div>
+        <div className="instaFollowers"><span className="no">4993 </span><br></br><span className="txt">followers</span></div>
         <div className="instaFollowing"><span className="no">59 </span><br></br><span className="txt">posts</span></div>
         </div>
         <p className="instaTags"><span>web apps</span><span>mobile apps</span><span>coding</span><span>ui/ux</span></p>
