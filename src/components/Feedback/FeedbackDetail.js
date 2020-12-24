@@ -8,28 +8,28 @@ const FeedbackDetail = (props) => {
         position: 'Founder of CursiveSecurity',
         location: 'Huntington, NY',
         feedback: 'This is one of several projects that I have worked with Stefan and the Vanila team on. They are amazing',
-        avatar: require('../../../public/img/homeAssets/james.png')
+        avatar: ('../../img/homeAssets/james.png')
     },
     {
         name: 'Rodolfo Ruiz',
         position: 'CEO at Driblet.io',
         location: 'Cambridge, Massachusetts',
         feedback: 'Great work! Followed instructions and worked till I was satisfied with the end result. Couldnt do this job without them. Thanks heaps for your hard work.',
-        avatar: require('../../../public/img/homeAssets/rodolfo.png')
+        avatar: ('../../img/homeAssets/rodolfo.png')
     },
     {
         name: 'Kaileb Gunn',
         position: 'CEO at DiscoveryCloth.com',
         location: 'Denver, CO',
         feedback: 'Stefan and the Vanila team are the BEST. They are my go to from now on for all things dev and design. This is the second successful project.',
-        avatar: require('../../../public/img/homeAssets/kaileb.png')
+        avatar: ('../../img/homeAssets/kaileb.png')
     },
     {
         name: 'Rudy Robin',
         position: 'Co-founder of Affimobiz.com',
         location: 'Pariz, France',
         feedback: 'Loved working with Jelena, really great about communicating and delivering great quality work :)',
-        avatar: require('../../../public/img/homeAssets/rudy.png')
+        avatar: ('../../img/homeAssets/rudy.png')
     }
   ]
 
@@ -43,7 +43,7 @@ const FeedbackDetail = (props) => {
         </div>
         <div className="media-body">
           <h4 className="media-heading">{feedbackEach.name}</h4>
-          <h5>{feedbackEach.position + ", "}{feedbackEach.location}</h5>
+          <h5>{feedbackEach.position + ', '}{feedbackEach.location}</h5>
           <p>"{feedbackEach.feedback}"</p>
         </div>
      </li>

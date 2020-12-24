@@ -11,7 +11,7 @@ class AppDev extends React.Component {
              <br></br>
             <p className="enterLeft-dev">It makes your applications fast, real-time, scalable and able to work on all<br></br> modern browsers and devices</p>
           </div>
-          <div className="col-md-6 aboutAppDev-img"><img className="enterRight-dev" src={require('../../../public/img/homeAssets/app-dev.png')} /></div>
+          <div className="col-md-6 aboutAppDev-img"><img className="enterRight-dev" src={'../../img/homeAssets/app-dev.png'} /></div>
         </div>
         </div>
     );

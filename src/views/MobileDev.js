@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Navigation from '../components/Header/Navigation';
 import Footer from '../components/Footer/Footer';
 
-import '../../public/styles/home.css'
+import '../styles/home.css'
 
 import SEO from '../components/seo';
 
@@ -13,7 +13,7 @@ export default class MobileDev extends Component {
           <div className="aboutMobileDev">
             <SEO url="mobile-app-dev" />
             <div id="zoomScale" className="headerIntro">
-              <audio id="clickSound" src="https://vanila.io/sound/click.ogg"></audio>
+              <audio id="clickSound" src="./audio/click.ogg"></audio>
               <Navigation />
               <div className="row rowHeader">
               <div className="container">
@@ -21,17 +21,17 @@ export default class MobileDev extends Component {
                   <h1 className="enterLeft-header">Mobile App Development for <br />IOS and Android</h1>
                   <h2 className="enterLeft-header">If you are looking for right mobile development partner, then you are in right company. Check five main advantages of technology we use.</h2>
                   <ul className="enterLeft-header meteorAdv">
-                     <li><img src={require('../../public/img/homeAssets/Watchclock.png')} alt="Time"/>MVP in 4-5 weeks</li>
-                     <li><img src={require('../../public/img/homeAssets/Dollarbag.png')} alt="Money"/>Cut development cost by ~40%</li>
-                     <li><img src={require('../../public/img/homeAssets/iPad.png')} alt="Cross Platform"/> Cross-Platform, IOS, Android, Desktop</li>
-                     <li><img src={require('../../public/img/homeAssets/Datatransfers.png')} alt="Realtime"/>RealTime & Scalability</li>
-                     <li><img src={require('../../public/img/homeAssets/meteor-icon.png')} alt="Meteor"/>Powered by Meteor.js</li>
+                     <li><img src={('../img/homeAssets/Watchclock.png')} alt="Time"/>MVP in 4-5 weeks</li>
+                     <li><img src={('../img/homeAssets/Dollarbag.png')} alt="Money"/>Cut development cost by ~40%</li>
+                     <li><img src={('../img/homeAssets/iPad.png')} alt="Cross Platform"/> Cross-Platform, IOS, Android, Desktop</li>
+                     <li><img src={('../img/homeAssets/Datatransfers.png')} alt="Realtime"/>RealTime & Scalability</li>
+                     <li><img src={('../img/homeAssets/meteor-icon.png')} alt="Meteor"/>Powered by Meteor.js</li>
                   </ul>
                   <div className="buttonGroup enterLeft-header">
                     <a href="#contact" className="btn btn-lg btn-primary btnGetStarted" id="button" onClick={this.onClickPlay}>Get started</a>
                   </div>
                 </div>
-                <div className="col-md-5"><img className="enterRight-header" src={require('../../public/img/homeAssets/app-dev.png')} /></div>
+                <div className="col-md-5"><img className="enterRight-header" src={('../img/homeAssets/app-dev.png')} /></div>
               </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default class MobileDev extends Component {
 Our mobile app development team is experienced in a range of technologies and platforms, and can put your ideas into a practical, effective result. You don't need to hire separate teams for web, iOS or Android; using Meteor.js, we save you time and money.                      </p>
                       <br />
                         <p className="enterLeft-dev">
-                          But there are other development solutions available to business owners too. With a reliable e-commerce solution, you can take your business online and sell your products and services to customers worldwide. Our e-commerce solutions are tailor-made to suit your unique business requirements. Our development solutions are geared toward small, medium and large businesses all over the globe. We help you to grow your business and your profits by creating scalable, robust and visually stunning app solutions. From professional mobile app development to e-commerce solutions and branding, we make sure that your business or start-up has the best possible online presence.
+                          But there are other development solutions available to business owners too. With a reliable e-commerce solution, you can take your business online and sell your products and services to customers worldwide. Our e-commerce solutions are tailor-made to suit your unique business ments. Our development solutions are geared toward small, medium and large businesses all over the globe. We help you to grow your business and your profits by creating scalable, robust and visually stunning app solutions. From professional mobile app development to e-commerce solutions and branding, we make sure that your business or start-up has the best possible online presence.
 
                          </p>
                          <br />

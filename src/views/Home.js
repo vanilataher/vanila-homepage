@@ -8,7 +8,7 @@ import Projects from '../components/Projects/Projects';
 import Tech from '../components/Tech/Tech';
 import Social from '../components/Social/Social';
 import Footer from '../components/Footer/Footer';
-import '../../public/styles/home.css'
+import '../styles/home.css'
 import ScrollReveal from 'scrollreveal';
 import SEO from '../components/seo';
 

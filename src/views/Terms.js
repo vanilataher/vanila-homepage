@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Navigation from '../components/Header/Navigation';
 import Footer from '../components/Footer/Footer';
 
-import '../../public/styles/home.css'
+import '../styles/home.css'
 
 import SEO from '../components/seo';
 

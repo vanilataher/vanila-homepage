@@ -6,42 +6,42 @@ const TeamCards = (props) => {
     {
         name: 'Stefan Smiljkovic',
         position: 'Founder of Vanila.io',
-        avatar: require('../../../public/img/homeAssets/stefan.png')
+        avatar: ('../../img/homeAssets/stefan.png')
     },
     {
         name: 'Jelena Jovanovic',
         position: 'Co-founder and Frontend Developer',
-        avatar: require('../../../public/img/homeAssets/jelena.png')
+        avatar: ('../../img/homeAssets/jelena.png')
     },
     {
         name: 'Md Abu Taher',
         position: 'Full Stack Developer, JavaScript',
-        avatar:require('../../../public/img/homeAssets/tahy.jpg')
+        avatar:('../../img/homeAssets/tahy.jpg')
     },
     {
         name: 'Marko Rajkovic',
         position: 'Frontend Developer',
-        avatar:require('../../../public/img/homeAssets/belac.png')
+        avatar:('../../img/homeAssets/belac.png')
     },
     {
         name: 'Mustafa Hossaini',
         position: 'Full Stack Developer',
-        avatar: require('../../../public/img/homeAssets/mustafa.png')
+        avatar: ('../../img/homeAssets/mustafa.png')
     },
     {
         name: 'Boran Jocic',
         position: 'Business Development',
-        avatar: require('../../../public/img/homeAssets/boran.png')
+        avatar: ('../../img/homeAssets/boran.png')
     },
     {
         name: 'Marija Jovanovic',
         position: 'Graphic Designer',
-        avatar: require('../../../public/img/homeAssets/marija.png')
+        avatar: ('../../img/homeAssets/marija.png')
     },
     {
         name: 'Faizur Rehman',
         position: 'Full Stack Designer',
-        avatar:require('../../../public/img/homeAssets/faizur.png')
+        avatar:('../../img/homeAssets/faizur.png')
     }
   ]
 
@@ -75,7 +75,7 @@ const TeamCards = (props) => {
           </div>
           </div>
           </div>
-          <img src={require('../../../public/img/homeAssets/community.png')} />
+          <img src={('../../img/homeAssets/community.png')} />
         </li>
       </ul>
     </div>

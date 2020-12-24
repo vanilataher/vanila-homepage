@@ -2,12 +2,11 @@ import React from 'react';
 import Navigation from './Navigation';
 import { Link } from 'react-router';
 
-
 class Header extends React.Component {
   render() {
     return (
       <div id="zoomScale" className="headerIntro">
-        <audio id="clickSound" src="https://front-end-noobs.com/jecko/assets/click.ogg"></audio>
+        <audio id="clickSound" src="./audio/click.ogg"></audio>
         <Navigation />
         <div className="row rowHeader">
         <div className="container">
@@ -19,7 +18,7 @@ class Header extends React.Component {
               <a  href="#contact" className="btn btn-lg btn-primary btnGetStarted aContact" id="button" onClick={this.onClickPlay}>Contact Us Now</a>
             </div>
           </div>
-          <div className="col-md-5"><img className="enterRight-header" src={require('../../../public/img/homeAssets/home.png')} /></div>
+          <div className="col-md-5"><img className="enterRight-header" src={('../../img/homeAssets/home.png')} /></div>
         </div>
         </div>
       </div>
