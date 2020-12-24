@@ -10,7 +10,7 @@ class CTA extends React.Component {
   render() {
     return (
       <div className="row rowCTA">
-        <audio id="clickSound" src="./audio/click.ogg"></audio>
+        <audio id="clickSound" src={("../../audio/click.ogg")}></audio>
         <div className="col-md-4 text-left">
           <img className="enterLeft-cta" src={('../../img/homeAssets/knife.png')} />
         </div>

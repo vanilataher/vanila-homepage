@@ -18,7 +18,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-default">
-        <audio id="audio" src="./audio/sound4.mp3"></audio>
+        <audio id="audio" src={("../../audio/click.ogg")}></audio>
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -28,7 +28,7 @@ class Navigation extends React.Component {
               <span className="icon-bar"></span>
             </button>
             <a className="navbar-brand" href="#"><img src={('../../img/homeAssets/logo.png')}/></a>
-            <audio id="clickSound" src="./audio/click.ogg"></audio>
+            <audio id="clickSound" src={("../../audio/click.ogg")}></audio>
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
