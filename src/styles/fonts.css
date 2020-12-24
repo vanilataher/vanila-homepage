@@ -1,5 +1,5 @@
 @font-face {
-  font-family: SegoeExtraLight;
+  font-family: 'Segoe UI Light';
   src: url(../fonts/segoeuil.ttf);
 }
 @font-face {
@@ -7,11 +7,11 @@
 	src: url(../fonts/segoeuisl.ttf);
 }
 @font-face {
-	font-family: SegoeRegular;
+	font-family: 'Segoe UI';
 	src: url(../fonts/segoeui.ttf);
 }
 @font-face {
-	font-family: SegoeBold;
+	font-family: 'Segoe UI Bold';
 	src: url(../fonts/segoeuib.ttf);
 }
 @font-face {
