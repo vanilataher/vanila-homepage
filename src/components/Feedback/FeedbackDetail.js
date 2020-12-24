@@ -8,28 +8,28 @@ const FeedbackDetail = (props) => {
         position: 'Founder of CursiveSecurity',
         location: 'Huntington, NY',
         feedback: 'This is one of several projects that I have worked with Stefan and the Vanila team on. They are amazing',
-        avatar: ('../../img/homeAssets/james.png')
+        avatar: ('../../img/homeAssets/james.webp')
     },
     {
         name: 'Rodolfo Ruiz',
         position: 'CEO at Driblet.io',
         location: 'Cambridge, Massachusetts',
         feedback: 'Great work! Followed instructions and worked till I was satisfied with the end result. Couldnt do this job without them. Thanks heaps for your hard work.',
-        avatar: ('../../img/homeAssets/rodolfo.png')
+        avatar: ('../../img/homeAssets/rodolfo.webp')
     },
     {
         name: 'Kaileb Gunn',
         position: 'CEO at DiscoveryCloth.com',
         location: 'Denver, CO',
         feedback: 'Stefan and the Vanila team are the BEST. They are my go to from now on for all things dev and design. This is the second successful project.',
-        avatar: ('../../img/homeAssets/kaileb.png')
+        avatar: ('../../img/homeAssets/kaileb.webp')
     },
     {
         name: 'Rudy Robin',
         position: 'Co-founder of Affimobiz.com',
         location: 'Pariz, France',
         feedback: 'Loved working with Jelena, really great about communicating and delivering great quality work :)',
-        avatar: ('../../img/homeAssets/rudy.png')
+        avatar: ('../../img/homeAssets/rudy.webp')
     }
   ]
 

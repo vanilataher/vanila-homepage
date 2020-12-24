@@ -6,12 +6,12 @@ const TeamCards = (props) => {
     {
         name: 'Stefan Smiljkovic',
         position: 'Founder of Vanila.io',
-        avatar: ('../../img/homeAssets/stefan.png')
+        avatar: ('../../img/homeAssets/stefan.webp')
     },
     {
         name: 'Jelena Jovanovic',
         position: 'Co-founder and Frontend Developer',
-        avatar: ('../../img/homeAssets/jelena.png')
+        avatar: ('../../img/homeAssets/jelena.webp')
     },
     {
         name: 'Md Abu Taher',
@@ -21,27 +21,27 @@ const TeamCards = (props) => {
     {
         name: 'Marko Rajkovic',
         position: 'Frontend Developer',
-        avatar:('../../img/homeAssets/belac.png')
+        avatar:('../../img/homeAssets/belac.webp')
     },
     {
         name: 'Mustafa Hossaini',
         position: 'Full Stack Developer',
-        avatar: ('../../img/homeAssets/mustafa.png')
+        avatar: ('../../img/homeAssets/mustafa.webp')
     },
     {
         name: 'Boran Jocic',
         position: 'Business Development',
-        avatar: ('../../img/homeAssets/boran.png')
+        avatar: ('../../img/homeAssets/boran.webp')
     },
     {
         name: 'Marija Jovanovic',
         position: 'Graphic Designer',
-        avatar: ('../../img/homeAssets/marija.png')
+        avatar: ('../../img/homeAssets/marija.webp')
     },
     {
         name: 'Faizur Rehman',
         position: 'Full Stack Designer',
-        avatar:('../../img/homeAssets/faizur.png')
+        avatar:('../../img/homeAssets/faizur.webp')
     }
   ]
 
@@ -75,7 +75,7 @@ const TeamCards = (props) => {
           </div>
           </div>
           </div>
-          <img src={('../../img/homeAssets/community.png')} />
+          <img src={('../../img/homeAssets/community.webp')} />
         </li>
       </ul>
     </div>

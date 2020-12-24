@@ -18,7 +18,7 @@ class Header extends React.Component {
               <a  href="#contact" className="btn btn-lg btn-primary btnGetStarted aContact" id="button" onClick={this.onClickPlay}>Contact Us Now</a>
             </div>
           </div>
-          <div className="col-md-5"><img className="enterRight-header" src={('../../img/homeAssets/home.png')} /></div>
+          <div className="col-md-5"><img className="enterRight-header" src={('../../img/homeAssets/home.webp')} /></div>
         </div>
         </div>
       </div>

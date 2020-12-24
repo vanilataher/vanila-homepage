@@ -27,7 +27,7 @@ class Navigation extends React.Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#"><img src={('../../img/homeAssets/logo.png')}/></a>
+            <a className="navbar-brand" href="#"><img src={('../../img/homeAssets/logo.webp')}/></a>
             <audio id="clickSound" src={("../../audio/click.ogg")}></audio>
           </div>
 

@@ -12,7 +12,7 @@ class CTA extends React.Component {
       <div className="row rowCTA">
         <audio id="clickSound" src={("../../audio/click.ogg")}></audio>
         <div className="col-md-4 text-left">
-          <img className="enterLeft-cta" src={('../../img/homeAssets/knife.png')} />
+          <img className="enterLeft-cta" src={('../../img/homeAssets/knife.webp')} />
         </div>
         <div className="col-md-4 text-center example">
           <h2 className="enterCta">Do you have an <strong>idea</strong> for <br></br>your next project ?</h2>
@@ -20,7 +20,7 @@ class CTA extends React.Component {
           <a href="#contact" className="btn btn-primary enterCta aContact" onClick={this.onClickPlay}>Get started</a>
         </div>
         <div className="col-md-4 text-right">
-          <img className="enterRight-cta" src={('../../img/homeAssets/wallet.png')} />
+          <img className="enterRight-cta" src={('../../img/homeAssets/wallet.webp')} />
         </div>
       </div>
     );
