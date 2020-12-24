@@ -13,7 +13,7 @@ export default class MobileDev extends Component {
           <div className="aboutMobileDev">
             <SEO url="mobile-app-dev" />
             <div id="zoomScale" className="headerIntro">
-              <audio id="clickSound" src="./audio/click.ogg"></audio>
+              <audio id="clickSound" src={("../audio/click.ogg")}></audio>
               <Navigation />
               <div className="row rowHeader">
               <div className="container">
