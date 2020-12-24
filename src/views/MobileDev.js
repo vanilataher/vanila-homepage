@@ -21,17 +21,17 @@ export default class MobileDev extends Component {
                   <h1 className="enterLeft-header">Mobile App Development for <br />IOS and Android</h1>
                   <h2 className="enterLeft-header">If you are looking for right mobile development partner, then you are in right company. Check five main advantages of technology we use.</h2>
                   <ul className="enterLeft-header meteorAdv">
-                     <li><img src={('../img/homeAssets/Watchclock.png')} alt="Time"/>MVP in 4-5 weeks</li>
-                     <li><img src={('../img/homeAssets/Dollarbag.png')} alt="Money"/>Cut development cost by ~40%</li>
-                     <li><img src={('../img/homeAssets/iPad.png')} alt="Cross Platform"/> Cross-Platform, IOS, Android, Desktop</li>
-                     <li><img src={('../img/homeAssets/Datatransfers.png')} alt="Realtime"/>RealTime & Scalability</li>
-                     <li><img src={('../img/homeAssets/meteor-icon.png')} alt="Meteor"/>Powered by Meteor.js</li>
+                     <li><img src={('../img/homeAssets/Watchclock.webp')} alt="Time"/>MVP in 4-5 weeks</li>
+                     <li><img src={('../img/homeAssets/Dollarbag.webp')} alt="Money"/>Cut development cost by ~40%</li>
+                     <li><img src={('../img/homeAssets/iPad.webp')} alt="Cross Platform"/> Cross-Platform, IOS, Android, Desktop</li>
+                     <li><img src={('../img/homeAssets/Datatransfers.webp')} alt="Realtime"/>RealTime & Scalability</li>
+                     <li><img src={('../img/homeAssets/meteor-icon.webp')} alt="Meteor"/>Powered by Meteor.js</li>
                   </ul>
                   <div className="buttonGroup enterLeft-header">
                     <a href="#contact" className="btn btn-lg btn-primary btnGetStarted" id="button" onClick={this.onClickPlay}>Get started</a>
                   </div>
                 </div>
-                <div className="col-md-5"><img className="enterRight-header" src={('../img/homeAssets/app-dev.png')} /></div>
+                <div className="col-md-5"><img className="enterRight-header" src={('../img/homeAssets/app-dev.webp')} /></div>
               </div>
               </div>
             </div>
