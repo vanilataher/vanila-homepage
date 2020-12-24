@@ -1,9 +1,4 @@
 /* General */
-@import url(./fonts.css);
-
-html,
-body {
-}
 .container {
     width: 85%!important;
 }
@@ -13,7 +8,7 @@ body {
 }
 
 .btn{
-  font-family: SegoeRegular;
+  font-family: 'Segoe UI';
 }
 
 .row{
@@ -38,11 +33,11 @@ padding-right: 20px;
     color: #888888;
     font-size: 1.3em;
     cursor: pointer;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .navbar-right li a strong {
     color: #444444;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
   background-color:transparent!important;
@@ -59,24 +54,24 @@ padding-right: 20px;
     color: #444444;
     font-weight: normal!important;
     font-size: 4em;
-    font-family: SegoeExtraLight;
+    font-family: 'Segoe UI Light';
 }
 .rowHeader h1 strong {
   color: #444444;
-font-family: SegoeBold;
+font-family: 'Segoe UI Bold';
 }
 .rowHeader p {
     color: #999999;
     font-size: 1.2em;
     margin-top: 20px;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowHeader p strong {
     color: #666666;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .rowHeader h2 {
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
     color: #95989a;
     line-height: 1.4;
     font-size: 2.2em;
@@ -130,12 +125,12 @@ font-family: SegoeBold;
     font-size: 3.6em;
     color: #444444;
     font-weight: bold;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .rowProjects h5 {
     color: #95989a;
     font-size: 1.8em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
     line-height: 1.4em;
     margin-top:15px;
     margin-bottom:50px;
@@ -243,12 +238,12 @@ font-family: SegoeBold;
 .aboutJavascript p {
     color: #a1a3a5;
     font-size: 1.6em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowAbout h2 {
     color: #444444;
     font-size: 2.6em;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 /* CTA */
 
@@ -261,16 +256,16 @@ font-family: SegoeBold;
 }
 .rowCTA h2 {
     font-size: 3.6em;
-    font-family: SegoeExtraLight;
+    font-family: 'Segoe UI Light';
 }
 .rowCTA strong{
-  font-family: SegoeBold;
+  font-family: 'Segoe UI Bold';
 }
 .rowCTA p {
     color: #a8a7a7;
     margin-top: 30px;
     font-size: 1.4em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowCTA .btn {
     border-radius: 2px;
@@ -315,11 +310,11 @@ font-family: SegoeBold;
     font-size: 1.7em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .teamBoxInner h4 {
     font-size: 3em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .communityBlockInner {
     font-weight: bold;
@@ -335,7 +330,7 @@ font-family: SegoeBold;
 }
 .communityBlockInner p {
     opacity: 0.8;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .communityBlock .purple {
     display: block;
@@ -355,7 +350,7 @@ font-family: SegoeBold;
     border: 2px solid #fff;
     font-weight: bold;
     font-size: 0.4em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .communityBlockInner button a{
   color: #fff;
@@ -367,14 +362,14 @@ font-family: SegoeBold;
     font-size: 4em;
     font-weight: bold;
     margin-top: 40px;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .rowFeedback h3 {
     color: #adadad;
     margin-top: 30px;
     font-size: 2em;
     line-height: 1.4em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowFeedback .details {
     display: block;
@@ -415,17 +410,17 @@ font-family: SegoeBold;
     font-size: 2em;
     font-style: italic;
     line-height: initial;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowFeedback .details li h4 {
     color: #333;
     font-size: 2.4em;
     margin-bottom: 20px;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowFeedback .details li h5 {
     margin-bottom: 20px;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowFeedback .details li h5 span:first-child {
     color: #999;
@@ -442,17 +437,17 @@ font-family: SegoeBold;
     color: #444444;
     font-size: 3.6em;
     margin-top: 60px;
-    font-family: SegoeExtraLight;
+    font-family: 'Segoe UI Light';
 }
 .rowTech h2 strong {
-  font-family: SegoeBold;
+  font-family: 'Segoe UI Bold';
 }
 .rowTech h3 {
     color: #adadad;
     margin-top: 30px;
     font-size: 1.4em;
     line-height: 1.4em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowTech ul {
     display: block;
@@ -513,7 +508,7 @@ padding-top: 30px;
     float: right;
     margin-right: 10px;
     margin-top: -2px;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .media-body,
 .media-left,
@@ -523,12 +518,12 @@ padding-top: 30px;
 .media-heading strong {
     color: #2d2c2c;
     font-size: 1.2em;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .media-heading p {
     color: #c6c7c8;
     font-size: 1.1em;
-        font-family: SegoeRegular;
+        font-family: 'Segoe UI';
 }
 /* Socials */
 
@@ -543,12 +538,12 @@ padding-top: 30px;
     font-size: 4em;
     margin-top: 60px;
     text-transform: capitalize;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .rowSocials h3 {
     color: #95989a;
     line-height: 1.4em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowSocials ul {
     display: block;
@@ -584,7 +579,7 @@ padding-top: 30px;
     margin-top: 20px;
     display: block;
     text-transform: uppercase;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
     padding-left: 10px;
 padding-right: 10px;
 }
@@ -594,7 +589,7 @@ padding-right: 10px;
 .instaDescription {
     color: #333333;
     font-weight: bold;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
     padding-left: 10px;
 padding-right: 10px;
 }
@@ -610,7 +605,7 @@ padding-right: 10px;
     padding: 5px 10px;
     margin-right: 5px;
     margin-bottom: 10px;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
     display: block;
     float: left;
     font-size: 12px;
@@ -627,19 +622,19 @@ padding-right: 10px;
     width: 50%;
     float: left;
     text-align: center;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .instaFollowers .no,
 .instaFollowing .no {
     font-size: 3em;
     color: #353d4d;
-    font-family: SegoeBold;
+    font-family: 'Segoe UI Bold';
 }
 .instaFollowers .txt,
 .instaFollowing .txt {
     font-size: 1.3em;
     color: #353d4d;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowSocials a:hover {
   text-decoration: none!important;
@@ -655,18 +650,18 @@ padding-right: 10px;
     color: #444444;
     margin-top: 80px;
     font-size: 3.6em;
-    font-family: SegoeExtraLight;
+    font-family: 'Segoe UI Light';
 }
 
 .rowFooter h2 strong{
-  font-family: SegoeBold;
+  font-family: 'Segoe UI Bold';
 }
 .rowFooter h3 {
     color: #929292;
     font-size: 1.4em;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 #contact-form-waiting{
   width:50%;
@@ -689,7 +684,7 @@ padding-right: 10px;
   font-size: 1.4em;
   margin-top: 40px;
   margin-bottom: 20px;
-  font-family: SegoeRegular;
+  font-family: 'Segoe UI';
 }
 
 .checkbox-inline{
@@ -728,7 +723,7 @@ textarea.form-control {
   color: #444444;
   font-weight: normal!important;
   font-size: 2em;
-  font-family: SegoeExtraLight;
+  font-family: 'Segoe UI Light';
 }
 /* Responsive */
 
@@ -1134,11 +1129,11 @@ float: none;
     font-size: 1.7em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .teamBoxInner h4 {
     font-size: 3em;
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
 }
 .rowFooter h2 {
     font-size: 2.4em;
@@ -1282,7 +1277,7 @@ overflow: hidden;
   color: #999;
   font-size: 1.2em;
   margin-top: 10px;
-  font-family: SegoeRegular;
+  font-family: 'Segoe UI';
 }
 
 .meteorAdv li img{
@@ -1308,11 +1303,11 @@ padding-bottom: 40px!important;
   color: #444444;
 font-weight: normal!important;
 font-size: 4em;
-font-family: SegoeExtraLight;
+font-family: 'Segoe UI Light';
 }
 .aboutMeteorDev h2 {
   color: rgba(200, 200, 200, .9);
-    font-family: SegoeRegular;
+    font-family: 'Segoe UI';
     line-height: 1.4;
     font-size: 2.2em;
 }
@@ -1325,7 +1320,7 @@ font-family: SegoeExtraLight;
 .aboutMeteorDev .aboutAppDev h2, .rowWhyMeteor h2, .rowMeteorTech h2, .aboutMobileDev .aboutAppDev h2{
   color: #444444;
 font-size: 2.6em;
-font-family: SegoeBold;
+font-family: 'Segoe UI Bold';
 }
 .aboutMeteorDev .aboutAppDev-img img{
   width: 40%;
@@ -1343,21 +1338,21 @@ margin-top: 30px;
 .rowWhyMeteor span{
   color: #a1a3a5;
 font-size: 1.6em;
-font-family: SegoeRegular;
+font-family: 'Segoe UI';
 display: block;
 margin: 0 auto;
 margin-bottom: 70px;
 }
 .rowWhyMeteor h3, .rowMeteorTech h3{
   font-size: 2.2em;
-    font-family: SegoeExtraLight;
+    font-family: 'Segoe UI Light';
       color:#333;
 }
 .rowWhyMeteor .col-md-4 p, .rowMeteorTech .col-md-4 p{
   font-size: 1.2em;
 text-align: left;
 color: #a1a3a5;
-font-family: SegoeRegular;
+font-family: 'Segoe UI';
 }
 .rowWhyMeteor .col-md-4{
   overflow: hidden;
