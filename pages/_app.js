@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import '../styles/globals.css';
+import '../styles/fonts.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -53,12 +54,6 @@ function MyApp({ Component, pageProps }) {
           href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossOrigin="anonymous"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
-          rel="preload"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'"
         />
       </Head>
       <Component {...pageProps} />
