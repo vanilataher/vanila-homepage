@@ -39,8 +39,9 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="twitter:image" content="/img/vanila-og.webp" />
         <link
-          rel="stylesheet"
+          rel="preload"
           as="style"
+          onload="this.onload=null;this.rel='stylesheet'"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
           crossOrigin="anonymous"
@@ -48,14 +49,16 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="stylesheet"
           as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
           href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossOrigin="anonymous"
         />
         <link
           href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
-          rel="stylesheet"
+          rel="preload"
           as="style"
+          onload="this.onload=null;this.rel='stylesheet'"
         />
       </Head>
       <Component {...pageProps} />

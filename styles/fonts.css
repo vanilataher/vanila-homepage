@@ -1,0 +1,63 @@
+/**
+ * Minified by jsDelivr using clean-css v4.1.9.
+ * Original file: /npm/segoe-fonts@1.0.1/segoe-fonts.css
+ * 
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+@font-face {
+  font-family: "Segoe UI";
+  src: url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/normal/segoeui.eot);
+  src: local("Segoe UI"), local("Segoe"), local("Segoe WP"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/normal/segoeui.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/normal/segoeui.woff)
+      format("woff"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/normal/segoeui.svg#SegoeUI)
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI Semibold";
+  src: url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/semibold/seguisb.eot);
+  src: local("Segoe Semibold"), local("Segoe WP Semibold"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/semibold/seguisb.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/semibold/seguisb.woff)
+      format("woff"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/semibold/seguisb.svg#SegoeUISemibold)
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI Bold";
+  src: url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/bold/segoeuib.eot);
+  src: local("Segoe Bold"), local("Segoe WP Bold"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/bold/segoeuib.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/bold/segoeuib.woff)
+      format("woff"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/bold/segoeuib.svg#SegoeUI)
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI Light";
+  src: url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/light/segoeuil.eot);
+  src: local("Segoe UI Light"), local("Segoe WP Light"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/light/segoeuil.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/light/segoeuil.woff)
+      format("woff"),
+    url(https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/fonts/light/segoeuil.svg#SegoeUI)
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*# sourceMappingURL=/sm/f1a98ee79851e517d4dc7025445c62a07458fc4e2d60d18adfd922cca942420a.map */
