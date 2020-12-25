@@ -9,7 +9,7 @@ class Contact extends React.Component {
   }
 
   componentDidMount() {
-    var postUrl = 'https://vanila.io/mail/submit';
+    var postUrl = '/api/mail';
     var form = $('#contact-form');
     function success(b, c, a) {
       if (c === 'success') {
@@ -22,7 +22,6 @@ class Contact extends React.Component {
     form.submit(function (a) {
       a.preventDefault();
       var b = form.serialize();
-      console.log(b);
       $.ajax({ type: 'POST', url: postUrl, data: b, success: success });
     });
   }
@@ -34,7 +33,7 @@ class Contact extends React.Component {
     return (
       <div id="contact" className="row rowContact">
         <div id="contact-form-waiting">
-          <form className="contactForm" id="contact-form">
+          <form className="contactForm" id="contact-form" method="post">
             <div className="form-group">
               <input
                 type="text"
@@ -71,7 +70,7 @@ class Contact extends React.Component {
             <div className="checkbox checkbox-inline">
               <input
                 name="options"
-                value="Web Designt"
+                value="Web Design"
                 id="checkbox2"
                 className="styled"
                 type="checkbox"
