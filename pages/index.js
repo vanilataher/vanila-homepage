@@ -11,6 +11,7 @@ import Tech from '@/components/Tech/Tech';
 import Social from '@/components/Social/Social';
 import Footer from '@/components/Footer/Footer';
 import SEO from '@/components/seo';
+import LazyLoad from 'react-lazyload';
 
 // non-react and non-nextjs script
 const Reveal = dynamic(() => import('@/components/Reveal'), {
@@ -22,16 +23,34 @@ export default class App extends Component {
     return (
       <div className="mainWrapperInner">
         <Reveal />
-        <Header />
         <SEO url="home" />
-        <About />
-        <Projects />
-        <CTA />
-        <Team />
-        <Feedback />
-        <Tech />
-        <Social />
-        <Footer />
+        <LazyLoad>
+          <Header />
+        </LazyLoad>
+        <LazyLoad>
+          <About />
+        </LazyLoad>
+        <LazyLoad>
+          <Projects />
+        </LazyLoad>
+        <LazyLoad>
+          <CTA />
+        </LazyLoad>
+        <LazyLoad>
+          <Team />
+        </LazyLoad>
+        <LazyLoad>
+          <Feedback />
+        </LazyLoad>
+        <LazyLoad>
+          <Tech />
+        </LazyLoad>
+        <LazyLoad>
+          <Social />
+        </LazyLoad>
+        <LazyLoad>
+          <Footer />
+        </LazyLoad>
       </div>
     );
   }
